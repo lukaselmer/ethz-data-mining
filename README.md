@@ -13,6 +13,7 @@ http://las.ethz.ch/courses/datamining-s14/
 Usage
 -----
 
+```
 # Hadoop dir
 /usr/local/Cellar/hadoop121/1.2.1
 
@@ -32,3 +33,5 @@ hadoop dfs -copyToLocal /user/hduser/gutenberg-output2 /Users/lukas/data-mining/
 
 # Delete dir
 hadoop dfs -rmr /user/hduser/gutenberg-output2
+```
+
