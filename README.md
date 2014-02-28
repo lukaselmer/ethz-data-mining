@@ -27,7 +27,11 @@ hadoop dfs -copyFromLocal /Users/lukas/data-mining/input /user/hduser/gutenberg
 
 # Run the job
 # Mapper and reducer paths are local, input and output paths are HDFS
-hadoop jar ~/.bin/hadoop-streaming-1.2.1.jar -mapper /Users/lukas/data-mining/mapper.py -reducer /Users/lukas/data-mining/reducer.py -input "/user/hduser/gutenberg/*" -output /user/hduser/gutenberg-output2
+hadoop jar ~/.bin/hadoop-streaming-1.2.1.jar \
+-mapper /Users/lukas/data-mining/mapper.py \
+-reducer /Users/lukas/data-mining/reducer.py \
+-input "/user/hduser/gutenberg/*" \
+-output /user/hduser/gutenberg-output2
 
 # List and output the results
 hadoop dfs -cat /user/hduser/gutenberg-output2
