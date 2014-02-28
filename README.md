@@ -15,6 +15,10 @@ Usage
 -----
 
 ```
+# Start and stop Hadoop
+/usr/local/Cellar/hadoop121/1.2.1/bin/start_all.sh
+/usr/local/Cellar/hadoop121/1.2.1/bin/stop_all.sh
+
 # Hadoop dir
 /usr/local/Cellar/hadoop121/1.2.1
 
