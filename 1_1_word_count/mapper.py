@@ -2,11 +2,15 @@
 """A more advanced Mapper, using Python iterators and generators."""
 
 import sys
+import re
+
 
 def read_input(file):
     for line in file:
         # split the line into words
-        yield line.split()
+        cleaned_line = re.sub('[^0-9a-zA-Z]+', ' ', line).lower()
+        yield cleaned_line.split()
+
 
 def main(separator='\t'):
     # input comes from STDIN (standard input)

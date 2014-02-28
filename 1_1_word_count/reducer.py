@@ -5,9 +5,11 @@ from itertools import groupby
 from operator import itemgetter
 import sys
 
+
 def read_mapper_output(file, separator='\t'):
     for line in file:
         yield line.rstrip().split(separator, 1)
+
 
 def main(separator='\t'):
     # input comes from STDIN (standard input)
@@ -23,6 +25,7 @@ def main(separator='\t'):
         except ValueError:
             # count was not a number, so silently discard this item
             pass
+
 
 if __name__ == "__main__":
     main()
