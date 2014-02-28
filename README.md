@@ -14,7 +14,7 @@ Important URLs
 Usage
 -----
 
-```
+```sh
 # Start and stop Hadoop
 /usr/local/Cellar/hadoop121/1.2.1/bin/start-all.sh
 /usr/local/Cellar/hadoop121/1.2.1/bin/stop-all.sh
