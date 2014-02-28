@@ -34,7 +34,7 @@ hadoop jar ~/.bin/hadoop-streaming-1.2.1.jar \
 -output /user/hduser/gutenberg-output2
 
 # List and output the results
-hadoop dfs -cat /user/hduser/gutenberg-output2
+hadoop dfs -ls /user/hduser/gutenberg-output2
 hadoop dfs -cat /user/hduser/gutenberg-output2/part-00000
 
 # Copy data to local dir
