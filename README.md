@@ -23,24 +23,24 @@ Usage
 /usr/local/Cellar/hadoop121/1.2.1
 
 # Copy data to HDFS
-hadoop dfs -copyFromLocal /Users/lukas/data-mining/input /user/hduser/gutenberg
+hadoop dfs -copyFromLocal /Users/lukas/data-mining/example/input /user/hduser/example
 
 # Run the job
 # Mapper and reducer paths are local, input and output paths are HDFS
 hadoop jar ~/.bin/hadoop-streaming-1.2.1.jar \
--mapper /Users/lukas/data-mining/mapper.py \
--reducer /Users/lukas/data-mining/reducer.py \
--input "/user/hduser/gutenberg/*" \
--output /user/hduser/gutenberg-output2
+-mapper /Users/lukas/data-mining/example/mapper.py \
+-reducer /Users/lukas/data-mining/example/reducer.py \
+-input "/user/hduser/example/*" \
+-output /user/hduser/example-output
 
 # List and output the results
-hadoop dfs -ls /user/hduser/gutenberg-output2
-hadoop dfs -cat /user/hduser/gutenberg-output2/part-00000
+hadoop dfs -ls /user/hduser/example-output
+hadoop dfs -cat /user/hduser/example-output/part-00000
 
 # Copy data to local dir
-hadoop dfs -copyToLocal /user/hduser/gutenberg-output2 /Users/lukas/data-mining/output
+hadoop dfs -copyToLocal /user/hduser/example-output /Users/lukas/data-mining/example/output
 
 # Delete dir
-hadoop dfs -rmr /user/hduser/gutenberg-output2
+hadoop dfs -rmr /user/hduser/example-output
 ```
 

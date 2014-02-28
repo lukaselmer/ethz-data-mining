@@ -36,3 +36,4 @@ nosetests.xml
 .pydevproject
 output/_logs/history
 _SUCCESS
+_logs
