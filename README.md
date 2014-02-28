@@ -3,12 +3,13 @@ Data Mining
 
 Important URLs
 --------------
-http://localhost:50070/dfshealth.jsp
-http://localhost:50030/jobtracker.jsp
-http://hadoop.apache.org/docs/r1.1.1/single_node_setup.html
-http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/
-http://las.ethz.ch/courses/datamining-s14/recitation/dm_rc-1_hadoop.pdf
-http://las.ethz.ch/courses/datamining-s14/
+
+* http://localhost:50070/dfshealth.jsp
+* http://localhost:50030/jobtracker.jsp
+* http://hadoop.apache.org/docs/r1.1.1/single_node_setup.html
+* http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/
+* http://las.ethz.ch/courses/datamining-s14/recitation/dm_rc-1_hadoop.pdf
+* http://las.ethz.ch/courses/datamining-s14/
 
 Usage
 -----
