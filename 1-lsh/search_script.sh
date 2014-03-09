@@ -1,39 +1,291 @@
 #!/bin/bash
 mkdir search
 cd search
-if [ ! -f ./prediction_35_20.txt ]; then
-touch ./prediction_35_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 35 20 | sort | ../reducer.py > ./prediction_35_20.txt
-echo 'Bands 35, Rows 20:' >> _results.txt
-../check.py ./prediction_35_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_256_42.txt ]; then
+touch ./prediction_256_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 42 | sort | ../reducer.py > ./prediction_256_42.txt
+echo 'Bands 256, Rows 42:' >> _results.txt
+../check.py ./prediction_256_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_35_25.txt ]; then
-touch ./prediction_35_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 35 25 | sort | ../reducer.py > ./prediction_35_25.txt
-echo 'Bands 35, Rows 25:' >> _results.txt
-../check.py ./prediction_35_25.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_256_45.txt ]; then
+touch ./prediction_256_45.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 45 | sort | ../reducer.py > ./prediction_256_45.txt
+echo 'Bands 256, Rows 45:' >> _results.txt
+../check.py ./prediction_256_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_35_30.txt ]; then
-touch ./prediction_35_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 35 30 | sort | ../reducer.py > ./prediction_35_30.txt
-echo 'Bands 35, Rows 30:' >> _results.txt
-../check.py ./prediction_35_30.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_256_48.txt ]; then
+touch ./prediction_256_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 48 | sort | ../reducer.py > ./prediction_256_48.txt
+echo 'Bands 256, Rows 48:' >> _results.txt
+../check.py ./prediction_256_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_35_35.txt ]; then
-touch ./prediction_35_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 35 35 | sort | ../reducer.py > ./prediction_35_35.txt
-echo 'Bands 35, Rows 35:' >> _results.txt
-../check.py ./prediction_35_35.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_256_51.txt ]; then
+touch ./prediction_256_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 51 | sort | ../reducer.py > ./prediction_256_51.txt
+echo 'Bands 256, Rows 51:' >> _results.txt
+../check.py ./prediction_256_51.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_35_40.txt ]; then
-touch ./prediction_35_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 35 40 | sort | ../reducer.py > ./prediction_35_40.txt
-echo 'Bands 35, Rows 40:' >> _results.txt
-../check.py ./prediction_35_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_256_54.txt ]; then
+touch ./prediction_256_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 54 | sort | ../reducer.py > ./prediction_256_54.txt
+echo 'Bands 256, Rows 54:' >> _results.txt
+../check.py ./prediction_256_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_256_57.txt ]; then
+touch ./prediction_256_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 57 | sort | ../reducer.py > ./prediction_256_57.txt
+echo 'Bands 256, Rows 57:' >> _results.txt
+../check.py ./prediction_256_57.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_256_60.txt ]; then
+touch ./prediction_256_60.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 60 | sort | ../reducer.py > ./prediction_256_60.txt
+echo 'Bands 256, Rows 60:' >> _results.txt
+../check.py ./prediction_256_60.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_256_63.txt ]; then
+touch ./prediction_256_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 63 | sort | ../reducer.py > ./prediction_256_63.txt
+echo 'Bands 256, Rows 63:' >> _results.txt
+../check.py ./prediction_256_63.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_256_66.txt ]; then
+touch ./prediction_256_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 66 | sort | ../reducer.py > ./prediction_256_66.txt
+echo 'Bands 256, Rows 66:' >> _results.txt
+../check.py ./prediction_256_66.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_256_69.txt ]; then
+touch ./prediction_256_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 256 69 | sort | ../reducer.py > ./prediction_256_69.txt
+echo 'Bands 256, Rows 69:' >> _results.txt
+../check.py ./prediction_256_69.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_42.txt ]; then
+touch ./prediction_255_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 42 | sort | ../reducer.py > ./prediction_255_42.txt
+echo 'Bands 255, Rows 42:' >> _results.txt
+../check.py ./prediction_255_42.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_45.txt ]; then
+touch ./prediction_255_45.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 45 | sort | ../reducer.py > ./prediction_255_45.txt
+echo 'Bands 255, Rows 45:' >> _results.txt
+../check.py ./prediction_255_45.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_48.txt ]; then
+touch ./prediction_255_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 48 | sort | ../reducer.py > ./prediction_255_48.txt
+echo 'Bands 255, Rows 48:' >> _results.txt
+../check.py ./prediction_255_48.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_51.txt ]; then
+touch ./prediction_255_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 51 | sort | ../reducer.py > ./prediction_255_51.txt
+echo 'Bands 255, Rows 51:' >> _results.txt
+../check.py ./prediction_255_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_54.txt ]; then
+touch ./prediction_255_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 54 | sort | ../reducer.py > ./prediction_255_54.txt
+echo 'Bands 255, Rows 54:' >> _results.txt
+../check.py ./prediction_255_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_57.txt ]; then
+touch ./prediction_255_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 57 | sort | ../reducer.py > ./prediction_255_57.txt
+echo 'Bands 255, Rows 57:' >> _results.txt
+../check.py ./prediction_255_57.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_60.txt ]; then
+touch ./prediction_255_60.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 60 | sort | ../reducer.py > ./prediction_255_60.txt
+echo 'Bands 255, Rows 60:' >> _results.txt
+../check.py ./prediction_255_60.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_63.txt ]; then
+touch ./prediction_255_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 63 | sort | ../reducer.py > ./prediction_255_63.txt
+echo 'Bands 255, Rows 63:' >> _results.txt
+../check.py ./prediction_255_63.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_66.txt ]; then
+touch ./prediction_255_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 66 | sort | ../reducer.py > ./prediction_255_66.txt
+echo 'Bands 255, Rows 66:' >> _results.txt
+../check.py ./prediction_255_66.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_255_69.txt ]; then
+touch ./prediction_255_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 255 69 | sort | ../reducer.py > ./prediction_255_69.txt
+echo 'Bands 255, Rows 69:' >> _results.txt
+../check.py ./prediction_255_69.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_42.txt ]; then
+touch ./prediction_254_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 42 | sort | ../reducer.py > ./prediction_254_42.txt
+echo 'Bands 254, Rows 42:' >> _results.txt
+../check.py ./prediction_254_42.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_45.txt ]; then
+touch ./prediction_254_45.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 45 | sort | ../reducer.py > ./prediction_254_45.txt
+echo 'Bands 254, Rows 45:' >> _results.txt
+../check.py ./prediction_254_45.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_48.txt ]; then
+touch ./prediction_254_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 48 | sort | ../reducer.py > ./prediction_254_48.txt
+echo 'Bands 254, Rows 48:' >> _results.txt
+../check.py ./prediction_254_48.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_51.txt ]; then
+touch ./prediction_254_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 51 | sort | ../reducer.py > ./prediction_254_51.txt
+echo 'Bands 254, Rows 51:' >> _results.txt
+../check.py ./prediction_254_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_54.txt ]; then
+touch ./prediction_254_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 54 | sort | ../reducer.py > ./prediction_254_54.txt
+echo 'Bands 254, Rows 54:' >> _results.txt
+../check.py ./prediction_254_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_57.txt ]; then
+touch ./prediction_254_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 57 | sort | ../reducer.py > ./prediction_254_57.txt
+echo 'Bands 254, Rows 57:' >> _results.txt
+../check.py ./prediction_254_57.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_60.txt ]; then
+touch ./prediction_254_60.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 60 | sort | ../reducer.py > ./prediction_254_60.txt
+echo 'Bands 254, Rows 60:' >> _results.txt
+../check.py ./prediction_254_60.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_63.txt ]; then
+touch ./prediction_254_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 63 | sort | ../reducer.py > ./prediction_254_63.txt
+echo 'Bands 254, Rows 63:' >> _results.txt
+../check.py ./prediction_254_63.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_66.txt ]; then
+touch ./prediction_254_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 66 | sort | ../reducer.py > ./prediction_254_66.txt
+echo 'Bands 254, Rows 66:' >> _results.txt
+../check.py ./prediction_254_66.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_254_69.txt ]; then
+touch ./prediction_254_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 254 69 | sort | ../reducer.py > ./prediction_254_69.txt
+echo 'Bands 254, Rows 69:' >> _results.txt
+../check.py ./prediction_254_69.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_42.txt ]; then
+touch ./prediction_253_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 42 | sort | ../reducer.py > ./prediction_253_42.txt
+echo 'Bands 253, Rows 42:' >> _results.txt
+../check.py ./prediction_253_42.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_45.txt ]; then
+touch ./prediction_253_45.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 45 | sort | ../reducer.py > ./prediction_253_45.txt
+echo 'Bands 253, Rows 45:' >> _results.txt
+../check.py ./prediction_253_45.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_48.txt ]; then
+touch ./prediction_253_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 48 | sort | ../reducer.py > ./prediction_253_48.txt
+echo 'Bands 253, Rows 48:' >> _results.txt
+../check.py ./prediction_253_48.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_51.txt ]; then
+touch ./prediction_253_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 51 | sort | ../reducer.py > ./prediction_253_51.txt
+echo 'Bands 253, Rows 51:' >> _results.txt
+../check.py ./prediction_253_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_54.txt ]; then
+touch ./prediction_253_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 54 | sort | ../reducer.py > ./prediction_253_54.txt
+echo 'Bands 253, Rows 54:' >> _results.txt
+../check.py ./prediction_253_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_57.txt ]; then
+touch ./prediction_253_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 57 | sort | ../reducer.py > ./prediction_253_57.txt
+echo 'Bands 253, Rows 57:' >> _results.txt
+../check.py ./prediction_253_57.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_60.txt ]; then
+touch ./prediction_253_60.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 60 | sort | ../reducer.py > ./prediction_253_60.txt
+echo 'Bands 253, Rows 60:' >> _results.txt
+../check.py ./prediction_253_60.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_63.txt ]; then
+touch ./prediction_253_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 63 | sort | ../reducer.py > ./prediction_253_63.txt
+echo 'Bands 253, Rows 63:' >> _results.txt
+../check.py ./prediction_253_63.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_66.txt ]; then
+touch ./prediction_253_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 66 | sort | ../reducer.py > ./prediction_253_66.txt
+echo 'Bands 253, Rows 66:' >> _results.txt
+../check.py ./prediction_253_66.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_253_69.txt ]; then
+touch ./prediction_253_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 253 69 | sort | ../reducer.py > ./prediction_253_69.txt
+echo 'Bands 253, Rows 69:' >> _results.txt
+../check.py ./prediction_253_69.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_35_42.txt ]; then
+touch ./prediction_35_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 35 42 | sort | ../reducer.py > ./prediction_35_42.txt
+echo 'Bands 35, Rows 42:' >> _results.txt
+../check.py ./prediction_35_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_35_45.txt ]; then
@@ -43,18 +295,32 @@ echo 'Bands 35, Rows 45:' >> _results.txt
 ../check.py ./prediction_35_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_35_50.txt ]; then
-touch ./prediction_35_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 35 50 | sort | ../reducer.py > ./prediction_35_50.txt
-echo 'Bands 35, Rows 50:' >> _results.txt
-../check.py ./prediction_35_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_35_48.txt ]; then
+touch ./prediction_35_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 35 48 | sort | ../reducer.py > ./prediction_35_48.txt
+echo 'Bands 35, Rows 48:' >> _results.txt
+../check.py ./prediction_35_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_35_55.txt ]; then
-touch ./prediction_35_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 35 55 | sort | ../reducer.py > ./prediction_35_55.txt
-echo 'Bands 35, Rows 55:' >> _results.txt
-../check.py ./prediction_35_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_35_51.txt ]; then
+touch ./prediction_35_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 35 51 | sort | ../reducer.py > ./prediction_35_51.txt
+echo 'Bands 35, Rows 51:' >> _results.txt
+../check.py ./prediction_35_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_35_54.txt ]; then
+touch ./prediction_35_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 35 54 | sort | ../reducer.py > ./prediction_35_54.txt
+echo 'Bands 35, Rows 54:' >> _results.txt
+../check.py ./prediction_35_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_35_57.txt ]; then
+touch ./prediction_35_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 35 57 | sort | ../reducer.py > ./prediction_35_57.txt
+echo 'Bands 35, Rows 57:' >> _results.txt
+../check.py ./prediction_35_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_35_60.txt ]; then
@@ -64,53 +330,32 @@ echo 'Bands 35, Rows 60:' >> _results.txt
 ../check.py ./prediction_35_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_35_65.txt ]; then
-touch ./prediction_35_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 35 65 | sort | ../reducer.py > ./prediction_35_65.txt
-echo 'Bands 35, Rows 65:' >> _results.txt
-../check.py ./prediction_35_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_35_63.txt ]; then
+touch ./prediction_35_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 35 63 | sort | ../reducer.py > ./prediction_35_63.txt
+echo 'Bands 35, Rows 63:' >> _results.txt
+../check.py ./prediction_35_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_35_70.txt ]; then
-touch ./prediction_35_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 35 70 | sort | ../reducer.py > ./prediction_35_70.txt
-echo 'Bands 35, Rows 70:' >> _results.txt
-../check.py ./prediction_35_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_35_66.txt ]; then
+touch ./prediction_35_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 35 66 | sort | ../reducer.py > ./prediction_35_66.txt
+echo 'Bands 35, Rows 66:' >> _results.txt
+../check.py ./prediction_35_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_40_20.txt ]; then
-touch ./prediction_40_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 40 20 | sort | ../reducer.py > ./prediction_40_20.txt
-echo 'Bands 40, Rows 20:' >> _results.txt
-../check.py ./prediction_40_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_35_69.txt ]; then
+touch ./prediction_35_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 35 69 | sort | ../reducer.py > ./prediction_35_69.txt
+echo 'Bands 35, Rows 69:' >> _results.txt
+../check.py ./prediction_35_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_40_25.txt ]; then
-touch ./prediction_40_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 40 25 | sort | ../reducer.py > ./prediction_40_25.txt
-echo 'Bands 40, Rows 25:' >> _results.txt
-../check.py ./prediction_40_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_40_30.txt ]; then
-touch ./prediction_40_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 40 30 | sort | ../reducer.py > ./prediction_40_30.txt
-echo 'Bands 40, Rows 30:' >> _results.txt
-../check.py ./prediction_40_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_40_35.txt ]; then
-touch ./prediction_40_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 40 35 | sort | ../reducer.py > ./prediction_40_35.txt
-echo 'Bands 40, Rows 35:' >> _results.txt
-../check.py ./prediction_40_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_40_40.txt ]; then
-touch ./prediction_40_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 40 40 | sort | ../reducer.py > ./prediction_40_40.txt
-echo 'Bands 40, Rows 40:' >> _results.txt
-../check.py ./prediction_40_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_40_42.txt ]; then
+touch ./prediction_40_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 40 42 | sort | ../reducer.py > ./prediction_40_42.txt
+echo 'Bands 40, Rows 42:' >> _results.txt
+../check.py ./prediction_40_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_40_45.txt ]; then
@@ -120,18 +365,32 @@ echo 'Bands 40, Rows 45:' >> _results.txt
 ../check.py ./prediction_40_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_40_50.txt ]; then
-touch ./prediction_40_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 40 50 | sort | ../reducer.py > ./prediction_40_50.txt
-echo 'Bands 40, Rows 50:' >> _results.txt
-../check.py ./prediction_40_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_40_48.txt ]; then
+touch ./prediction_40_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 40 48 | sort | ../reducer.py > ./prediction_40_48.txt
+echo 'Bands 40, Rows 48:' >> _results.txt
+../check.py ./prediction_40_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_40_55.txt ]; then
-touch ./prediction_40_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 40 55 | sort | ../reducer.py > ./prediction_40_55.txt
-echo 'Bands 40, Rows 55:' >> _results.txt
-../check.py ./prediction_40_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_40_51.txt ]; then
+touch ./prediction_40_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 40 51 | sort | ../reducer.py > ./prediction_40_51.txt
+echo 'Bands 40, Rows 51:' >> _results.txt
+../check.py ./prediction_40_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_40_54.txt ]; then
+touch ./prediction_40_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 40 54 | sort | ../reducer.py > ./prediction_40_54.txt
+echo 'Bands 40, Rows 54:' >> _results.txt
+../check.py ./prediction_40_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_40_57.txt ]; then
+touch ./prediction_40_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 40 57 | sort | ../reducer.py > ./prediction_40_57.txt
+echo 'Bands 40, Rows 57:' >> _results.txt
+../check.py ./prediction_40_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_40_60.txt ]; then
@@ -141,53 +400,32 @@ echo 'Bands 40, Rows 60:' >> _results.txt
 ../check.py ./prediction_40_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_40_65.txt ]; then
-touch ./prediction_40_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 40 65 | sort | ../reducer.py > ./prediction_40_65.txt
-echo 'Bands 40, Rows 65:' >> _results.txt
-../check.py ./prediction_40_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_40_63.txt ]; then
+touch ./prediction_40_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 40 63 | sort | ../reducer.py > ./prediction_40_63.txt
+echo 'Bands 40, Rows 63:' >> _results.txt
+../check.py ./prediction_40_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_40_70.txt ]; then
-touch ./prediction_40_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 40 70 | sort | ../reducer.py > ./prediction_40_70.txt
-echo 'Bands 40, Rows 70:' >> _results.txt
-../check.py ./prediction_40_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_40_66.txt ]; then
+touch ./prediction_40_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 40 66 | sort | ../reducer.py > ./prediction_40_66.txt
+echo 'Bands 40, Rows 66:' >> _results.txt
+../check.py ./prediction_40_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_45_20.txt ]; then
-touch ./prediction_45_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 45 20 | sort | ../reducer.py > ./prediction_45_20.txt
-echo 'Bands 45, Rows 20:' >> _results.txt
-../check.py ./prediction_45_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_40_69.txt ]; then
+touch ./prediction_40_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 40 69 | sort | ../reducer.py > ./prediction_40_69.txt
+echo 'Bands 40, Rows 69:' >> _results.txt
+../check.py ./prediction_40_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_45_25.txt ]; then
-touch ./prediction_45_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 45 25 | sort | ../reducer.py > ./prediction_45_25.txt
-echo 'Bands 45, Rows 25:' >> _results.txt
-../check.py ./prediction_45_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_45_30.txt ]; then
-touch ./prediction_45_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 45 30 | sort | ../reducer.py > ./prediction_45_30.txt
-echo 'Bands 45, Rows 30:' >> _results.txt
-../check.py ./prediction_45_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_45_35.txt ]; then
-touch ./prediction_45_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 45 35 | sort | ../reducer.py > ./prediction_45_35.txt
-echo 'Bands 45, Rows 35:' >> _results.txt
-../check.py ./prediction_45_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_45_40.txt ]; then
-touch ./prediction_45_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 45 40 | sort | ../reducer.py > ./prediction_45_40.txt
-echo 'Bands 45, Rows 40:' >> _results.txt
-../check.py ./prediction_45_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_45_42.txt ]; then
+touch ./prediction_45_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 45 42 | sort | ../reducer.py > ./prediction_45_42.txt
+echo 'Bands 45, Rows 42:' >> _results.txt
+../check.py ./prediction_45_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_45_45.txt ]; then
@@ -197,18 +435,32 @@ echo 'Bands 45, Rows 45:' >> _results.txt
 ../check.py ./prediction_45_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_45_50.txt ]; then
-touch ./prediction_45_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 45 50 | sort | ../reducer.py > ./prediction_45_50.txt
-echo 'Bands 45, Rows 50:' >> _results.txt
-../check.py ./prediction_45_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_45_48.txt ]; then
+touch ./prediction_45_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 45 48 | sort | ../reducer.py > ./prediction_45_48.txt
+echo 'Bands 45, Rows 48:' >> _results.txt
+../check.py ./prediction_45_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_45_55.txt ]; then
-touch ./prediction_45_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 45 55 | sort | ../reducer.py > ./prediction_45_55.txt
-echo 'Bands 45, Rows 55:' >> _results.txt
-../check.py ./prediction_45_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_45_51.txt ]; then
+touch ./prediction_45_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 45 51 | sort | ../reducer.py > ./prediction_45_51.txt
+echo 'Bands 45, Rows 51:' >> _results.txt
+../check.py ./prediction_45_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_45_54.txt ]; then
+touch ./prediction_45_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 45 54 | sort | ../reducer.py > ./prediction_45_54.txt
+echo 'Bands 45, Rows 54:' >> _results.txt
+../check.py ./prediction_45_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_45_57.txt ]; then
+touch ./prediction_45_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 45 57 | sort | ../reducer.py > ./prediction_45_57.txt
+echo 'Bands 45, Rows 57:' >> _results.txt
+../check.py ./prediction_45_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_45_60.txt ]; then
@@ -218,53 +470,32 @@ echo 'Bands 45, Rows 60:' >> _results.txt
 ../check.py ./prediction_45_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_45_65.txt ]; then
-touch ./prediction_45_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 45 65 | sort | ../reducer.py > ./prediction_45_65.txt
-echo 'Bands 45, Rows 65:' >> _results.txt
-../check.py ./prediction_45_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_45_63.txt ]; then
+touch ./prediction_45_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 45 63 | sort | ../reducer.py > ./prediction_45_63.txt
+echo 'Bands 45, Rows 63:' >> _results.txt
+../check.py ./prediction_45_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_45_70.txt ]; then
-touch ./prediction_45_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 45 70 | sort | ../reducer.py > ./prediction_45_70.txt
-echo 'Bands 45, Rows 70:' >> _results.txt
-../check.py ./prediction_45_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_45_66.txt ]; then
+touch ./prediction_45_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 45 66 | sort | ../reducer.py > ./prediction_45_66.txt
+echo 'Bands 45, Rows 66:' >> _results.txt
+../check.py ./prediction_45_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_50_20.txt ]; then
-touch ./prediction_50_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 50 20 | sort | ../reducer.py > ./prediction_50_20.txt
-echo 'Bands 50, Rows 20:' >> _results.txt
-../check.py ./prediction_50_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_45_69.txt ]; then
+touch ./prediction_45_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 45 69 | sort | ../reducer.py > ./prediction_45_69.txt
+echo 'Bands 45, Rows 69:' >> _results.txt
+../check.py ./prediction_45_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_50_25.txt ]; then
-touch ./prediction_50_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 50 25 | sort | ../reducer.py > ./prediction_50_25.txt
-echo 'Bands 50, Rows 25:' >> _results.txt
-../check.py ./prediction_50_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_50_30.txt ]; then
-touch ./prediction_50_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 50 30 | sort | ../reducer.py > ./prediction_50_30.txt
-echo 'Bands 50, Rows 30:' >> _results.txt
-../check.py ./prediction_50_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_50_35.txt ]; then
-touch ./prediction_50_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 50 35 | sort | ../reducer.py > ./prediction_50_35.txt
-echo 'Bands 50, Rows 35:' >> _results.txt
-../check.py ./prediction_50_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_50_40.txt ]; then
-touch ./prediction_50_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 50 40 | sort | ../reducer.py > ./prediction_50_40.txt
-echo 'Bands 50, Rows 40:' >> _results.txt
-../check.py ./prediction_50_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_50_42.txt ]; then
+touch ./prediction_50_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 50 42 | sort | ../reducer.py > ./prediction_50_42.txt
+echo 'Bands 50, Rows 42:' >> _results.txt
+../check.py ./prediction_50_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_50_45.txt ]; then
@@ -274,18 +505,32 @@ echo 'Bands 50, Rows 45:' >> _results.txt
 ../check.py ./prediction_50_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_50_50.txt ]; then
-touch ./prediction_50_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 50 50 | sort | ../reducer.py > ./prediction_50_50.txt
-echo 'Bands 50, Rows 50:' >> _results.txt
-../check.py ./prediction_50_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_50_48.txt ]; then
+touch ./prediction_50_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 50 48 | sort | ../reducer.py > ./prediction_50_48.txt
+echo 'Bands 50, Rows 48:' >> _results.txt
+../check.py ./prediction_50_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_50_55.txt ]; then
-touch ./prediction_50_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 50 55 | sort | ../reducer.py > ./prediction_50_55.txt
-echo 'Bands 50, Rows 55:' >> _results.txt
-../check.py ./prediction_50_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_50_51.txt ]; then
+touch ./prediction_50_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 50 51 | sort | ../reducer.py > ./prediction_50_51.txt
+echo 'Bands 50, Rows 51:' >> _results.txt
+../check.py ./prediction_50_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_50_54.txt ]; then
+touch ./prediction_50_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 50 54 | sort | ../reducer.py > ./prediction_50_54.txt
+echo 'Bands 50, Rows 54:' >> _results.txt
+../check.py ./prediction_50_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_50_57.txt ]; then
+touch ./prediction_50_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 50 57 | sort | ../reducer.py > ./prediction_50_57.txt
+echo 'Bands 50, Rows 57:' >> _results.txt
+../check.py ./prediction_50_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_50_60.txt ]; then
@@ -295,53 +540,32 @@ echo 'Bands 50, Rows 60:' >> _results.txt
 ../check.py ./prediction_50_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_50_65.txt ]; then
-touch ./prediction_50_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 50 65 | sort | ../reducer.py > ./prediction_50_65.txt
-echo 'Bands 50, Rows 65:' >> _results.txt
-../check.py ./prediction_50_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_50_63.txt ]; then
+touch ./prediction_50_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 50 63 | sort | ../reducer.py > ./prediction_50_63.txt
+echo 'Bands 50, Rows 63:' >> _results.txt
+../check.py ./prediction_50_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_50_70.txt ]; then
-touch ./prediction_50_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 50 70 | sort | ../reducer.py > ./prediction_50_70.txt
-echo 'Bands 50, Rows 70:' >> _results.txt
-../check.py ./prediction_50_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_50_66.txt ]; then
+touch ./prediction_50_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 50 66 | sort | ../reducer.py > ./prediction_50_66.txt
+echo 'Bands 50, Rows 66:' >> _results.txt
+../check.py ./prediction_50_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_55_20.txt ]; then
-touch ./prediction_55_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 55 20 | sort | ../reducer.py > ./prediction_55_20.txt
-echo 'Bands 55, Rows 20:' >> _results.txt
-../check.py ./prediction_55_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_50_69.txt ]; then
+touch ./prediction_50_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 50 69 | sort | ../reducer.py > ./prediction_50_69.txt
+echo 'Bands 50, Rows 69:' >> _results.txt
+../check.py ./prediction_50_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_55_25.txt ]; then
-touch ./prediction_55_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 55 25 | sort | ../reducer.py > ./prediction_55_25.txt
-echo 'Bands 55, Rows 25:' >> _results.txt
-../check.py ./prediction_55_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_55_30.txt ]; then
-touch ./prediction_55_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 55 30 | sort | ../reducer.py > ./prediction_55_30.txt
-echo 'Bands 55, Rows 30:' >> _results.txt
-../check.py ./prediction_55_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_55_35.txt ]; then
-touch ./prediction_55_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 55 35 | sort | ../reducer.py > ./prediction_55_35.txt
-echo 'Bands 55, Rows 35:' >> _results.txt
-../check.py ./prediction_55_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_55_40.txt ]; then
-touch ./prediction_55_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 55 40 | sort | ../reducer.py > ./prediction_55_40.txt
-echo 'Bands 55, Rows 40:' >> _results.txt
-../check.py ./prediction_55_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_55_42.txt ]; then
+touch ./prediction_55_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 55 42 | sort | ../reducer.py > ./prediction_55_42.txt
+echo 'Bands 55, Rows 42:' >> _results.txt
+../check.py ./prediction_55_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_55_45.txt ]; then
@@ -351,18 +575,32 @@ echo 'Bands 55, Rows 45:' >> _results.txt
 ../check.py ./prediction_55_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_55_50.txt ]; then
-touch ./prediction_55_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 55 50 | sort | ../reducer.py > ./prediction_55_50.txt
-echo 'Bands 55, Rows 50:' >> _results.txt
-../check.py ./prediction_55_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_55_48.txt ]; then
+touch ./prediction_55_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 55 48 | sort | ../reducer.py > ./prediction_55_48.txt
+echo 'Bands 55, Rows 48:' >> _results.txt
+../check.py ./prediction_55_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_55_55.txt ]; then
-touch ./prediction_55_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 55 55 | sort | ../reducer.py > ./prediction_55_55.txt
-echo 'Bands 55, Rows 55:' >> _results.txt
-../check.py ./prediction_55_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_55_51.txt ]; then
+touch ./prediction_55_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 55 51 | sort | ../reducer.py > ./prediction_55_51.txt
+echo 'Bands 55, Rows 51:' >> _results.txt
+../check.py ./prediction_55_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_55_54.txt ]; then
+touch ./prediction_55_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 55 54 | sort | ../reducer.py > ./prediction_55_54.txt
+echo 'Bands 55, Rows 54:' >> _results.txt
+../check.py ./prediction_55_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_55_57.txt ]; then
+touch ./prediction_55_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 55 57 | sort | ../reducer.py > ./prediction_55_57.txt
+echo 'Bands 55, Rows 57:' >> _results.txt
+../check.py ./prediction_55_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_55_60.txt ]; then
@@ -372,53 +610,32 @@ echo 'Bands 55, Rows 60:' >> _results.txt
 ../check.py ./prediction_55_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_55_65.txt ]; then
-touch ./prediction_55_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 55 65 | sort | ../reducer.py > ./prediction_55_65.txt
-echo 'Bands 55, Rows 65:' >> _results.txt
-../check.py ./prediction_55_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_55_63.txt ]; then
+touch ./prediction_55_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 55 63 | sort | ../reducer.py > ./prediction_55_63.txt
+echo 'Bands 55, Rows 63:' >> _results.txt
+../check.py ./prediction_55_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_55_70.txt ]; then
-touch ./prediction_55_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 55 70 | sort | ../reducer.py > ./prediction_55_70.txt
-echo 'Bands 55, Rows 70:' >> _results.txt
-../check.py ./prediction_55_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_55_66.txt ]; then
+touch ./prediction_55_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 55 66 | sort | ../reducer.py > ./prediction_55_66.txt
+echo 'Bands 55, Rows 66:' >> _results.txt
+../check.py ./prediction_55_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_60_20.txt ]; then
-touch ./prediction_60_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 60 20 | sort | ../reducer.py > ./prediction_60_20.txt
-echo 'Bands 60, Rows 20:' >> _results.txt
-../check.py ./prediction_60_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_55_69.txt ]; then
+touch ./prediction_55_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 55 69 | sort | ../reducer.py > ./prediction_55_69.txt
+echo 'Bands 55, Rows 69:' >> _results.txt
+../check.py ./prediction_55_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_60_25.txt ]; then
-touch ./prediction_60_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 60 25 | sort | ../reducer.py > ./prediction_60_25.txt
-echo 'Bands 60, Rows 25:' >> _results.txt
-../check.py ./prediction_60_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_60_30.txt ]; then
-touch ./prediction_60_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 60 30 | sort | ../reducer.py > ./prediction_60_30.txt
-echo 'Bands 60, Rows 30:' >> _results.txt
-../check.py ./prediction_60_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_60_35.txt ]; then
-touch ./prediction_60_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 60 35 | sort | ../reducer.py > ./prediction_60_35.txt
-echo 'Bands 60, Rows 35:' >> _results.txt
-../check.py ./prediction_60_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_60_40.txt ]; then
-touch ./prediction_60_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 60 40 | sort | ../reducer.py > ./prediction_60_40.txt
-echo 'Bands 60, Rows 40:' >> _results.txt
-../check.py ./prediction_60_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_60_42.txt ]; then
+touch ./prediction_60_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 60 42 | sort | ../reducer.py > ./prediction_60_42.txt
+echo 'Bands 60, Rows 42:' >> _results.txt
+../check.py ./prediction_60_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_60_45.txt ]; then
@@ -428,18 +645,32 @@ echo 'Bands 60, Rows 45:' >> _results.txt
 ../check.py ./prediction_60_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_60_50.txt ]; then
-touch ./prediction_60_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 60 50 | sort | ../reducer.py > ./prediction_60_50.txt
-echo 'Bands 60, Rows 50:' >> _results.txt
-../check.py ./prediction_60_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_60_48.txt ]; then
+touch ./prediction_60_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 60 48 | sort | ../reducer.py > ./prediction_60_48.txt
+echo 'Bands 60, Rows 48:' >> _results.txt
+../check.py ./prediction_60_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_60_55.txt ]; then
-touch ./prediction_60_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 60 55 | sort | ../reducer.py > ./prediction_60_55.txt
-echo 'Bands 60, Rows 55:' >> _results.txt
-../check.py ./prediction_60_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_60_51.txt ]; then
+touch ./prediction_60_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 60 51 | sort | ../reducer.py > ./prediction_60_51.txt
+echo 'Bands 60, Rows 51:' >> _results.txt
+../check.py ./prediction_60_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_60_54.txt ]; then
+touch ./prediction_60_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 60 54 | sort | ../reducer.py > ./prediction_60_54.txt
+echo 'Bands 60, Rows 54:' >> _results.txt
+../check.py ./prediction_60_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_60_57.txt ]; then
+touch ./prediction_60_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 60 57 | sort | ../reducer.py > ./prediction_60_57.txt
+echo 'Bands 60, Rows 57:' >> _results.txt
+../check.py ./prediction_60_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_60_60.txt ]; then
@@ -449,53 +680,32 @@ echo 'Bands 60, Rows 60:' >> _results.txt
 ../check.py ./prediction_60_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_60_65.txt ]; then
-touch ./prediction_60_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 60 65 | sort | ../reducer.py > ./prediction_60_65.txt
-echo 'Bands 60, Rows 65:' >> _results.txt
-../check.py ./prediction_60_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_60_63.txt ]; then
+touch ./prediction_60_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 60 63 | sort | ../reducer.py > ./prediction_60_63.txt
+echo 'Bands 60, Rows 63:' >> _results.txt
+../check.py ./prediction_60_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_60_70.txt ]; then
-touch ./prediction_60_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 60 70 | sort | ../reducer.py > ./prediction_60_70.txt
-echo 'Bands 60, Rows 70:' >> _results.txt
-../check.py ./prediction_60_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_60_66.txt ]; then
+touch ./prediction_60_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 60 66 | sort | ../reducer.py > ./prediction_60_66.txt
+echo 'Bands 60, Rows 66:' >> _results.txt
+../check.py ./prediction_60_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_65_20.txt ]; then
-touch ./prediction_65_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 65 20 | sort | ../reducer.py > ./prediction_65_20.txt
-echo 'Bands 65, Rows 20:' >> _results.txt
-../check.py ./prediction_65_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_60_69.txt ]; then
+touch ./prediction_60_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 60 69 | sort | ../reducer.py > ./prediction_60_69.txt
+echo 'Bands 60, Rows 69:' >> _results.txt
+../check.py ./prediction_60_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_65_25.txt ]; then
-touch ./prediction_65_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 65 25 | sort | ../reducer.py > ./prediction_65_25.txt
-echo 'Bands 65, Rows 25:' >> _results.txt
-../check.py ./prediction_65_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_65_30.txt ]; then
-touch ./prediction_65_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 65 30 | sort | ../reducer.py > ./prediction_65_30.txt
-echo 'Bands 65, Rows 30:' >> _results.txt
-../check.py ./prediction_65_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_65_35.txt ]; then
-touch ./prediction_65_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 65 35 | sort | ../reducer.py > ./prediction_65_35.txt
-echo 'Bands 65, Rows 35:' >> _results.txt
-../check.py ./prediction_65_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_65_40.txt ]; then
-touch ./prediction_65_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 65 40 | sort | ../reducer.py > ./prediction_65_40.txt
-echo 'Bands 65, Rows 40:' >> _results.txt
-../check.py ./prediction_65_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_65_42.txt ]; then
+touch ./prediction_65_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 65 42 | sort | ../reducer.py > ./prediction_65_42.txt
+echo 'Bands 65, Rows 42:' >> _results.txt
+../check.py ./prediction_65_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_65_45.txt ]; then
@@ -505,18 +715,32 @@ echo 'Bands 65, Rows 45:' >> _results.txt
 ../check.py ./prediction_65_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_65_50.txt ]; then
-touch ./prediction_65_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 65 50 | sort | ../reducer.py > ./prediction_65_50.txt
-echo 'Bands 65, Rows 50:' >> _results.txt
-../check.py ./prediction_65_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_65_48.txt ]; then
+touch ./prediction_65_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 65 48 | sort | ../reducer.py > ./prediction_65_48.txt
+echo 'Bands 65, Rows 48:' >> _results.txt
+../check.py ./prediction_65_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_65_55.txt ]; then
-touch ./prediction_65_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 65 55 | sort | ../reducer.py > ./prediction_65_55.txt
-echo 'Bands 65, Rows 55:' >> _results.txt
-../check.py ./prediction_65_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_65_51.txt ]; then
+touch ./prediction_65_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 65 51 | sort | ../reducer.py > ./prediction_65_51.txt
+echo 'Bands 65, Rows 51:' >> _results.txt
+../check.py ./prediction_65_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_65_54.txt ]; then
+touch ./prediction_65_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 65 54 | sort | ../reducer.py > ./prediction_65_54.txt
+echo 'Bands 65, Rows 54:' >> _results.txt
+../check.py ./prediction_65_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_65_57.txt ]; then
+touch ./prediction_65_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 65 57 | sort | ../reducer.py > ./prediction_65_57.txt
+echo 'Bands 65, Rows 57:' >> _results.txt
+../check.py ./prediction_65_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_65_60.txt ]; then
@@ -526,53 +750,32 @@ echo 'Bands 65, Rows 60:' >> _results.txt
 ../check.py ./prediction_65_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_65_65.txt ]; then
-touch ./prediction_65_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 65 65 | sort | ../reducer.py > ./prediction_65_65.txt
-echo 'Bands 65, Rows 65:' >> _results.txt
-../check.py ./prediction_65_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_65_63.txt ]; then
+touch ./prediction_65_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 65 63 | sort | ../reducer.py > ./prediction_65_63.txt
+echo 'Bands 65, Rows 63:' >> _results.txt
+../check.py ./prediction_65_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_65_70.txt ]; then
-touch ./prediction_65_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 65 70 | sort | ../reducer.py > ./prediction_65_70.txt
-echo 'Bands 65, Rows 70:' >> _results.txt
-../check.py ./prediction_65_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_65_66.txt ]; then
+touch ./prediction_65_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 65 66 | sort | ../reducer.py > ./prediction_65_66.txt
+echo 'Bands 65, Rows 66:' >> _results.txt
+../check.py ./prediction_65_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_70_20.txt ]; then
-touch ./prediction_70_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 70 20 | sort | ../reducer.py > ./prediction_70_20.txt
-echo 'Bands 70, Rows 20:' >> _results.txt
-../check.py ./prediction_70_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_65_69.txt ]; then
+touch ./prediction_65_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 65 69 | sort | ../reducer.py > ./prediction_65_69.txt
+echo 'Bands 65, Rows 69:' >> _results.txt
+../check.py ./prediction_65_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_70_25.txt ]; then
-touch ./prediction_70_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 70 25 | sort | ../reducer.py > ./prediction_70_25.txt
-echo 'Bands 70, Rows 25:' >> _results.txt
-../check.py ./prediction_70_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_70_30.txt ]; then
-touch ./prediction_70_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 70 30 | sort | ../reducer.py > ./prediction_70_30.txt
-echo 'Bands 70, Rows 30:' >> _results.txt
-../check.py ./prediction_70_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_70_35.txt ]; then
-touch ./prediction_70_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 70 35 | sort | ../reducer.py > ./prediction_70_35.txt
-echo 'Bands 70, Rows 35:' >> _results.txt
-../check.py ./prediction_70_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_70_40.txt ]; then
-touch ./prediction_70_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 70 40 | sort | ../reducer.py > ./prediction_70_40.txt
-echo 'Bands 70, Rows 40:' >> _results.txt
-../check.py ./prediction_70_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_70_42.txt ]; then
+touch ./prediction_70_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 70 42 | sort | ../reducer.py > ./prediction_70_42.txt
+echo 'Bands 70, Rows 42:' >> _results.txt
+../check.py ./prediction_70_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_70_45.txt ]; then
@@ -582,18 +785,32 @@ echo 'Bands 70, Rows 45:' >> _results.txt
 ../check.py ./prediction_70_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_70_50.txt ]; then
-touch ./prediction_70_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 70 50 | sort | ../reducer.py > ./prediction_70_50.txt
-echo 'Bands 70, Rows 50:' >> _results.txt
-../check.py ./prediction_70_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_70_48.txt ]; then
+touch ./prediction_70_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 70 48 | sort | ../reducer.py > ./prediction_70_48.txt
+echo 'Bands 70, Rows 48:' >> _results.txt
+../check.py ./prediction_70_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_70_55.txt ]; then
-touch ./prediction_70_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 70 55 | sort | ../reducer.py > ./prediction_70_55.txt
-echo 'Bands 70, Rows 55:' >> _results.txt
-../check.py ./prediction_70_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_70_51.txt ]; then
+touch ./prediction_70_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 70 51 | sort | ../reducer.py > ./prediction_70_51.txt
+echo 'Bands 70, Rows 51:' >> _results.txt
+../check.py ./prediction_70_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_70_54.txt ]; then
+touch ./prediction_70_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 70 54 | sort | ../reducer.py > ./prediction_70_54.txt
+echo 'Bands 70, Rows 54:' >> _results.txt
+../check.py ./prediction_70_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_70_57.txt ]; then
+touch ./prediction_70_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 70 57 | sort | ../reducer.py > ./prediction_70_57.txt
+echo 'Bands 70, Rows 57:' >> _results.txt
+../check.py ./prediction_70_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_70_60.txt ]; then
@@ -603,53 +820,32 @@ echo 'Bands 70, Rows 60:' >> _results.txt
 ../check.py ./prediction_70_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_70_65.txt ]; then
-touch ./prediction_70_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 70 65 | sort | ../reducer.py > ./prediction_70_65.txt
-echo 'Bands 70, Rows 65:' >> _results.txt
-../check.py ./prediction_70_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_70_63.txt ]; then
+touch ./prediction_70_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 70 63 | sort | ../reducer.py > ./prediction_70_63.txt
+echo 'Bands 70, Rows 63:' >> _results.txt
+../check.py ./prediction_70_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_70_70.txt ]; then
-touch ./prediction_70_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 70 70 | sort | ../reducer.py > ./prediction_70_70.txt
-echo 'Bands 70, Rows 70:' >> _results.txt
-../check.py ./prediction_70_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_70_66.txt ]; then
+touch ./prediction_70_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 70 66 | sort | ../reducer.py > ./prediction_70_66.txt
+echo 'Bands 70, Rows 66:' >> _results.txt
+../check.py ./prediction_70_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_75_20.txt ]; then
-touch ./prediction_75_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 75 20 | sort | ../reducer.py > ./prediction_75_20.txt
-echo 'Bands 75, Rows 20:' >> _results.txt
-../check.py ./prediction_75_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_70_69.txt ]; then
+touch ./prediction_70_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 70 69 | sort | ../reducer.py > ./prediction_70_69.txt
+echo 'Bands 70, Rows 69:' >> _results.txt
+../check.py ./prediction_70_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_75_25.txt ]; then
-touch ./prediction_75_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 75 25 | sort | ../reducer.py > ./prediction_75_25.txt
-echo 'Bands 75, Rows 25:' >> _results.txt
-../check.py ./prediction_75_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_75_30.txt ]; then
-touch ./prediction_75_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 75 30 | sort | ../reducer.py > ./prediction_75_30.txt
-echo 'Bands 75, Rows 30:' >> _results.txt
-../check.py ./prediction_75_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_75_35.txt ]; then
-touch ./prediction_75_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 75 35 | sort | ../reducer.py > ./prediction_75_35.txt
-echo 'Bands 75, Rows 35:' >> _results.txt
-../check.py ./prediction_75_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_75_40.txt ]; then
-touch ./prediction_75_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 75 40 | sort | ../reducer.py > ./prediction_75_40.txt
-echo 'Bands 75, Rows 40:' >> _results.txt
-../check.py ./prediction_75_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_75_42.txt ]; then
+touch ./prediction_75_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 75 42 | sort | ../reducer.py > ./prediction_75_42.txt
+echo 'Bands 75, Rows 42:' >> _results.txt
+../check.py ./prediction_75_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_75_45.txt ]; then
@@ -659,18 +855,32 @@ echo 'Bands 75, Rows 45:' >> _results.txt
 ../check.py ./prediction_75_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_75_50.txt ]; then
-touch ./prediction_75_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 75 50 | sort | ../reducer.py > ./prediction_75_50.txt
-echo 'Bands 75, Rows 50:' >> _results.txt
-../check.py ./prediction_75_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_75_48.txt ]; then
+touch ./prediction_75_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 75 48 | sort | ../reducer.py > ./prediction_75_48.txt
+echo 'Bands 75, Rows 48:' >> _results.txt
+../check.py ./prediction_75_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_75_55.txt ]; then
-touch ./prediction_75_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 75 55 | sort | ../reducer.py > ./prediction_75_55.txt
-echo 'Bands 75, Rows 55:' >> _results.txt
-../check.py ./prediction_75_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_75_51.txt ]; then
+touch ./prediction_75_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 75 51 | sort | ../reducer.py > ./prediction_75_51.txt
+echo 'Bands 75, Rows 51:' >> _results.txt
+../check.py ./prediction_75_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_75_54.txt ]; then
+touch ./prediction_75_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 75 54 | sort | ../reducer.py > ./prediction_75_54.txt
+echo 'Bands 75, Rows 54:' >> _results.txt
+../check.py ./prediction_75_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_75_57.txt ]; then
+touch ./prediction_75_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 75 57 | sort | ../reducer.py > ./prediction_75_57.txt
+echo 'Bands 75, Rows 57:' >> _results.txt
+../check.py ./prediction_75_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_75_60.txt ]; then
@@ -680,53 +890,32 @@ echo 'Bands 75, Rows 60:' >> _results.txt
 ../check.py ./prediction_75_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_75_65.txt ]; then
-touch ./prediction_75_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 75 65 | sort | ../reducer.py > ./prediction_75_65.txt
-echo 'Bands 75, Rows 65:' >> _results.txt
-../check.py ./prediction_75_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_75_63.txt ]; then
+touch ./prediction_75_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 75 63 | sort | ../reducer.py > ./prediction_75_63.txt
+echo 'Bands 75, Rows 63:' >> _results.txt
+../check.py ./prediction_75_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_75_70.txt ]; then
-touch ./prediction_75_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 75 70 | sort | ../reducer.py > ./prediction_75_70.txt
-echo 'Bands 75, Rows 70:' >> _results.txt
-../check.py ./prediction_75_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_75_66.txt ]; then
+touch ./prediction_75_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 75 66 | sort | ../reducer.py > ./prediction_75_66.txt
+echo 'Bands 75, Rows 66:' >> _results.txt
+../check.py ./prediction_75_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_80_20.txt ]; then
-touch ./prediction_80_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 80 20 | sort | ../reducer.py > ./prediction_80_20.txt
-echo 'Bands 80, Rows 20:' >> _results.txt
-../check.py ./prediction_80_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_75_69.txt ]; then
+touch ./prediction_75_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 75 69 | sort | ../reducer.py > ./prediction_75_69.txt
+echo 'Bands 75, Rows 69:' >> _results.txt
+../check.py ./prediction_75_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_80_25.txt ]; then
-touch ./prediction_80_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 80 25 | sort | ../reducer.py > ./prediction_80_25.txt
-echo 'Bands 80, Rows 25:' >> _results.txt
-../check.py ./prediction_80_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_80_30.txt ]; then
-touch ./prediction_80_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 80 30 | sort | ../reducer.py > ./prediction_80_30.txt
-echo 'Bands 80, Rows 30:' >> _results.txt
-../check.py ./prediction_80_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_80_35.txt ]; then
-touch ./prediction_80_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 80 35 | sort | ../reducer.py > ./prediction_80_35.txt
-echo 'Bands 80, Rows 35:' >> _results.txt
-../check.py ./prediction_80_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_80_40.txt ]; then
-touch ./prediction_80_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 80 40 | sort | ../reducer.py > ./prediction_80_40.txt
-echo 'Bands 80, Rows 40:' >> _results.txt
-../check.py ./prediction_80_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_80_42.txt ]; then
+touch ./prediction_80_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 80 42 | sort | ../reducer.py > ./prediction_80_42.txt
+echo 'Bands 80, Rows 42:' >> _results.txt
+../check.py ./prediction_80_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_80_45.txt ]; then
@@ -736,18 +925,32 @@ echo 'Bands 80, Rows 45:' >> _results.txt
 ../check.py ./prediction_80_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_80_50.txt ]; then
-touch ./prediction_80_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 80 50 | sort | ../reducer.py > ./prediction_80_50.txt
-echo 'Bands 80, Rows 50:' >> _results.txt
-../check.py ./prediction_80_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_80_48.txt ]; then
+touch ./prediction_80_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 80 48 | sort | ../reducer.py > ./prediction_80_48.txt
+echo 'Bands 80, Rows 48:' >> _results.txt
+../check.py ./prediction_80_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_80_55.txt ]; then
-touch ./prediction_80_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 80 55 | sort | ../reducer.py > ./prediction_80_55.txt
-echo 'Bands 80, Rows 55:' >> _results.txt
-../check.py ./prediction_80_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_80_51.txt ]; then
+touch ./prediction_80_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 80 51 | sort | ../reducer.py > ./prediction_80_51.txt
+echo 'Bands 80, Rows 51:' >> _results.txt
+../check.py ./prediction_80_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_80_54.txt ]; then
+touch ./prediction_80_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 80 54 | sort | ../reducer.py > ./prediction_80_54.txt
+echo 'Bands 80, Rows 54:' >> _results.txt
+../check.py ./prediction_80_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_80_57.txt ]; then
+touch ./prediction_80_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 80 57 | sort | ../reducer.py > ./prediction_80_57.txt
+echo 'Bands 80, Rows 57:' >> _results.txt
+../check.py ./prediction_80_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_80_60.txt ]; then
@@ -757,53 +960,32 @@ echo 'Bands 80, Rows 60:' >> _results.txt
 ../check.py ./prediction_80_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_80_65.txt ]; then
-touch ./prediction_80_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 80 65 | sort | ../reducer.py > ./prediction_80_65.txt
-echo 'Bands 80, Rows 65:' >> _results.txt
-../check.py ./prediction_80_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_80_63.txt ]; then
+touch ./prediction_80_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 80 63 | sort | ../reducer.py > ./prediction_80_63.txt
+echo 'Bands 80, Rows 63:' >> _results.txt
+../check.py ./prediction_80_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_80_70.txt ]; then
-touch ./prediction_80_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 80 70 | sort | ../reducer.py > ./prediction_80_70.txt
-echo 'Bands 80, Rows 70:' >> _results.txt
-../check.py ./prediction_80_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_80_66.txt ]; then
+touch ./prediction_80_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 80 66 | sort | ../reducer.py > ./prediction_80_66.txt
+echo 'Bands 80, Rows 66:' >> _results.txt
+../check.py ./prediction_80_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_85_20.txt ]; then
-touch ./prediction_85_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 85 20 | sort | ../reducer.py > ./prediction_85_20.txt
-echo 'Bands 85, Rows 20:' >> _results.txt
-../check.py ./prediction_85_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_80_69.txt ]; then
+touch ./prediction_80_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 80 69 | sort | ../reducer.py > ./prediction_80_69.txt
+echo 'Bands 80, Rows 69:' >> _results.txt
+../check.py ./prediction_80_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_85_25.txt ]; then
-touch ./prediction_85_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 85 25 | sort | ../reducer.py > ./prediction_85_25.txt
-echo 'Bands 85, Rows 25:' >> _results.txt
-../check.py ./prediction_85_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_85_30.txt ]; then
-touch ./prediction_85_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 85 30 | sort | ../reducer.py > ./prediction_85_30.txt
-echo 'Bands 85, Rows 30:' >> _results.txt
-../check.py ./prediction_85_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_85_35.txt ]; then
-touch ./prediction_85_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 85 35 | sort | ../reducer.py > ./prediction_85_35.txt
-echo 'Bands 85, Rows 35:' >> _results.txt
-../check.py ./prediction_85_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_85_40.txt ]; then
-touch ./prediction_85_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 85 40 | sort | ../reducer.py > ./prediction_85_40.txt
-echo 'Bands 85, Rows 40:' >> _results.txt
-../check.py ./prediction_85_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_85_42.txt ]; then
+touch ./prediction_85_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 85 42 | sort | ../reducer.py > ./prediction_85_42.txt
+echo 'Bands 85, Rows 42:' >> _results.txt
+../check.py ./prediction_85_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_85_45.txt ]; then
@@ -813,18 +995,32 @@ echo 'Bands 85, Rows 45:' >> _results.txt
 ../check.py ./prediction_85_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_85_50.txt ]; then
-touch ./prediction_85_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 85 50 | sort | ../reducer.py > ./prediction_85_50.txt
-echo 'Bands 85, Rows 50:' >> _results.txt
-../check.py ./prediction_85_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_85_48.txt ]; then
+touch ./prediction_85_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 85 48 | sort | ../reducer.py > ./prediction_85_48.txt
+echo 'Bands 85, Rows 48:' >> _results.txt
+../check.py ./prediction_85_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_85_55.txt ]; then
-touch ./prediction_85_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 85 55 | sort | ../reducer.py > ./prediction_85_55.txt
-echo 'Bands 85, Rows 55:' >> _results.txt
-../check.py ./prediction_85_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_85_51.txt ]; then
+touch ./prediction_85_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 85 51 | sort | ../reducer.py > ./prediction_85_51.txt
+echo 'Bands 85, Rows 51:' >> _results.txt
+../check.py ./prediction_85_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_85_54.txt ]; then
+touch ./prediction_85_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 85 54 | sort | ../reducer.py > ./prediction_85_54.txt
+echo 'Bands 85, Rows 54:' >> _results.txt
+../check.py ./prediction_85_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_85_57.txt ]; then
+touch ./prediction_85_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 85 57 | sort | ../reducer.py > ./prediction_85_57.txt
+echo 'Bands 85, Rows 57:' >> _results.txt
+../check.py ./prediction_85_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_85_60.txt ]; then
@@ -834,53 +1030,32 @@ echo 'Bands 85, Rows 60:' >> _results.txt
 ../check.py ./prediction_85_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_85_65.txt ]; then
-touch ./prediction_85_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 85 65 | sort | ../reducer.py > ./prediction_85_65.txt
-echo 'Bands 85, Rows 65:' >> _results.txt
-../check.py ./prediction_85_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_85_63.txt ]; then
+touch ./prediction_85_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 85 63 | sort | ../reducer.py > ./prediction_85_63.txt
+echo 'Bands 85, Rows 63:' >> _results.txt
+../check.py ./prediction_85_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_85_70.txt ]; then
-touch ./prediction_85_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 85 70 | sort | ../reducer.py > ./prediction_85_70.txt
-echo 'Bands 85, Rows 70:' >> _results.txt
-../check.py ./prediction_85_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_85_66.txt ]; then
+touch ./prediction_85_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 85 66 | sort | ../reducer.py > ./prediction_85_66.txt
+echo 'Bands 85, Rows 66:' >> _results.txt
+../check.py ./prediction_85_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_90_20.txt ]; then
-touch ./prediction_90_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 90 20 | sort | ../reducer.py > ./prediction_90_20.txt
-echo 'Bands 90, Rows 20:' >> _results.txt
-../check.py ./prediction_90_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_85_69.txt ]; then
+touch ./prediction_85_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 85 69 | sort | ../reducer.py > ./prediction_85_69.txt
+echo 'Bands 85, Rows 69:' >> _results.txt
+../check.py ./prediction_85_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_90_25.txt ]; then
-touch ./prediction_90_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 90 25 | sort | ../reducer.py > ./prediction_90_25.txt
-echo 'Bands 90, Rows 25:' >> _results.txt
-../check.py ./prediction_90_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_90_30.txt ]; then
-touch ./prediction_90_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 90 30 | sort | ../reducer.py > ./prediction_90_30.txt
-echo 'Bands 90, Rows 30:' >> _results.txt
-../check.py ./prediction_90_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_90_35.txt ]; then
-touch ./prediction_90_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 90 35 | sort | ../reducer.py > ./prediction_90_35.txt
-echo 'Bands 90, Rows 35:' >> _results.txt
-../check.py ./prediction_90_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_90_40.txt ]; then
-touch ./prediction_90_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 90 40 | sort | ../reducer.py > ./prediction_90_40.txt
-echo 'Bands 90, Rows 40:' >> _results.txt
-../check.py ./prediction_90_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_90_42.txt ]; then
+touch ./prediction_90_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 90 42 | sort | ../reducer.py > ./prediction_90_42.txt
+echo 'Bands 90, Rows 42:' >> _results.txt
+../check.py ./prediction_90_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_90_45.txt ]; then
@@ -890,18 +1065,32 @@ echo 'Bands 90, Rows 45:' >> _results.txt
 ../check.py ./prediction_90_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_90_50.txt ]; then
-touch ./prediction_90_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 90 50 | sort | ../reducer.py > ./prediction_90_50.txt
-echo 'Bands 90, Rows 50:' >> _results.txt
-../check.py ./prediction_90_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_90_48.txt ]; then
+touch ./prediction_90_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 90 48 | sort | ../reducer.py > ./prediction_90_48.txt
+echo 'Bands 90, Rows 48:' >> _results.txt
+../check.py ./prediction_90_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_90_55.txt ]; then
-touch ./prediction_90_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 90 55 | sort | ../reducer.py > ./prediction_90_55.txt
-echo 'Bands 90, Rows 55:' >> _results.txt
-../check.py ./prediction_90_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_90_51.txt ]; then
+touch ./prediction_90_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 90 51 | sort | ../reducer.py > ./prediction_90_51.txt
+echo 'Bands 90, Rows 51:' >> _results.txt
+../check.py ./prediction_90_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_90_54.txt ]; then
+touch ./prediction_90_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 90 54 | sort | ../reducer.py > ./prediction_90_54.txt
+echo 'Bands 90, Rows 54:' >> _results.txt
+../check.py ./prediction_90_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_90_57.txt ]; then
+touch ./prediction_90_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 90 57 | sort | ../reducer.py > ./prediction_90_57.txt
+echo 'Bands 90, Rows 57:' >> _results.txt
+../check.py ./prediction_90_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_90_60.txt ]; then
@@ -911,53 +1100,32 @@ echo 'Bands 90, Rows 60:' >> _results.txt
 ../check.py ./prediction_90_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_90_65.txt ]; then
-touch ./prediction_90_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 90 65 | sort | ../reducer.py > ./prediction_90_65.txt
-echo 'Bands 90, Rows 65:' >> _results.txt
-../check.py ./prediction_90_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_90_63.txt ]; then
+touch ./prediction_90_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 90 63 | sort | ../reducer.py > ./prediction_90_63.txt
+echo 'Bands 90, Rows 63:' >> _results.txt
+../check.py ./prediction_90_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_90_70.txt ]; then
-touch ./prediction_90_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 90 70 | sort | ../reducer.py > ./prediction_90_70.txt
-echo 'Bands 90, Rows 70:' >> _results.txt
-../check.py ./prediction_90_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_90_66.txt ]; then
+touch ./prediction_90_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 90 66 | sort | ../reducer.py > ./prediction_90_66.txt
+echo 'Bands 90, Rows 66:' >> _results.txt
+../check.py ./prediction_90_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_95_20.txt ]; then
-touch ./prediction_95_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 95 20 | sort | ../reducer.py > ./prediction_95_20.txt
-echo 'Bands 95, Rows 20:' >> _results.txt
-../check.py ./prediction_95_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_90_69.txt ]; then
+touch ./prediction_90_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 90 69 | sort | ../reducer.py > ./prediction_90_69.txt
+echo 'Bands 90, Rows 69:' >> _results.txt
+../check.py ./prediction_90_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_95_25.txt ]; then
-touch ./prediction_95_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 95 25 | sort | ../reducer.py > ./prediction_95_25.txt
-echo 'Bands 95, Rows 25:' >> _results.txt
-../check.py ./prediction_95_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_95_30.txt ]; then
-touch ./prediction_95_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 95 30 | sort | ../reducer.py > ./prediction_95_30.txt
-echo 'Bands 95, Rows 30:' >> _results.txt
-../check.py ./prediction_95_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_95_35.txt ]; then
-touch ./prediction_95_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 95 35 | sort | ../reducer.py > ./prediction_95_35.txt
-echo 'Bands 95, Rows 35:' >> _results.txt
-../check.py ./prediction_95_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_95_40.txt ]; then
-touch ./prediction_95_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 95 40 | sort | ../reducer.py > ./prediction_95_40.txt
-echo 'Bands 95, Rows 40:' >> _results.txt
-../check.py ./prediction_95_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_95_42.txt ]; then
+touch ./prediction_95_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 95 42 | sort | ../reducer.py > ./prediction_95_42.txt
+echo 'Bands 95, Rows 42:' >> _results.txt
+../check.py ./prediction_95_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_95_45.txt ]; then
@@ -967,18 +1135,32 @@ echo 'Bands 95, Rows 45:' >> _results.txt
 ../check.py ./prediction_95_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_95_50.txt ]; then
-touch ./prediction_95_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 95 50 | sort | ../reducer.py > ./prediction_95_50.txt
-echo 'Bands 95, Rows 50:' >> _results.txt
-../check.py ./prediction_95_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_95_48.txt ]; then
+touch ./prediction_95_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 95 48 | sort | ../reducer.py > ./prediction_95_48.txt
+echo 'Bands 95, Rows 48:' >> _results.txt
+../check.py ./prediction_95_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_95_55.txt ]; then
-touch ./prediction_95_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 95 55 | sort | ../reducer.py > ./prediction_95_55.txt
-echo 'Bands 95, Rows 55:' >> _results.txt
-../check.py ./prediction_95_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_95_51.txt ]; then
+touch ./prediction_95_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 95 51 | sort | ../reducer.py > ./prediction_95_51.txt
+echo 'Bands 95, Rows 51:' >> _results.txt
+../check.py ./prediction_95_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_95_54.txt ]; then
+touch ./prediction_95_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 95 54 | sort | ../reducer.py > ./prediction_95_54.txt
+echo 'Bands 95, Rows 54:' >> _results.txt
+../check.py ./prediction_95_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_95_57.txt ]; then
+touch ./prediction_95_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 95 57 | sort | ../reducer.py > ./prediction_95_57.txt
+echo 'Bands 95, Rows 57:' >> _results.txt
+../check.py ./prediction_95_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_95_60.txt ]; then
@@ -988,53 +1170,32 @@ echo 'Bands 95, Rows 60:' >> _results.txt
 ../check.py ./prediction_95_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_95_65.txt ]; then
-touch ./prediction_95_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 95 65 | sort | ../reducer.py > ./prediction_95_65.txt
-echo 'Bands 95, Rows 65:' >> _results.txt
-../check.py ./prediction_95_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_95_63.txt ]; then
+touch ./prediction_95_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 95 63 | sort | ../reducer.py > ./prediction_95_63.txt
+echo 'Bands 95, Rows 63:' >> _results.txt
+../check.py ./prediction_95_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_95_70.txt ]; then
-touch ./prediction_95_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 95 70 | sort | ../reducer.py > ./prediction_95_70.txt
-echo 'Bands 95, Rows 70:' >> _results.txt
-../check.py ./prediction_95_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_95_66.txt ]; then
+touch ./prediction_95_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 95 66 | sort | ../reducer.py > ./prediction_95_66.txt
+echo 'Bands 95, Rows 66:' >> _results.txt
+../check.py ./prediction_95_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_100_20.txt ]; then
-touch ./prediction_100_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 100 20 | sort | ../reducer.py > ./prediction_100_20.txt
-echo 'Bands 100, Rows 20:' >> _results.txt
-../check.py ./prediction_100_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_95_69.txt ]; then
+touch ./prediction_95_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 95 69 | sort | ../reducer.py > ./prediction_95_69.txt
+echo 'Bands 95, Rows 69:' >> _results.txt
+../check.py ./prediction_95_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_100_25.txt ]; then
-touch ./prediction_100_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 100 25 | sort | ../reducer.py > ./prediction_100_25.txt
-echo 'Bands 100, Rows 25:' >> _results.txt
-../check.py ./prediction_100_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_100_30.txt ]; then
-touch ./prediction_100_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 100 30 | sort | ../reducer.py > ./prediction_100_30.txt
-echo 'Bands 100, Rows 30:' >> _results.txt
-../check.py ./prediction_100_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_100_35.txt ]; then
-touch ./prediction_100_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 100 35 | sort | ../reducer.py > ./prediction_100_35.txt
-echo 'Bands 100, Rows 35:' >> _results.txt
-../check.py ./prediction_100_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_100_40.txt ]; then
-touch ./prediction_100_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 100 40 | sort | ../reducer.py > ./prediction_100_40.txt
-echo 'Bands 100, Rows 40:' >> _results.txt
-../check.py ./prediction_100_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_100_42.txt ]; then
+touch ./prediction_100_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 100 42 | sort | ../reducer.py > ./prediction_100_42.txt
+echo 'Bands 100, Rows 42:' >> _results.txt
+../check.py ./prediction_100_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_100_45.txt ]; then
@@ -1044,18 +1205,32 @@ echo 'Bands 100, Rows 45:' >> _results.txt
 ../check.py ./prediction_100_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_100_50.txt ]; then
-touch ./prediction_100_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 100 50 | sort | ../reducer.py > ./prediction_100_50.txt
-echo 'Bands 100, Rows 50:' >> _results.txt
-../check.py ./prediction_100_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_100_48.txt ]; then
+touch ./prediction_100_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 100 48 | sort | ../reducer.py > ./prediction_100_48.txt
+echo 'Bands 100, Rows 48:' >> _results.txt
+../check.py ./prediction_100_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_100_55.txt ]; then
-touch ./prediction_100_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 100 55 | sort | ../reducer.py > ./prediction_100_55.txt
-echo 'Bands 100, Rows 55:' >> _results.txt
-../check.py ./prediction_100_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_100_51.txt ]; then
+touch ./prediction_100_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 100 51 | sort | ../reducer.py > ./prediction_100_51.txt
+echo 'Bands 100, Rows 51:' >> _results.txt
+../check.py ./prediction_100_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_100_54.txt ]; then
+touch ./prediction_100_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 100 54 | sort | ../reducer.py > ./prediction_100_54.txt
+echo 'Bands 100, Rows 54:' >> _results.txt
+../check.py ./prediction_100_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_100_57.txt ]; then
+touch ./prediction_100_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 100 57 | sort | ../reducer.py > ./prediction_100_57.txt
+echo 'Bands 100, Rows 57:' >> _results.txt
+../check.py ./prediction_100_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_100_60.txt ]; then
@@ -1065,53 +1240,32 @@ echo 'Bands 100, Rows 60:' >> _results.txt
 ../check.py ./prediction_100_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_100_65.txt ]; then
-touch ./prediction_100_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 100 65 | sort | ../reducer.py > ./prediction_100_65.txt
-echo 'Bands 100, Rows 65:' >> _results.txt
-../check.py ./prediction_100_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_100_63.txt ]; then
+touch ./prediction_100_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 100 63 | sort | ../reducer.py > ./prediction_100_63.txt
+echo 'Bands 100, Rows 63:' >> _results.txt
+../check.py ./prediction_100_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_100_70.txt ]; then
-touch ./prediction_100_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 100 70 | sort | ../reducer.py > ./prediction_100_70.txt
-echo 'Bands 100, Rows 70:' >> _results.txt
-../check.py ./prediction_100_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_100_66.txt ]; then
+touch ./prediction_100_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 100 66 | sort | ../reducer.py > ./prediction_100_66.txt
+echo 'Bands 100, Rows 66:' >> _results.txt
+../check.py ./prediction_100_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_105_20.txt ]; then
-touch ./prediction_105_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 105 20 | sort | ../reducer.py > ./prediction_105_20.txt
-echo 'Bands 105, Rows 20:' >> _results.txt
-../check.py ./prediction_105_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_100_69.txt ]; then
+touch ./prediction_100_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 100 69 | sort | ../reducer.py > ./prediction_100_69.txt
+echo 'Bands 100, Rows 69:' >> _results.txt
+../check.py ./prediction_100_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_105_25.txt ]; then
-touch ./prediction_105_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 105 25 | sort | ../reducer.py > ./prediction_105_25.txt
-echo 'Bands 105, Rows 25:' >> _results.txt
-../check.py ./prediction_105_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_105_30.txt ]; then
-touch ./prediction_105_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 105 30 | sort | ../reducer.py > ./prediction_105_30.txt
-echo 'Bands 105, Rows 30:' >> _results.txt
-../check.py ./prediction_105_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_105_35.txt ]; then
-touch ./prediction_105_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 105 35 | sort | ../reducer.py > ./prediction_105_35.txt
-echo 'Bands 105, Rows 35:' >> _results.txt
-../check.py ./prediction_105_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_105_40.txt ]; then
-touch ./prediction_105_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 105 40 | sort | ../reducer.py > ./prediction_105_40.txt
-echo 'Bands 105, Rows 40:' >> _results.txt
-../check.py ./prediction_105_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_105_42.txt ]; then
+touch ./prediction_105_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 105 42 | sort | ../reducer.py > ./prediction_105_42.txt
+echo 'Bands 105, Rows 42:' >> _results.txt
+../check.py ./prediction_105_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_105_45.txt ]; then
@@ -1121,18 +1275,32 @@ echo 'Bands 105, Rows 45:' >> _results.txt
 ../check.py ./prediction_105_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_105_50.txt ]; then
-touch ./prediction_105_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 105 50 | sort | ../reducer.py > ./prediction_105_50.txt
-echo 'Bands 105, Rows 50:' >> _results.txt
-../check.py ./prediction_105_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_105_48.txt ]; then
+touch ./prediction_105_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 105 48 | sort | ../reducer.py > ./prediction_105_48.txt
+echo 'Bands 105, Rows 48:' >> _results.txt
+../check.py ./prediction_105_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_105_55.txt ]; then
-touch ./prediction_105_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 105 55 | sort | ../reducer.py > ./prediction_105_55.txt
-echo 'Bands 105, Rows 55:' >> _results.txt
-../check.py ./prediction_105_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_105_51.txt ]; then
+touch ./prediction_105_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 105 51 | sort | ../reducer.py > ./prediction_105_51.txt
+echo 'Bands 105, Rows 51:' >> _results.txt
+../check.py ./prediction_105_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_105_54.txt ]; then
+touch ./prediction_105_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 105 54 | sort | ../reducer.py > ./prediction_105_54.txt
+echo 'Bands 105, Rows 54:' >> _results.txt
+../check.py ./prediction_105_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_105_57.txt ]; then
+touch ./prediction_105_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 105 57 | sort | ../reducer.py > ./prediction_105_57.txt
+echo 'Bands 105, Rows 57:' >> _results.txt
+../check.py ./prediction_105_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_105_60.txt ]; then
@@ -1142,53 +1310,32 @@ echo 'Bands 105, Rows 60:' >> _results.txt
 ../check.py ./prediction_105_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_105_65.txt ]; then
-touch ./prediction_105_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 105 65 | sort | ../reducer.py > ./prediction_105_65.txt
-echo 'Bands 105, Rows 65:' >> _results.txt
-../check.py ./prediction_105_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_105_63.txt ]; then
+touch ./prediction_105_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 105 63 | sort | ../reducer.py > ./prediction_105_63.txt
+echo 'Bands 105, Rows 63:' >> _results.txt
+../check.py ./prediction_105_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_105_70.txt ]; then
-touch ./prediction_105_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 105 70 | sort | ../reducer.py > ./prediction_105_70.txt
-echo 'Bands 105, Rows 70:' >> _results.txt
-../check.py ./prediction_105_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_105_66.txt ]; then
+touch ./prediction_105_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 105 66 | sort | ../reducer.py > ./prediction_105_66.txt
+echo 'Bands 105, Rows 66:' >> _results.txt
+../check.py ./prediction_105_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_110_20.txt ]; then
-touch ./prediction_110_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 110 20 | sort | ../reducer.py > ./prediction_110_20.txt
-echo 'Bands 110, Rows 20:' >> _results.txt
-../check.py ./prediction_110_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_105_69.txt ]; then
+touch ./prediction_105_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 105 69 | sort | ../reducer.py > ./prediction_105_69.txt
+echo 'Bands 105, Rows 69:' >> _results.txt
+../check.py ./prediction_105_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_110_25.txt ]; then
-touch ./prediction_110_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 110 25 | sort | ../reducer.py > ./prediction_110_25.txt
-echo 'Bands 110, Rows 25:' >> _results.txt
-../check.py ./prediction_110_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_110_30.txt ]; then
-touch ./prediction_110_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 110 30 | sort | ../reducer.py > ./prediction_110_30.txt
-echo 'Bands 110, Rows 30:' >> _results.txt
-../check.py ./prediction_110_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_110_35.txt ]; then
-touch ./prediction_110_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 110 35 | sort | ../reducer.py > ./prediction_110_35.txt
-echo 'Bands 110, Rows 35:' >> _results.txt
-../check.py ./prediction_110_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_110_40.txt ]; then
-touch ./prediction_110_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 110 40 | sort | ../reducer.py > ./prediction_110_40.txt
-echo 'Bands 110, Rows 40:' >> _results.txt
-../check.py ./prediction_110_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_110_42.txt ]; then
+touch ./prediction_110_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 110 42 | sort | ../reducer.py > ./prediction_110_42.txt
+echo 'Bands 110, Rows 42:' >> _results.txt
+../check.py ./prediction_110_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_110_45.txt ]; then
@@ -1198,18 +1345,32 @@ echo 'Bands 110, Rows 45:' >> _results.txt
 ../check.py ./prediction_110_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_110_50.txt ]; then
-touch ./prediction_110_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 110 50 | sort | ../reducer.py > ./prediction_110_50.txt
-echo 'Bands 110, Rows 50:' >> _results.txt
-../check.py ./prediction_110_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_110_48.txt ]; then
+touch ./prediction_110_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 110 48 | sort | ../reducer.py > ./prediction_110_48.txt
+echo 'Bands 110, Rows 48:' >> _results.txt
+../check.py ./prediction_110_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_110_55.txt ]; then
-touch ./prediction_110_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 110 55 | sort | ../reducer.py > ./prediction_110_55.txt
-echo 'Bands 110, Rows 55:' >> _results.txt
-../check.py ./prediction_110_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_110_51.txt ]; then
+touch ./prediction_110_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 110 51 | sort | ../reducer.py > ./prediction_110_51.txt
+echo 'Bands 110, Rows 51:' >> _results.txt
+../check.py ./prediction_110_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_110_54.txt ]; then
+touch ./prediction_110_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 110 54 | sort | ../reducer.py > ./prediction_110_54.txt
+echo 'Bands 110, Rows 54:' >> _results.txt
+../check.py ./prediction_110_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_110_57.txt ]; then
+touch ./prediction_110_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 110 57 | sort | ../reducer.py > ./prediction_110_57.txt
+echo 'Bands 110, Rows 57:' >> _results.txt
+../check.py ./prediction_110_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_110_60.txt ]; then
@@ -1219,53 +1380,32 @@ echo 'Bands 110, Rows 60:' >> _results.txt
 ../check.py ./prediction_110_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_110_65.txt ]; then
-touch ./prediction_110_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 110 65 | sort | ../reducer.py > ./prediction_110_65.txt
-echo 'Bands 110, Rows 65:' >> _results.txt
-../check.py ./prediction_110_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_110_63.txt ]; then
+touch ./prediction_110_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 110 63 | sort | ../reducer.py > ./prediction_110_63.txt
+echo 'Bands 110, Rows 63:' >> _results.txt
+../check.py ./prediction_110_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_110_70.txt ]; then
-touch ./prediction_110_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 110 70 | sort | ../reducer.py > ./prediction_110_70.txt
-echo 'Bands 110, Rows 70:' >> _results.txt
-../check.py ./prediction_110_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_110_66.txt ]; then
+touch ./prediction_110_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 110 66 | sort | ../reducer.py > ./prediction_110_66.txt
+echo 'Bands 110, Rows 66:' >> _results.txt
+../check.py ./prediction_110_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_115_20.txt ]; then
-touch ./prediction_115_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 115 20 | sort | ../reducer.py > ./prediction_115_20.txt
-echo 'Bands 115, Rows 20:' >> _results.txt
-../check.py ./prediction_115_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_110_69.txt ]; then
+touch ./prediction_110_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 110 69 | sort | ../reducer.py > ./prediction_110_69.txt
+echo 'Bands 110, Rows 69:' >> _results.txt
+../check.py ./prediction_110_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_115_25.txt ]; then
-touch ./prediction_115_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 115 25 | sort | ../reducer.py > ./prediction_115_25.txt
-echo 'Bands 115, Rows 25:' >> _results.txt
-../check.py ./prediction_115_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_115_30.txt ]; then
-touch ./prediction_115_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 115 30 | sort | ../reducer.py > ./prediction_115_30.txt
-echo 'Bands 115, Rows 30:' >> _results.txt
-../check.py ./prediction_115_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_115_35.txt ]; then
-touch ./prediction_115_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 115 35 | sort | ../reducer.py > ./prediction_115_35.txt
-echo 'Bands 115, Rows 35:' >> _results.txt
-../check.py ./prediction_115_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_115_40.txt ]; then
-touch ./prediction_115_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 115 40 | sort | ../reducer.py > ./prediction_115_40.txt
-echo 'Bands 115, Rows 40:' >> _results.txt
-../check.py ./prediction_115_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_115_42.txt ]; then
+touch ./prediction_115_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 115 42 | sort | ../reducer.py > ./prediction_115_42.txt
+echo 'Bands 115, Rows 42:' >> _results.txt
+../check.py ./prediction_115_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_115_45.txt ]; then
@@ -1275,18 +1415,32 @@ echo 'Bands 115, Rows 45:' >> _results.txt
 ../check.py ./prediction_115_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_115_50.txt ]; then
-touch ./prediction_115_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 115 50 | sort | ../reducer.py > ./prediction_115_50.txt
-echo 'Bands 115, Rows 50:' >> _results.txt
-../check.py ./prediction_115_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_115_48.txt ]; then
+touch ./prediction_115_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 115 48 | sort | ../reducer.py > ./prediction_115_48.txt
+echo 'Bands 115, Rows 48:' >> _results.txt
+../check.py ./prediction_115_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_115_55.txt ]; then
-touch ./prediction_115_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 115 55 | sort | ../reducer.py > ./prediction_115_55.txt
-echo 'Bands 115, Rows 55:' >> _results.txt
-../check.py ./prediction_115_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_115_51.txt ]; then
+touch ./prediction_115_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 115 51 | sort | ../reducer.py > ./prediction_115_51.txt
+echo 'Bands 115, Rows 51:' >> _results.txt
+../check.py ./prediction_115_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_115_54.txt ]; then
+touch ./prediction_115_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 115 54 | sort | ../reducer.py > ./prediction_115_54.txt
+echo 'Bands 115, Rows 54:' >> _results.txt
+../check.py ./prediction_115_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_115_57.txt ]; then
+touch ./prediction_115_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 115 57 | sort | ../reducer.py > ./prediction_115_57.txt
+echo 'Bands 115, Rows 57:' >> _results.txt
+../check.py ./prediction_115_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_115_60.txt ]; then
@@ -1296,53 +1450,32 @@ echo 'Bands 115, Rows 60:' >> _results.txt
 ../check.py ./prediction_115_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_115_65.txt ]; then
-touch ./prediction_115_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 115 65 | sort | ../reducer.py > ./prediction_115_65.txt
-echo 'Bands 115, Rows 65:' >> _results.txt
-../check.py ./prediction_115_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_115_63.txt ]; then
+touch ./prediction_115_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 115 63 | sort | ../reducer.py > ./prediction_115_63.txt
+echo 'Bands 115, Rows 63:' >> _results.txt
+../check.py ./prediction_115_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_115_70.txt ]; then
-touch ./prediction_115_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 115 70 | sort | ../reducer.py > ./prediction_115_70.txt
-echo 'Bands 115, Rows 70:' >> _results.txt
-../check.py ./prediction_115_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_115_66.txt ]; then
+touch ./prediction_115_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 115 66 | sort | ../reducer.py > ./prediction_115_66.txt
+echo 'Bands 115, Rows 66:' >> _results.txt
+../check.py ./prediction_115_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_120_20.txt ]; then
-touch ./prediction_120_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 120 20 | sort | ../reducer.py > ./prediction_120_20.txt
-echo 'Bands 120, Rows 20:' >> _results.txt
-../check.py ./prediction_120_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_115_69.txt ]; then
+touch ./prediction_115_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 115 69 | sort | ../reducer.py > ./prediction_115_69.txt
+echo 'Bands 115, Rows 69:' >> _results.txt
+../check.py ./prediction_115_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_120_25.txt ]; then
-touch ./prediction_120_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 120 25 | sort | ../reducer.py > ./prediction_120_25.txt
-echo 'Bands 120, Rows 25:' >> _results.txt
-../check.py ./prediction_120_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_120_30.txt ]; then
-touch ./prediction_120_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 120 30 | sort | ../reducer.py > ./prediction_120_30.txt
-echo 'Bands 120, Rows 30:' >> _results.txt
-../check.py ./prediction_120_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_120_35.txt ]; then
-touch ./prediction_120_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 120 35 | sort | ../reducer.py > ./prediction_120_35.txt
-echo 'Bands 120, Rows 35:' >> _results.txt
-../check.py ./prediction_120_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_120_40.txt ]; then
-touch ./prediction_120_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 120 40 | sort | ../reducer.py > ./prediction_120_40.txt
-echo 'Bands 120, Rows 40:' >> _results.txt
-../check.py ./prediction_120_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_120_42.txt ]; then
+touch ./prediction_120_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 120 42 | sort | ../reducer.py > ./prediction_120_42.txt
+echo 'Bands 120, Rows 42:' >> _results.txt
+../check.py ./prediction_120_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_120_45.txt ]; then
@@ -1352,18 +1485,32 @@ echo 'Bands 120, Rows 45:' >> _results.txt
 ../check.py ./prediction_120_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_120_50.txt ]; then
-touch ./prediction_120_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 120 50 | sort | ../reducer.py > ./prediction_120_50.txt
-echo 'Bands 120, Rows 50:' >> _results.txt
-../check.py ./prediction_120_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_120_48.txt ]; then
+touch ./prediction_120_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 120 48 | sort | ../reducer.py > ./prediction_120_48.txt
+echo 'Bands 120, Rows 48:' >> _results.txt
+../check.py ./prediction_120_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_120_55.txt ]; then
-touch ./prediction_120_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 120 55 | sort | ../reducer.py > ./prediction_120_55.txt
-echo 'Bands 120, Rows 55:' >> _results.txt
-../check.py ./prediction_120_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_120_51.txt ]; then
+touch ./prediction_120_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 120 51 | sort | ../reducer.py > ./prediction_120_51.txt
+echo 'Bands 120, Rows 51:' >> _results.txt
+../check.py ./prediction_120_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_120_54.txt ]; then
+touch ./prediction_120_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 120 54 | sort | ../reducer.py > ./prediction_120_54.txt
+echo 'Bands 120, Rows 54:' >> _results.txt
+../check.py ./prediction_120_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_120_57.txt ]; then
+touch ./prediction_120_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 120 57 | sort | ../reducer.py > ./prediction_120_57.txt
+echo 'Bands 120, Rows 57:' >> _results.txt
+../check.py ./prediction_120_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_120_60.txt ]; then
@@ -1373,53 +1520,32 @@ echo 'Bands 120, Rows 60:' >> _results.txt
 ../check.py ./prediction_120_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_120_65.txt ]; then
-touch ./prediction_120_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 120 65 | sort | ../reducer.py > ./prediction_120_65.txt
-echo 'Bands 120, Rows 65:' >> _results.txt
-../check.py ./prediction_120_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_120_63.txt ]; then
+touch ./prediction_120_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 120 63 | sort | ../reducer.py > ./prediction_120_63.txt
+echo 'Bands 120, Rows 63:' >> _results.txt
+../check.py ./prediction_120_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_120_70.txt ]; then
-touch ./prediction_120_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 120 70 | sort | ../reducer.py > ./prediction_120_70.txt
-echo 'Bands 120, Rows 70:' >> _results.txt
-../check.py ./prediction_120_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_120_66.txt ]; then
+touch ./prediction_120_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 120 66 | sort | ../reducer.py > ./prediction_120_66.txt
+echo 'Bands 120, Rows 66:' >> _results.txt
+../check.py ./prediction_120_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_125_20.txt ]; then
-touch ./prediction_125_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 125 20 | sort | ../reducer.py > ./prediction_125_20.txt
-echo 'Bands 125, Rows 20:' >> _results.txt
-../check.py ./prediction_125_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_120_69.txt ]; then
+touch ./prediction_120_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 120 69 | sort | ../reducer.py > ./prediction_120_69.txt
+echo 'Bands 120, Rows 69:' >> _results.txt
+../check.py ./prediction_120_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_125_25.txt ]; then
-touch ./prediction_125_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 125 25 | sort | ../reducer.py > ./prediction_125_25.txt
-echo 'Bands 125, Rows 25:' >> _results.txt
-../check.py ./prediction_125_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_125_30.txt ]; then
-touch ./prediction_125_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 125 30 | sort | ../reducer.py > ./prediction_125_30.txt
-echo 'Bands 125, Rows 30:' >> _results.txt
-../check.py ./prediction_125_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_125_35.txt ]; then
-touch ./prediction_125_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 125 35 | sort | ../reducer.py > ./prediction_125_35.txt
-echo 'Bands 125, Rows 35:' >> _results.txt
-../check.py ./prediction_125_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_125_40.txt ]; then
-touch ./prediction_125_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 125 40 | sort | ../reducer.py > ./prediction_125_40.txt
-echo 'Bands 125, Rows 40:' >> _results.txt
-../check.py ./prediction_125_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_125_42.txt ]; then
+touch ./prediction_125_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 125 42 | sort | ../reducer.py > ./prediction_125_42.txt
+echo 'Bands 125, Rows 42:' >> _results.txt
+../check.py ./prediction_125_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_125_45.txt ]; then
@@ -1429,18 +1555,32 @@ echo 'Bands 125, Rows 45:' >> _results.txt
 ../check.py ./prediction_125_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_125_50.txt ]; then
-touch ./prediction_125_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 125 50 | sort | ../reducer.py > ./prediction_125_50.txt
-echo 'Bands 125, Rows 50:' >> _results.txt
-../check.py ./prediction_125_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_125_48.txt ]; then
+touch ./prediction_125_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 125 48 | sort | ../reducer.py > ./prediction_125_48.txt
+echo 'Bands 125, Rows 48:' >> _results.txt
+../check.py ./prediction_125_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_125_55.txt ]; then
-touch ./prediction_125_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 125 55 | sort | ../reducer.py > ./prediction_125_55.txt
-echo 'Bands 125, Rows 55:' >> _results.txt
-../check.py ./prediction_125_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_125_51.txt ]; then
+touch ./prediction_125_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 125 51 | sort | ../reducer.py > ./prediction_125_51.txt
+echo 'Bands 125, Rows 51:' >> _results.txt
+../check.py ./prediction_125_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_125_54.txt ]; then
+touch ./prediction_125_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 125 54 | sort | ../reducer.py > ./prediction_125_54.txt
+echo 'Bands 125, Rows 54:' >> _results.txt
+../check.py ./prediction_125_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_125_57.txt ]; then
+touch ./prediction_125_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 125 57 | sort | ../reducer.py > ./prediction_125_57.txt
+echo 'Bands 125, Rows 57:' >> _results.txt
+../check.py ./prediction_125_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_125_60.txt ]; then
@@ -1450,53 +1590,32 @@ echo 'Bands 125, Rows 60:' >> _results.txt
 ../check.py ./prediction_125_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_125_65.txt ]; then
-touch ./prediction_125_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 125 65 | sort | ../reducer.py > ./prediction_125_65.txt
-echo 'Bands 125, Rows 65:' >> _results.txt
-../check.py ./prediction_125_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_125_63.txt ]; then
+touch ./prediction_125_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 125 63 | sort | ../reducer.py > ./prediction_125_63.txt
+echo 'Bands 125, Rows 63:' >> _results.txt
+../check.py ./prediction_125_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_125_70.txt ]; then
-touch ./prediction_125_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 125 70 | sort | ../reducer.py > ./prediction_125_70.txt
-echo 'Bands 125, Rows 70:' >> _results.txt
-../check.py ./prediction_125_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_125_66.txt ]; then
+touch ./prediction_125_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 125 66 | sort | ../reducer.py > ./prediction_125_66.txt
+echo 'Bands 125, Rows 66:' >> _results.txt
+../check.py ./prediction_125_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_130_20.txt ]; then
-touch ./prediction_130_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 130 20 | sort | ../reducer.py > ./prediction_130_20.txt
-echo 'Bands 130, Rows 20:' >> _results.txt
-../check.py ./prediction_130_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_125_69.txt ]; then
+touch ./prediction_125_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 125 69 | sort | ../reducer.py > ./prediction_125_69.txt
+echo 'Bands 125, Rows 69:' >> _results.txt
+../check.py ./prediction_125_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_130_25.txt ]; then
-touch ./prediction_130_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 130 25 | sort | ../reducer.py > ./prediction_130_25.txt
-echo 'Bands 130, Rows 25:' >> _results.txt
-../check.py ./prediction_130_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_130_30.txt ]; then
-touch ./prediction_130_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 130 30 | sort | ../reducer.py > ./prediction_130_30.txt
-echo 'Bands 130, Rows 30:' >> _results.txt
-../check.py ./prediction_130_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_130_35.txt ]; then
-touch ./prediction_130_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 130 35 | sort | ../reducer.py > ./prediction_130_35.txt
-echo 'Bands 130, Rows 35:' >> _results.txt
-../check.py ./prediction_130_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_130_40.txt ]; then
-touch ./prediction_130_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 130 40 | sort | ../reducer.py > ./prediction_130_40.txt
-echo 'Bands 130, Rows 40:' >> _results.txt
-../check.py ./prediction_130_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_130_42.txt ]; then
+touch ./prediction_130_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 130 42 | sort | ../reducer.py > ./prediction_130_42.txt
+echo 'Bands 130, Rows 42:' >> _results.txt
+../check.py ./prediction_130_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_130_45.txt ]; then
@@ -1506,18 +1625,32 @@ echo 'Bands 130, Rows 45:' >> _results.txt
 ../check.py ./prediction_130_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_130_50.txt ]; then
-touch ./prediction_130_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 130 50 | sort | ../reducer.py > ./prediction_130_50.txt
-echo 'Bands 130, Rows 50:' >> _results.txt
-../check.py ./prediction_130_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_130_48.txt ]; then
+touch ./prediction_130_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 130 48 | sort | ../reducer.py > ./prediction_130_48.txt
+echo 'Bands 130, Rows 48:' >> _results.txt
+../check.py ./prediction_130_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_130_55.txt ]; then
-touch ./prediction_130_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 130 55 | sort | ../reducer.py > ./prediction_130_55.txt
-echo 'Bands 130, Rows 55:' >> _results.txt
-../check.py ./prediction_130_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_130_51.txt ]; then
+touch ./prediction_130_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 130 51 | sort | ../reducer.py > ./prediction_130_51.txt
+echo 'Bands 130, Rows 51:' >> _results.txt
+../check.py ./prediction_130_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_130_54.txt ]; then
+touch ./prediction_130_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 130 54 | sort | ../reducer.py > ./prediction_130_54.txt
+echo 'Bands 130, Rows 54:' >> _results.txt
+../check.py ./prediction_130_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_130_57.txt ]; then
+touch ./prediction_130_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 130 57 | sort | ../reducer.py > ./prediction_130_57.txt
+echo 'Bands 130, Rows 57:' >> _results.txt
+../check.py ./prediction_130_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_130_60.txt ]; then
@@ -1527,53 +1660,32 @@ echo 'Bands 130, Rows 60:' >> _results.txt
 ../check.py ./prediction_130_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_130_65.txt ]; then
-touch ./prediction_130_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 130 65 | sort | ../reducer.py > ./prediction_130_65.txt
-echo 'Bands 130, Rows 65:' >> _results.txt
-../check.py ./prediction_130_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_130_63.txt ]; then
+touch ./prediction_130_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 130 63 | sort | ../reducer.py > ./prediction_130_63.txt
+echo 'Bands 130, Rows 63:' >> _results.txt
+../check.py ./prediction_130_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_130_70.txt ]; then
-touch ./prediction_130_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 130 70 | sort | ../reducer.py > ./prediction_130_70.txt
-echo 'Bands 130, Rows 70:' >> _results.txt
-../check.py ./prediction_130_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_130_66.txt ]; then
+touch ./prediction_130_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 130 66 | sort | ../reducer.py > ./prediction_130_66.txt
+echo 'Bands 130, Rows 66:' >> _results.txt
+../check.py ./prediction_130_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_135_20.txt ]; then
-touch ./prediction_135_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 135 20 | sort | ../reducer.py > ./prediction_135_20.txt
-echo 'Bands 135, Rows 20:' >> _results.txt
-../check.py ./prediction_135_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_130_69.txt ]; then
+touch ./prediction_130_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 130 69 | sort | ../reducer.py > ./prediction_130_69.txt
+echo 'Bands 130, Rows 69:' >> _results.txt
+../check.py ./prediction_130_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_135_25.txt ]; then
-touch ./prediction_135_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 135 25 | sort | ../reducer.py > ./prediction_135_25.txt
-echo 'Bands 135, Rows 25:' >> _results.txt
-../check.py ./prediction_135_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_135_30.txt ]; then
-touch ./prediction_135_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 135 30 | sort | ../reducer.py > ./prediction_135_30.txt
-echo 'Bands 135, Rows 30:' >> _results.txt
-../check.py ./prediction_135_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_135_35.txt ]; then
-touch ./prediction_135_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 135 35 | sort | ../reducer.py > ./prediction_135_35.txt
-echo 'Bands 135, Rows 35:' >> _results.txt
-../check.py ./prediction_135_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_135_40.txt ]; then
-touch ./prediction_135_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 135 40 | sort | ../reducer.py > ./prediction_135_40.txt
-echo 'Bands 135, Rows 40:' >> _results.txt
-../check.py ./prediction_135_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_135_42.txt ]; then
+touch ./prediction_135_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 135 42 | sort | ../reducer.py > ./prediction_135_42.txt
+echo 'Bands 135, Rows 42:' >> _results.txt
+../check.py ./prediction_135_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_135_45.txt ]; then
@@ -1583,18 +1695,32 @@ echo 'Bands 135, Rows 45:' >> _results.txt
 ../check.py ./prediction_135_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_135_50.txt ]; then
-touch ./prediction_135_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 135 50 | sort | ../reducer.py > ./prediction_135_50.txt
-echo 'Bands 135, Rows 50:' >> _results.txt
-../check.py ./prediction_135_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_135_48.txt ]; then
+touch ./prediction_135_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 135 48 | sort | ../reducer.py > ./prediction_135_48.txt
+echo 'Bands 135, Rows 48:' >> _results.txt
+../check.py ./prediction_135_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_135_55.txt ]; then
-touch ./prediction_135_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 135 55 | sort | ../reducer.py > ./prediction_135_55.txt
-echo 'Bands 135, Rows 55:' >> _results.txt
-../check.py ./prediction_135_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_135_51.txt ]; then
+touch ./prediction_135_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 135 51 | sort | ../reducer.py > ./prediction_135_51.txt
+echo 'Bands 135, Rows 51:' >> _results.txt
+../check.py ./prediction_135_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_135_54.txt ]; then
+touch ./prediction_135_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 135 54 | sort | ../reducer.py > ./prediction_135_54.txt
+echo 'Bands 135, Rows 54:' >> _results.txt
+../check.py ./prediction_135_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_135_57.txt ]; then
+touch ./prediction_135_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 135 57 | sort | ../reducer.py > ./prediction_135_57.txt
+echo 'Bands 135, Rows 57:' >> _results.txt
+../check.py ./prediction_135_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_135_60.txt ]; then
@@ -1604,53 +1730,32 @@ echo 'Bands 135, Rows 60:' >> _results.txt
 ../check.py ./prediction_135_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_135_65.txt ]; then
-touch ./prediction_135_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 135 65 | sort | ../reducer.py > ./prediction_135_65.txt
-echo 'Bands 135, Rows 65:' >> _results.txt
-../check.py ./prediction_135_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_135_63.txt ]; then
+touch ./prediction_135_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 135 63 | sort | ../reducer.py > ./prediction_135_63.txt
+echo 'Bands 135, Rows 63:' >> _results.txt
+../check.py ./prediction_135_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_135_70.txt ]; then
-touch ./prediction_135_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 135 70 | sort | ../reducer.py > ./prediction_135_70.txt
-echo 'Bands 135, Rows 70:' >> _results.txt
-../check.py ./prediction_135_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_135_66.txt ]; then
+touch ./prediction_135_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 135 66 | sort | ../reducer.py > ./prediction_135_66.txt
+echo 'Bands 135, Rows 66:' >> _results.txt
+../check.py ./prediction_135_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_140_20.txt ]; then
-touch ./prediction_140_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 140 20 | sort | ../reducer.py > ./prediction_140_20.txt
-echo 'Bands 140, Rows 20:' >> _results.txt
-../check.py ./prediction_140_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_135_69.txt ]; then
+touch ./prediction_135_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 135 69 | sort | ../reducer.py > ./prediction_135_69.txt
+echo 'Bands 135, Rows 69:' >> _results.txt
+../check.py ./prediction_135_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_140_25.txt ]; then
-touch ./prediction_140_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 140 25 | sort | ../reducer.py > ./prediction_140_25.txt
-echo 'Bands 140, Rows 25:' >> _results.txt
-../check.py ./prediction_140_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_140_30.txt ]; then
-touch ./prediction_140_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 140 30 | sort | ../reducer.py > ./prediction_140_30.txt
-echo 'Bands 140, Rows 30:' >> _results.txt
-../check.py ./prediction_140_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_140_35.txt ]; then
-touch ./prediction_140_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 140 35 | sort | ../reducer.py > ./prediction_140_35.txt
-echo 'Bands 140, Rows 35:' >> _results.txt
-../check.py ./prediction_140_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_140_40.txt ]; then
-touch ./prediction_140_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 140 40 | sort | ../reducer.py > ./prediction_140_40.txt
-echo 'Bands 140, Rows 40:' >> _results.txt
-../check.py ./prediction_140_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_140_42.txt ]; then
+touch ./prediction_140_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 140 42 | sort | ../reducer.py > ./prediction_140_42.txt
+echo 'Bands 140, Rows 42:' >> _results.txt
+../check.py ./prediction_140_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_140_45.txt ]; then
@@ -1660,18 +1765,32 @@ echo 'Bands 140, Rows 45:' >> _results.txt
 ../check.py ./prediction_140_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_140_50.txt ]; then
-touch ./prediction_140_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 140 50 | sort | ../reducer.py > ./prediction_140_50.txt
-echo 'Bands 140, Rows 50:' >> _results.txt
-../check.py ./prediction_140_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_140_48.txt ]; then
+touch ./prediction_140_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 140 48 | sort | ../reducer.py > ./prediction_140_48.txt
+echo 'Bands 140, Rows 48:' >> _results.txt
+../check.py ./prediction_140_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_140_55.txt ]; then
-touch ./prediction_140_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 140 55 | sort | ../reducer.py > ./prediction_140_55.txt
-echo 'Bands 140, Rows 55:' >> _results.txt
-../check.py ./prediction_140_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_140_51.txt ]; then
+touch ./prediction_140_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 140 51 | sort | ../reducer.py > ./prediction_140_51.txt
+echo 'Bands 140, Rows 51:' >> _results.txt
+../check.py ./prediction_140_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_140_54.txt ]; then
+touch ./prediction_140_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 140 54 | sort | ../reducer.py > ./prediction_140_54.txt
+echo 'Bands 140, Rows 54:' >> _results.txt
+../check.py ./prediction_140_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_140_57.txt ]; then
+touch ./prediction_140_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 140 57 | sort | ../reducer.py > ./prediction_140_57.txt
+echo 'Bands 140, Rows 57:' >> _results.txt
+../check.py ./prediction_140_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_140_60.txt ]; then
@@ -1681,53 +1800,32 @@ echo 'Bands 140, Rows 60:' >> _results.txt
 ../check.py ./prediction_140_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_140_65.txt ]; then
-touch ./prediction_140_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 140 65 | sort | ../reducer.py > ./prediction_140_65.txt
-echo 'Bands 140, Rows 65:' >> _results.txt
-../check.py ./prediction_140_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_140_63.txt ]; then
+touch ./prediction_140_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 140 63 | sort | ../reducer.py > ./prediction_140_63.txt
+echo 'Bands 140, Rows 63:' >> _results.txt
+../check.py ./prediction_140_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_140_70.txt ]; then
-touch ./prediction_140_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 140 70 | sort | ../reducer.py > ./prediction_140_70.txt
-echo 'Bands 140, Rows 70:' >> _results.txt
-../check.py ./prediction_140_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_140_66.txt ]; then
+touch ./prediction_140_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 140 66 | sort | ../reducer.py > ./prediction_140_66.txt
+echo 'Bands 140, Rows 66:' >> _results.txt
+../check.py ./prediction_140_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_145_20.txt ]; then
-touch ./prediction_145_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 145 20 | sort | ../reducer.py > ./prediction_145_20.txt
-echo 'Bands 145, Rows 20:' >> _results.txt
-../check.py ./prediction_145_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_140_69.txt ]; then
+touch ./prediction_140_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 140 69 | sort | ../reducer.py > ./prediction_140_69.txt
+echo 'Bands 140, Rows 69:' >> _results.txt
+../check.py ./prediction_140_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_145_25.txt ]; then
-touch ./prediction_145_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 145 25 | sort | ../reducer.py > ./prediction_145_25.txt
-echo 'Bands 145, Rows 25:' >> _results.txt
-../check.py ./prediction_145_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_145_30.txt ]; then
-touch ./prediction_145_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 145 30 | sort | ../reducer.py > ./prediction_145_30.txt
-echo 'Bands 145, Rows 30:' >> _results.txt
-../check.py ./prediction_145_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_145_35.txt ]; then
-touch ./prediction_145_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 145 35 | sort | ../reducer.py > ./prediction_145_35.txt
-echo 'Bands 145, Rows 35:' >> _results.txt
-../check.py ./prediction_145_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_145_40.txt ]; then
-touch ./prediction_145_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 145 40 | sort | ../reducer.py > ./prediction_145_40.txt
-echo 'Bands 145, Rows 40:' >> _results.txt
-../check.py ./prediction_145_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_145_42.txt ]; then
+touch ./prediction_145_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 145 42 | sort | ../reducer.py > ./prediction_145_42.txt
+echo 'Bands 145, Rows 42:' >> _results.txt
+../check.py ./prediction_145_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_145_45.txt ]; then
@@ -1737,18 +1835,32 @@ echo 'Bands 145, Rows 45:' >> _results.txt
 ../check.py ./prediction_145_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_145_50.txt ]; then
-touch ./prediction_145_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 145 50 | sort | ../reducer.py > ./prediction_145_50.txt
-echo 'Bands 145, Rows 50:' >> _results.txt
-../check.py ./prediction_145_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_145_48.txt ]; then
+touch ./prediction_145_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 145 48 | sort | ../reducer.py > ./prediction_145_48.txt
+echo 'Bands 145, Rows 48:' >> _results.txt
+../check.py ./prediction_145_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_145_55.txt ]; then
-touch ./prediction_145_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 145 55 | sort | ../reducer.py > ./prediction_145_55.txt
-echo 'Bands 145, Rows 55:' >> _results.txt
-../check.py ./prediction_145_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_145_51.txt ]; then
+touch ./prediction_145_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 145 51 | sort | ../reducer.py > ./prediction_145_51.txt
+echo 'Bands 145, Rows 51:' >> _results.txt
+../check.py ./prediction_145_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_145_54.txt ]; then
+touch ./prediction_145_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 145 54 | sort | ../reducer.py > ./prediction_145_54.txt
+echo 'Bands 145, Rows 54:' >> _results.txt
+../check.py ./prediction_145_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_145_57.txt ]; then
+touch ./prediction_145_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 145 57 | sort | ../reducer.py > ./prediction_145_57.txt
+echo 'Bands 145, Rows 57:' >> _results.txt
+../check.py ./prediction_145_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_145_60.txt ]; then
@@ -1758,53 +1870,32 @@ echo 'Bands 145, Rows 60:' >> _results.txt
 ../check.py ./prediction_145_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_145_65.txt ]; then
-touch ./prediction_145_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 145 65 | sort | ../reducer.py > ./prediction_145_65.txt
-echo 'Bands 145, Rows 65:' >> _results.txt
-../check.py ./prediction_145_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_145_63.txt ]; then
+touch ./prediction_145_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 145 63 | sort | ../reducer.py > ./prediction_145_63.txt
+echo 'Bands 145, Rows 63:' >> _results.txt
+../check.py ./prediction_145_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_145_70.txt ]; then
-touch ./prediction_145_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 145 70 | sort | ../reducer.py > ./prediction_145_70.txt
-echo 'Bands 145, Rows 70:' >> _results.txt
-../check.py ./prediction_145_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_145_66.txt ]; then
+touch ./prediction_145_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 145 66 | sort | ../reducer.py > ./prediction_145_66.txt
+echo 'Bands 145, Rows 66:' >> _results.txt
+../check.py ./prediction_145_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_150_20.txt ]; then
-touch ./prediction_150_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 150 20 | sort | ../reducer.py > ./prediction_150_20.txt
-echo 'Bands 150, Rows 20:' >> _results.txt
-../check.py ./prediction_150_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_145_69.txt ]; then
+touch ./prediction_145_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 145 69 | sort | ../reducer.py > ./prediction_145_69.txt
+echo 'Bands 145, Rows 69:' >> _results.txt
+../check.py ./prediction_145_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_150_25.txt ]; then
-touch ./prediction_150_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 150 25 | sort | ../reducer.py > ./prediction_150_25.txt
-echo 'Bands 150, Rows 25:' >> _results.txt
-../check.py ./prediction_150_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_150_30.txt ]; then
-touch ./prediction_150_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 150 30 | sort | ../reducer.py > ./prediction_150_30.txt
-echo 'Bands 150, Rows 30:' >> _results.txt
-../check.py ./prediction_150_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_150_35.txt ]; then
-touch ./prediction_150_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 150 35 | sort | ../reducer.py > ./prediction_150_35.txt
-echo 'Bands 150, Rows 35:' >> _results.txt
-../check.py ./prediction_150_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_150_40.txt ]; then
-touch ./prediction_150_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 150 40 | sort | ../reducer.py > ./prediction_150_40.txt
-echo 'Bands 150, Rows 40:' >> _results.txt
-../check.py ./prediction_150_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_150_42.txt ]; then
+touch ./prediction_150_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 150 42 | sort | ../reducer.py > ./prediction_150_42.txt
+echo 'Bands 150, Rows 42:' >> _results.txt
+../check.py ./prediction_150_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_150_45.txt ]; then
@@ -1814,18 +1905,32 @@ echo 'Bands 150, Rows 45:' >> _results.txt
 ../check.py ./prediction_150_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_150_50.txt ]; then
-touch ./prediction_150_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 150 50 | sort | ../reducer.py > ./prediction_150_50.txt
-echo 'Bands 150, Rows 50:' >> _results.txt
-../check.py ./prediction_150_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_150_48.txt ]; then
+touch ./prediction_150_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 150 48 | sort | ../reducer.py > ./prediction_150_48.txt
+echo 'Bands 150, Rows 48:' >> _results.txt
+../check.py ./prediction_150_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_150_55.txt ]; then
-touch ./prediction_150_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 150 55 | sort | ../reducer.py > ./prediction_150_55.txt
-echo 'Bands 150, Rows 55:' >> _results.txt
-../check.py ./prediction_150_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_150_51.txt ]; then
+touch ./prediction_150_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 150 51 | sort | ../reducer.py > ./prediction_150_51.txt
+echo 'Bands 150, Rows 51:' >> _results.txt
+../check.py ./prediction_150_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_150_54.txt ]; then
+touch ./prediction_150_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 150 54 | sort | ../reducer.py > ./prediction_150_54.txt
+echo 'Bands 150, Rows 54:' >> _results.txt
+../check.py ./prediction_150_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_150_57.txt ]; then
+touch ./prediction_150_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 150 57 | sort | ../reducer.py > ./prediction_150_57.txt
+echo 'Bands 150, Rows 57:' >> _results.txt
+../check.py ./prediction_150_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_150_60.txt ]; then
@@ -1835,53 +1940,32 @@ echo 'Bands 150, Rows 60:' >> _results.txt
 ../check.py ./prediction_150_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_150_65.txt ]; then
-touch ./prediction_150_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 150 65 | sort | ../reducer.py > ./prediction_150_65.txt
-echo 'Bands 150, Rows 65:' >> _results.txt
-../check.py ./prediction_150_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_150_63.txt ]; then
+touch ./prediction_150_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 150 63 | sort | ../reducer.py > ./prediction_150_63.txt
+echo 'Bands 150, Rows 63:' >> _results.txt
+../check.py ./prediction_150_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_150_70.txt ]; then
-touch ./prediction_150_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 150 70 | sort | ../reducer.py > ./prediction_150_70.txt
-echo 'Bands 150, Rows 70:' >> _results.txt
-../check.py ./prediction_150_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_150_66.txt ]; then
+touch ./prediction_150_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 150 66 | sort | ../reducer.py > ./prediction_150_66.txt
+echo 'Bands 150, Rows 66:' >> _results.txt
+../check.py ./prediction_150_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_155_20.txt ]; then
-touch ./prediction_155_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 155 20 | sort | ../reducer.py > ./prediction_155_20.txt
-echo 'Bands 155, Rows 20:' >> _results.txt
-../check.py ./prediction_155_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_150_69.txt ]; then
+touch ./prediction_150_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 150 69 | sort | ../reducer.py > ./prediction_150_69.txt
+echo 'Bands 150, Rows 69:' >> _results.txt
+../check.py ./prediction_150_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_155_25.txt ]; then
-touch ./prediction_155_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 155 25 | sort | ../reducer.py > ./prediction_155_25.txt
-echo 'Bands 155, Rows 25:' >> _results.txt
-../check.py ./prediction_155_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_155_30.txt ]; then
-touch ./prediction_155_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 155 30 | sort | ../reducer.py > ./prediction_155_30.txt
-echo 'Bands 155, Rows 30:' >> _results.txt
-../check.py ./prediction_155_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_155_35.txt ]; then
-touch ./prediction_155_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 155 35 | sort | ../reducer.py > ./prediction_155_35.txt
-echo 'Bands 155, Rows 35:' >> _results.txt
-../check.py ./prediction_155_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_155_40.txt ]; then
-touch ./prediction_155_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 155 40 | sort | ../reducer.py > ./prediction_155_40.txt
-echo 'Bands 155, Rows 40:' >> _results.txt
-../check.py ./prediction_155_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_155_42.txt ]; then
+touch ./prediction_155_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 155 42 | sort | ../reducer.py > ./prediction_155_42.txt
+echo 'Bands 155, Rows 42:' >> _results.txt
+../check.py ./prediction_155_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_155_45.txt ]; then
@@ -1891,18 +1975,32 @@ echo 'Bands 155, Rows 45:' >> _results.txt
 ../check.py ./prediction_155_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_155_50.txt ]; then
-touch ./prediction_155_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 155 50 | sort | ../reducer.py > ./prediction_155_50.txt
-echo 'Bands 155, Rows 50:' >> _results.txt
-../check.py ./prediction_155_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_155_48.txt ]; then
+touch ./prediction_155_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 155 48 | sort | ../reducer.py > ./prediction_155_48.txt
+echo 'Bands 155, Rows 48:' >> _results.txt
+../check.py ./prediction_155_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_155_55.txt ]; then
-touch ./prediction_155_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 155 55 | sort | ../reducer.py > ./prediction_155_55.txt
-echo 'Bands 155, Rows 55:' >> _results.txt
-../check.py ./prediction_155_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_155_51.txt ]; then
+touch ./prediction_155_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 155 51 | sort | ../reducer.py > ./prediction_155_51.txt
+echo 'Bands 155, Rows 51:' >> _results.txt
+../check.py ./prediction_155_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_155_54.txt ]; then
+touch ./prediction_155_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 155 54 | sort | ../reducer.py > ./prediction_155_54.txt
+echo 'Bands 155, Rows 54:' >> _results.txt
+../check.py ./prediction_155_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_155_57.txt ]; then
+touch ./prediction_155_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 155 57 | sort | ../reducer.py > ./prediction_155_57.txt
+echo 'Bands 155, Rows 57:' >> _results.txt
+../check.py ./prediction_155_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_155_60.txt ]; then
@@ -1912,53 +2010,32 @@ echo 'Bands 155, Rows 60:' >> _results.txt
 ../check.py ./prediction_155_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_155_65.txt ]; then
-touch ./prediction_155_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 155 65 | sort | ../reducer.py > ./prediction_155_65.txt
-echo 'Bands 155, Rows 65:' >> _results.txt
-../check.py ./prediction_155_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_155_63.txt ]; then
+touch ./prediction_155_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 155 63 | sort | ../reducer.py > ./prediction_155_63.txt
+echo 'Bands 155, Rows 63:' >> _results.txt
+../check.py ./prediction_155_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_155_70.txt ]; then
-touch ./prediction_155_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 155 70 | sort | ../reducer.py > ./prediction_155_70.txt
-echo 'Bands 155, Rows 70:' >> _results.txt
-../check.py ./prediction_155_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_155_66.txt ]; then
+touch ./prediction_155_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 155 66 | sort | ../reducer.py > ./prediction_155_66.txt
+echo 'Bands 155, Rows 66:' >> _results.txt
+../check.py ./prediction_155_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_160_20.txt ]; then
-touch ./prediction_160_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 160 20 | sort | ../reducer.py > ./prediction_160_20.txt
-echo 'Bands 160, Rows 20:' >> _results.txt
-../check.py ./prediction_160_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_155_69.txt ]; then
+touch ./prediction_155_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 155 69 | sort | ../reducer.py > ./prediction_155_69.txt
+echo 'Bands 155, Rows 69:' >> _results.txt
+../check.py ./prediction_155_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_160_25.txt ]; then
-touch ./prediction_160_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 160 25 | sort | ../reducer.py > ./prediction_160_25.txt
-echo 'Bands 160, Rows 25:' >> _results.txt
-../check.py ./prediction_160_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_160_30.txt ]; then
-touch ./prediction_160_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 160 30 | sort | ../reducer.py > ./prediction_160_30.txt
-echo 'Bands 160, Rows 30:' >> _results.txt
-../check.py ./prediction_160_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_160_35.txt ]; then
-touch ./prediction_160_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 160 35 | sort | ../reducer.py > ./prediction_160_35.txt
-echo 'Bands 160, Rows 35:' >> _results.txt
-../check.py ./prediction_160_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_160_40.txt ]; then
-touch ./prediction_160_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 160 40 | sort | ../reducer.py > ./prediction_160_40.txt
-echo 'Bands 160, Rows 40:' >> _results.txt
-../check.py ./prediction_160_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_160_42.txt ]; then
+touch ./prediction_160_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 160 42 | sort | ../reducer.py > ./prediction_160_42.txt
+echo 'Bands 160, Rows 42:' >> _results.txt
+../check.py ./prediction_160_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_160_45.txt ]; then
@@ -1968,18 +2045,32 @@ echo 'Bands 160, Rows 45:' >> _results.txt
 ../check.py ./prediction_160_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_160_50.txt ]; then
-touch ./prediction_160_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 160 50 | sort | ../reducer.py > ./prediction_160_50.txt
-echo 'Bands 160, Rows 50:' >> _results.txt
-../check.py ./prediction_160_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_160_48.txt ]; then
+touch ./prediction_160_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 160 48 | sort | ../reducer.py > ./prediction_160_48.txt
+echo 'Bands 160, Rows 48:' >> _results.txt
+../check.py ./prediction_160_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_160_55.txt ]; then
-touch ./prediction_160_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 160 55 | sort | ../reducer.py > ./prediction_160_55.txt
-echo 'Bands 160, Rows 55:' >> _results.txt
-../check.py ./prediction_160_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_160_51.txt ]; then
+touch ./prediction_160_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 160 51 | sort | ../reducer.py > ./prediction_160_51.txt
+echo 'Bands 160, Rows 51:' >> _results.txt
+../check.py ./prediction_160_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_160_54.txt ]; then
+touch ./prediction_160_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 160 54 | sort | ../reducer.py > ./prediction_160_54.txt
+echo 'Bands 160, Rows 54:' >> _results.txt
+../check.py ./prediction_160_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_160_57.txt ]; then
+touch ./prediction_160_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 160 57 | sort | ../reducer.py > ./prediction_160_57.txt
+echo 'Bands 160, Rows 57:' >> _results.txt
+../check.py ./prediction_160_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_160_60.txt ]; then
@@ -1989,53 +2080,32 @@ echo 'Bands 160, Rows 60:' >> _results.txt
 ../check.py ./prediction_160_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_160_65.txt ]; then
-touch ./prediction_160_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 160 65 | sort | ../reducer.py > ./prediction_160_65.txt
-echo 'Bands 160, Rows 65:' >> _results.txt
-../check.py ./prediction_160_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_160_63.txt ]; then
+touch ./prediction_160_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 160 63 | sort | ../reducer.py > ./prediction_160_63.txt
+echo 'Bands 160, Rows 63:' >> _results.txt
+../check.py ./prediction_160_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_160_70.txt ]; then
-touch ./prediction_160_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 160 70 | sort | ../reducer.py > ./prediction_160_70.txt
-echo 'Bands 160, Rows 70:' >> _results.txt
-../check.py ./prediction_160_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_160_66.txt ]; then
+touch ./prediction_160_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 160 66 | sort | ../reducer.py > ./prediction_160_66.txt
+echo 'Bands 160, Rows 66:' >> _results.txt
+../check.py ./prediction_160_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_165_20.txt ]; then
-touch ./prediction_165_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 165 20 | sort | ../reducer.py > ./prediction_165_20.txt
-echo 'Bands 165, Rows 20:' >> _results.txt
-../check.py ./prediction_165_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_160_69.txt ]; then
+touch ./prediction_160_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 160 69 | sort | ../reducer.py > ./prediction_160_69.txt
+echo 'Bands 160, Rows 69:' >> _results.txt
+../check.py ./prediction_160_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_165_25.txt ]; then
-touch ./prediction_165_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 165 25 | sort | ../reducer.py > ./prediction_165_25.txt
-echo 'Bands 165, Rows 25:' >> _results.txt
-../check.py ./prediction_165_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_165_30.txt ]; then
-touch ./prediction_165_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 165 30 | sort | ../reducer.py > ./prediction_165_30.txt
-echo 'Bands 165, Rows 30:' >> _results.txt
-../check.py ./prediction_165_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_165_35.txt ]; then
-touch ./prediction_165_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 165 35 | sort | ../reducer.py > ./prediction_165_35.txt
-echo 'Bands 165, Rows 35:' >> _results.txt
-../check.py ./prediction_165_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_165_40.txt ]; then
-touch ./prediction_165_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 165 40 | sort | ../reducer.py > ./prediction_165_40.txt
-echo 'Bands 165, Rows 40:' >> _results.txt
-../check.py ./prediction_165_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_165_42.txt ]; then
+touch ./prediction_165_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 165 42 | sort | ../reducer.py > ./prediction_165_42.txt
+echo 'Bands 165, Rows 42:' >> _results.txt
+../check.py ./prediction_165_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_165_45.txt ]; then
@@ -2045,18 +2115,32 @@ echo 'Bands 165, Rows 45:' >> _results.txt
 ../check.py ./prediction_165_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_165_50.txt ]; then
-touch ./prediction_165_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 165 50 | sort | ../reducer.py > ./prediction_165_50.txt
-echo 'Bands 165, Rows 50:' >> _results.txt
-../check.py ./prediction_165_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_165_48.txt ]; then
+touch ./prediction_165_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 165 48 | sort | ../reducer.py > ./prediction_165_48.txt
+echo 'Bands 165, Rows 48:' >> _results.txt
+../check.py ./prediction_165_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_165_55.txt ]; then
-touch ./prediction_165_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 165 55 | sort | ../reducer.py > ./prediction_165_55.txt
-echo 'Bands 165, Rows 55:' >> _results.txt
-../check.py ./prediction_165_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_165_51.txt ]; then
+touch ./prediction_165_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 165 51 | sort | ../reducer.py > ./prediction_165_51.txt
+echo 'Bands 165, Rows 51:' >> _results.txt
+../check.py ./prediction_165_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_165_54.txt ]; then
+touch ./prediction_165_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 165 54 | sort | ../reducer.py > ./prediction_165_54.txt
+echo 'Bands 165, Rows 54:' >> _results.txt
+../check.py ./prediction_165_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_165_57.txt ]; then
+touch ./prediction_165_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 165 57 | sort | ../reducer.py > ./prediction_165_57.txt
+echo 'Bands 165, Rows 57:' >> _results.txt
+../check.py ./prediction_165_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_165_60.txt ]; then
@@ -2066,53 +2150,32 @@ echo 'Bands 165, Rows 60:' >> _results.txt
 ../check.py ./prediction_165_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_165_65.txt ]; then
-touch ./prediction_165_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 165 65 | sort | ../reducer.py > ./prediction_165_65.txt
-echo 'Bands 165, Rows 65:' >> _results.txt
-../check.py ./prediction_165_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_165_63.txt ]; then
+touch ./prediction_165_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 165 63 | sort | ../reducer.py > ./prediction_165_63.txt
+echo 'Bands 165, Rows 63:' >> _results.txt
+../check.py ./prediction_165_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_165_70.txt ]; then
-touch ./prediction_165_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 165 70 | sort | ../reducer.py > ./prediction_165_70.txt
-echo 'Bands 165, Rows 70:' >> _results.txt
-../check.py ./prediction_165_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_165_66.txt ]; then
+touch ./prediction_165_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 165 66 | sort | ../reducer.py > ./prediction_165_66.txt
+echo 'Bands 165, Rows 66:' >> _results.txt
+../check.py ./prediction_165_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_170_20.txt ]; then
-touch ./prediction_170_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 170 20 | sort | ../reducer.py > ./prediction_170_20.txt
-echo 'Bands 170, Rows 20:' >> _results.txt
-../check.py ./prediction_170_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_165_69.txt ]; then
+touch ./prediction_165_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 165 69 | sort | ../reducer.py > ./prediction_165_69.txt
+echo 'Bands 165, Rows 69:' >> _results.txt
+../check.py ./prediction_165_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_170_25.txt ]; then
-touch ./prediction_170_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 170 25 | sort | ../reducer.py > ./prediction_170_25.txt
-echo 'Bands 170, Rows 25:' >> _results.txt
-../check.py ./prediction_170_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_170_30.txt ]; then
-touch ./prediction_170_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 170 30 | sort | ../reducer.py > ./prediction_170_30.txt
-echo 'Bands 170, Rows 30:' >> _results.txt
-../check.py ./prediction_170_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_170_35.txt ]; then
-touch ./prediction_170_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 170 35 | sort | ../reducer.py > ./prediction_170_35.txt
-echo 'Bands 170, Rows 35:' >> _results.txt
-../check.py ./prediction_170_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_170_40.txt ]; then
-touch ./prediction_170_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 170 40 | sort | ../reducer.py > ./prediction_170_40.txt
-echo 'Bands 170, Rows 40:' >> _results.txt
-../check.py ./prediction_170_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_170_42.txt ]; then
+touch ./prediction_170_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 170 42 | sort | ../reducer.py > ./prediction_170_42.txt
+echo 'Bands 170, Rows 42:' >> _results.txt
+../check.py ./prediction_170_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_170_45.txt ]; then
@@ -2122,18 +2185,32 @@ echo 'Bands 170, Rows 45:' >> _results.txt
 ../check.py ./prediction_170_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_170_50.txt ]; then
-touch ./prediction_170_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 170 50 | sort | ../reducer.py > ./prediction_170_50.txt
-echo 'Bands 170, Rows 50:' >> _results.txt
-../check.py ./prediction_170_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_170_48.txt ]; then
+touch ./prediction_170_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 170 48 | sort | ../reducer.py > ./prediction_170_48.txt
+echo 'Bands 170, Rows 48:' >> _results.txt
+../check.py ./prediction_170_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_170_55.txt ]; then
-touch ./prediction_170_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 170 55 | sort | ../reducer.py > ./prediction_170_55.txt
-echo 'Bands 170, Rows 55:' >> _results.txt
-../check.py ./prediction_170_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_170_51.txt ]; then
+touch ./prediction_170_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 170 51 | sort | ../reducer.py > ./prediction_170_51.txt
+echo 'Bands 170, Rows 51:' >> _results.txt
+../check.py ./prediction_170_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_170_54.txt ]; then
+touch ./prediction_170_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 170 54 | sort | ../reducer.py > ./prediction_170_54.txt
+echo 'Bands 170, Rows 54:' >> _results.txt
+../check.py ./prediction_170_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_170_57.txt ]; then
+touch ./prediction_170_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 170 57 | sort | ../reducer.py > ./prediction_170_57.txt
+echo 'Bands 170, Rows 57:' >> _results.txt
+../check.py ./prediction_170_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_170_60.txt ]; then
@@ -2143,53 +2220,32 @@ echo 'Bands 170, Rows 60:' >> _results.txt
 ../check.py ./prediction_170_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_170_65.txt ]; then
-touch ./prediction_170_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 170 65 | sort | ../reducer.py > ./prediction_170_65.txt
-echo 'Bands 170, Rows 65:' >> _results.txt
-../check.py ./prediction_170_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_170_63.txt ]; then
+touch ./prediction_170_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 170 63 | sort | ../reducer.py > ./prediction_170_63.txt
+echo 'Bands 170, Rows 63:' >> _results.txt
+../check.py ./prediction_170_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_170_70.txt ]; then
-touch ./prediction_170_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 170 70 | sort | ../reducer.py > ./prediction_170_70.txt
-echo 'Bands 170, Rows 70:' >> _results.txt
-../check.py ./prediction_170_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_170_66.txt ]; then
+touch ./prediction_170_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 170 66 | sort | ../reducer.py > ./prediction_170_66.txt
+echo 'Bands 170, Rows 66:' >> _results.txt
+../check.py ./prediction_170_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_175_20.txt ]; then
-touch ./prediction_175_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 175 20 | sort | ../reducer.py > ./prediction_175_20.txt
-echo 'Bands 175, Rows 20:' >> _results.txt
-../check.py ./prediction_175_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_170_69.txt ]; then
+touch ./prediction_170_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 170 69 | sort | ../reducer.py > ./prediction_170_69.txt
+echo 'Bands 170, Rows 69:' >> _results.txt
+../check.py ./prediction_170_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_175_25.txt ]; then
-touch ./prediction_175_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 175 25 | sort | ../reducer.py > ./prediction_175_25.txt
-echo 'Bands 175, Rows 25:' >> _results.txt
-../check.py ./prediction_175_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_175_30.txt ]; then
-touch ./prediction_175_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 175 30 | sort | ../reducer.py > ./prediction_175_30.txt
-echo 'Bands 175, Rows 30:' >> _results.txt
-../check.py ./prediction_175_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_175_35.txt ]; then
-touch ./prediction_175_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 175 35 | sort | ../reducer.py > ./prediction_175_35.txt
-echo 'Bands 175, Rows 35:' >> _results.txt
-../check.py ./prediction_175_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_175_40.txt ]; then
-touch ./prediction_175_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 175 40 | sort | ../reducer.py > ./prediction_175_40.txt
-echo 'Bands 175, Rows 40:' >> _results.txt
-../check.py ./prediction_175_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_175_42.txt ]; then
+touch ./prediction_175_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 175 42 | sort | ../reducer.py > ./prediction_175_42.txt
+echo 'Bands 175, Rows 42:' >> _results.txt
+../check.py ./prediction_175_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_175_45.txt ]; then
@@ -2199,18 +2255,32 @@ echo 'Bands 175, Rows 45:' >> _results.txt
 ../check.py ./prediction_175_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_175_50.txt ]; then
-touch ./prediction_175_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 175 50 | sort | ../reducer.py > ./prediction_175_50.txt
-echo 'Bands 175, Rows 50:' >> _results.txt
-../check.py ./prediction_175_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_175_48.txt ]; then
+touch ./prediction_175_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 175 48 | sort | ../reducer.py > ./prediction_175_48.txt
+echo 'Bands 175, Rows 48:' >> _results.txt
+../check.py ./prediction_175_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_175_55.txt ]; then
-touch ./prediction_175_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 175 55 | sort | ../reducer.py > ./prediction_175_55.txt
-echo 'Bands 175, Rows 55:' >> _results.txt
-../check.py ./prediction_175_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_175_51.txt ]; then
+touch ./prediction_175_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 175 51 | sort | ../reducer.py > ./prediction_175_51.txt
+echo 'Bands 175, Rows 51:' >> _results.txt
+../check.py ./prediction_175_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_175_54.txt ]; then
+touch ./prediction_175_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 175 54 | sort | ../reducer.py > ./prediction_175_54.txt
+echo 'Bands 175, Rows 54:' >> _results.txt
+../check.py ./prediction_175_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_175_57.txt ]; then
+touch ./prediction_175_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 175 57 | sort | ../reducer.py > ./prediction_175_57.txt
+echo 'Bands 175, Rows 57:' >> _results.txt
+../check.py ./prediction_175_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_175_60.txt ]; then
@@ -2220,53 +2290,32 @@ echo 'Bands 175, Rows 60:' >> _results.txt
 ../check.py ./prediction_175_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_175_65.txt ]; then
-touch ./prediction_175_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 175 65 | sort | ../reducer.py > ./prediction_175_65.txt
-echo 'Bands 175, Rows 65:' >> _results.txt
-../check.py ./prediction_175_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_175_63.txt ]; then
+touch ./prediction_175_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 175 63 | sort | ../reducer.py > ./prediction_175_63.txt
+echo 'Bands 175, Rows 63:' >> _results.txt
+../check.py ./prediction_175_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_175_70.txt ]; then
-touch ./prediction_175_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 175 70 | sort | ../reducer.py > ./prediction_175_70.txt
-echo 'Bands 175, Rows 70:' >> _results.txt
-../check.py ./prediction_175_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_175_66.txt ]; then
+touch ./prediction_175_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 175 66 | sort | ../reducer.py > ./prediction_175_66.txt
+echo 'Bands 175, Rows 66:' >> _results.txt
+../check.py ./prediction_175_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_180_20.txt ]; then
-touch ./prediction_180_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 180 20 | sort | ../reducer.py > ./prediction_180_20.txt
-echo 'Bands 180, Rows 20:' >> _results.txt
-../check.py ./prediction_180_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_175_69.txt ]; then
+touch ./prediction_175_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 175 69 | sort | ../reducer.py > ./prediction_175_69.txt
+echo 'Bands 175, Rows 69:' >> _results.txt
+../check.py ./prediction_175_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_180_25.txt ]; then
-touch ./prediction_180_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 180 25 | sort | ../reducer.py > ./prediction_180_25.txt
-echo 'Bands 180, Rows 25:' >> _results.txt
-../check.py ./prediction_180_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_180_30.txt ]; then
-touch ./prediction_180_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 180 30 | sort | ../reducer.py > ./prediction_180_30.txt
-echo 'Bands 180, Rows 30:' >> _results.txt
-../check.py ./prediction_180_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_180_35.txt ]; then
-touch ./prediction_180_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 180 35 | sort | ../reducer.py > ./prediction_180_35.txt
-echo 'Bands 180, Rows 35:' >> _results.txt
-../check.py ./prediction_180_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_180_40.txt ]; then
-touch ./prediction_180_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 180 40 | sort | ../reducer.py > ./prediction_180_40.txt
-echo 'Bands 180, Rows 40:' >> _results.txt
-../check.py ./prediction_180_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_180_42.txt ]; then
+touch ./prediction_180_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 180 42 | sort | ../reducer.py > ./prediction_180_42.txt
+echo 'Bands 180, Rows 42:' >> _results.txt
+../check.py ./prediction_180_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_180_45.txt ]; then
@@ -2276,18 +2325,32 @@ echo 'Bands 180, Rows 45:' >> _results.txt
 ../check.py ./prediction_180_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_180_50.txt ]; then
-touch ./prediction_180_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 180 50 | sort | ../reducer.py > ./prediction_180_50.txt
-echo 'Bands 180, Rows 50:' >> _results.txt
-../check.py ./prediction_180_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_180_48.txt ]; then
+touch ./prediction_180_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 180 48 | sort | ../reducer.py > ./prediction_180_48.txt
+echo 'Bands 180, Rows 48:' >> _results.txt
+../check.py ./prediction_180_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_180_55.txt ]; then
-touch ./prediction_180_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 180 55 | sort | ../reducer.py > ./prediction_180_55.txt
-echo 'Bands 180, Rows 55:' >> _results.txt
-../check.py ./prediction_180_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_180_51.txt ]; then
+touch ./prediction_180_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 180 51 | sort | ../reducer.py > ./prediction_180_51.txt
+echo 'Bands 180, Rows 51:' >> _results.txt
+../check.py ./prediction_180_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_180_54.txt ]; then
+touch ./prediction_180_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 180 54 | sort | ../reducer.py > ./prediction_180_54.txt
+echo 'Bands 180, Rows 54:' >> _results.txt
+../check.py ./prediction_180_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_180_57.txt ]; then
+touch ./prediction_180_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 180 57 | sort | ../reducer.py > ./prediction_180_57.txt
+echo 'Bands 180, Rows 57:' >> _results.txt
+../check.py ./prediction_180_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_180_60.txt ]; then
@@ -2297,53 +2360,32 @@ echo 'Bands 180, Rows 60:' >> _results.txt
 ../check.py ./prediction_180_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_180_65.txt ]; then
-touch ./prediction_180_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 180 65 | sort | ../reducer.py > ./prediction_180_65.txt
-echo 'Bands 180, Rows 65:' >> _results.txt
-../check.py ./prediction_180_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_180_63.txt ]; then
+touch ./prediction_180_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 180 63 | sort | ../reducer.py > ./prediction_180_63.txt
+echo 'Bands 180, Rows 63:' >> _results.txt
+../check.py ./prediction_180_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_180_70.txt ]; then
-touch ./prediction_180_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 180 70 | sort | ../reducer.py > ./prediction_180_70.txt
-echo 'Bands 180, Rows 70:' >> _results.txt
-../check.py ./prediction_180_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_180_66.txt ]; then
+touch ./prediction_180_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 180 66 | sort | ../reducer.py > ./prediction_180_66.txt
+echo 'Bands 180, Rows 66:' >> _results.txt
+../check.py ./prediction_180_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_185_20.txt ]; then
-touch ./prediction_185_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 185 20 | sort | ../reducer.py > ./prediction_185_20.txt
-echo 'Bands 185, Rows 20:' >> _results.txt
-../check.py ./prediction_185_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_180_69.txt ]; then
+touch ./prediction_180_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 180 69 | sort | ../reducer.py > ./prediction_180_69.txt
+echo 'Bands 180, Rows 69:' >> _results.txt
+../check.py ./prediction_180_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_185_25.txt ]; then
-touch ./prediction_185_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 185 25 | sort | ../reducer.py > ./prediction_185_25.txt
-echo 'Bands 185, Rows 25:' >> _results.txt
-../check.py ./prediction_185_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_185_30.txt ]; then
-touch ./prediction_185_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 185 30 | sort | ../reducer.py > ./prediction_185_30.txt
-echo 'Bands 185, Rows 30:' >> _results.txt
-../check.py ./prediction_185_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_185_35.txt ]; then
-touch ./prediction_185_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 185 35 | sort | ../reducer.py > ./prediction_185_35.txt
-echo 'Bands 185, Rows 35:' >> _results.txt
-../check.py ./prediction_185_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_185_40.txt ]; then
-touch ./prediction_185_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 185 40 | sort | ../reducer.py > ./prediction_185_40.txt
-echo 'Bands 185, Rows 40:' >> _results.txt
-../check.py ./prediction_185_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_185_42.txt ]; then
+touch ./prediction_185_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 185 42 | sort | ../reducer.py > ./prediction_185_42.txt
+echo 'Bands 185, Rows 42:' >> _results.txt
+../check.py ./prediction_185_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_185_45.txt ]; then
@@ -2353,18 +2395,32 @@ echo 'Bands 185, Rows 45:' >> _results.txt
 ../check.py ./prediction_185_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_185_50.txt ]; then
-touch ./prediction_185_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 185 50 | sort | ../reducer.py > ./prediction_185_50.txt
-echo 'Bands 185, Rows 50:' >> _results.txt
-../check.py ./prediction_185_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_185_48.txt ]; then
+touch ./prediction_185_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 185 48 | sort | ../reducer.py > ./prediction_185_48.txt
+echo 'Bands 185, Rows 48:' >> _results.txt
+../check.py ./prediction_185_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_185_55.txt ]; then
-touch ./prediction_185_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 185 55 | sort | ../reducer.py > ./prediction_185_55.txt
-echo 'Bands 185, Rows 55:' >> _results.txt
-../check.py ./prediction_185_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_185_51.txt ]; then
+touch ./prediction_185_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 185 51 | sort | ../reducer.py > ./prediction_185_51.txt
+echo 'Bands 185, Rows 51:' >> _results.txt
+../check.py ./prediction_185_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_185_54.txt ]; then
+touch ./prediction_185_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 185 54 | sort | ../reducer.py > ./prediction_185_54.txt
+echo 'Bands 185, Rows 54:' >> _results.txt
+../check.py ./prediction_185_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_185_57.txt ]; then
+touch ./prediction_185_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 185 57 | sort | ../reducer.py > ./prediction_185_57.txt
+echo 'Bands 185, Rows 57:' >> _results.txt
+../check.py ./prediction_185_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_185_60.txt ]; then
@@ -2374,53 +2430,32 @@ echo 'Bands 185, Rows 60:' >> _results.txt
 ../check.py ./prediction_185_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_185_65.txt ]; then
-touch ./prediction_185_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 185 65 | sort | ../reducer.py > ./prediction_185_65.txt
-echo 'Bands 185, Rows 65:' >> _results.txt
-../check.py ./prediction_185_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_185_63.txt ]; then
+touch ./prediction_185_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 185 63 | sort | ../reducer.py > ./prediction_185_63.txt
+echo 'Bands 185, Rows 63:' >> _results.txt
+../check.py ./prediction_185_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_185_70.txt ]; then
-touch ./prediction_185_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 185 70 | sort | ../reducer.py > ./prediction_185_70.txt
-echo 'Bands 185, Rows 70:' >> _results.txt
-../check.py ./prediction_185_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_185_66.txt ]; then
+touch ./prediction_185_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 185 66 | sort | ../reducer.py > ./prediction_185_66.txt
+echo 'Bands 185, Rows 66:' >> _results.txt
+../check.py ./prediction_185_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_190_20.txt ]; then
-touch ./prediction_190_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 190 20 | sort | ../reducer.py > ./prediction_190_20.txt
-echo 'Bands 190, Rows 20:' >> _results.txt
-../check.py ./prediction_190_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_185_69.txt ]; then
+touch ./prediction_185_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 185 69 | sort | ../reducer.py > ./prediction_185_69.txt
+echo 'Bands 185, Rows 69:' >> _results.txt
+../check.py ./prediction_185_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_190_25.txt ]; then
-touch ./prediction_190_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 190 25 | sort | ../reducer.py > ./prediction_190_25.txt
-echo 'Bands 190, Rows 25:' >> _results.txt
-../check.py ./prediction_190_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_190_30.txt ]; then
-touch ./prediction_190_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 190 30 | sort | ../reducer.py > ./prediction_190_30.txt
-echo 'Bands 190, Rows 30:' >> _results.txt
-../check.py ./prediction_190_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_190_35.txt ]; then
-touch ./prediction_190_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 190 35 | sort | ../reducer.py > ./prediction_190_35.txt
-echo 'Bands 190, Rows 35:' >> _results.txt
-../check.py ./prediction_190_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_190_40.txt ]; then
-touch ./prediction_190_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 190 40 | sort | ../reducer.py > ./prediction_190_40.txt
-echo 'Bands 190, Rows 40:' >> _results.txt
-../check.py ./prediction_190_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_190_42.txt ]; then
+touch ./prediction_190_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 190 42 | sort | ../reducer.py > ./prediction_190_42.txt
+echo 'Bands 190, Rows 42:' >> _results.txt
+../check.py ./prediction_190_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_190_45.txt ]; then
@@ -2430,18 +2465,32 @@ echo 'Bands 190, Rows 45:' >> _results.txt
 ../check.py ./prediction_190_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_190_50.txt ]; then
-touch ./prediction_190_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 190 50 | sort | ../reducer.py > ./prediction_190_50.txt
-echo 'Bands 190, Rows 50:' >> _results.txt
-../check.py ./prediction_190_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_190_48.txt ]; then
+touch ./prediction_190_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 190 48 | sort | ../reducer.py > ./prediction_190_48.txt
+echo 'Bands 190, Rows 48:' >> _results.txt
+../check.py ./prediction_190_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_190_55.txt ]; then
-touch ./prediction_190_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 190 55 | sort | ../reducer.py > ./prediction_190_55.txt
-echo 'Bands 190, Rows 55:' >> _results.txt
-../check.py ./prediction_190_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_190_51.txt ]; then
+touch ./prediction_190_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 190 51 | sort | ../reducer.py > ./prediction_190_51.txt
+echo 'Bands 190, Rows 51:' >> _results.txt
+../check.py ./prediction_190_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_190_54.txt ]; then
+touch ./prediction_190_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 190 54 | sort | ../reducer.py > ./prediction_190_54.txt
+echo 'Bands 190, Rows 54:' >> _results.txt
+../check.py ./prediction_190_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_190_57.txt ]; then
+touch ./prediction_190_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 190 57 | sort | ../reducer.py > ./prediction_190_57.txt
+echo 'Bands 190, Rows 57:' >> _results.txt
+../check.py ./prediction_190_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_190_60.txt ]; then
@@ -2451,53 +2500,32 @@ echo 'Bands 190, Rows 60:' >> _results.txt
 ../check.py ./prediction_190_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_190_65.txt ]; then
-touch ./prediction_190_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 190 65 | sort | ../reducer.py > ./prediction_190_65.txt
-echo 'Bands 190, Rows 65:' >> _results.txt
-../check.py ./prediction_190_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_190_63.txt ]; then
+touch ./prediction_190_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 190 63 | sort | ../reducer.py > ./prediction_190_63.txt
+echo 'Bands 190, Rows 63:' >> _results.txt
+../check.py ./prediction_190_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_190_70.txt ]; then
-touch ./prediction_190_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 190 70 | sort | ../reducer.py > ./prediction_190_70.txt
-echo 'Bands 190, Rows 70:' >> _results.txt
-../check.py ./prediction_190_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_190_66.txt ]; then
+touch ./prediction_190_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 190 66 | sort | ../reducer.py > ./prediction_190_66.txt
+echo 'Bands 190, Rows 66:' >> _results.txt
+../check.py ./prediction_190_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_195_20.txt ]; then
-touch ./prediction_195_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 195 20 | sort | ../reducer.py > ./prediction_195_20.txt
-echo 'Bands 195, Rows 20:' >> _results.txt
-../check.py ./prediction_195_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_190_69.txt ]; then
+touch ./prediction_190_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 190 69 | sort | ../reducer.py > ./prediction_190_69.txt
+echo 'Bands 190, Rows 69:' >> _results.txt
+../check.py ./prediction_190_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_195_25.txt ]; then
-touch ./prediction_195_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 195 25 | sort | ../reducer.py > ./prediction_195_25.txt
-echo 'Bands 195, Rows 25:' >> _results.txt
-../check.py ./prediction_195_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_195_30.txt ]; then
-touch ./prediction_195_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 195 30 | sort | ../reducer.py > ./prediction_195_30.txt
-echo 'Bands 195, Rows 30:' >> _results.txt
-../check.py ./prediction_195_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_195_35.txt ]; then
-touch ./prediction_195_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 195 35 | sort | ../reducer.py > ./prediction_195_35.txt
-echo 'Bands 195, Rows 35:' >> _results.txt
-../check.py ./prediction_195_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_195_40.txt ]; then
-touch ./prediction_195_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 195 40 | sort | ../reducer.py > ./prediction_195_40.txt
-echo 'Bands 195, Rows 40:' >> _results.txt
-../check.py ./prediction_195_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_195_42.txt ]; then
+touch ./prediction_195_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 195 42 | sort | ../reducer.py > ./prediction_195_42.txt
+echo 'Bands 195, Rows 42:' >> _results.txt
+../check.py ./prediction_195_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_195_45.txt ]; then
@@ -2507,18 +2535,32 @@ echo 'Bands 195, Rows 45:' >> _results.txt
 ../check.py ./prediction_195_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_195_50.txt ]; then
-touch ./prediction_195_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 195 50 | sort | ../reducer.py > ./prediction_195_50.txt
-echo 'Bands 195, Rows 50:' >> _results.txt
-../check.py ./prediction_195_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_195_48.txt ]; then
+touch ./prediction_195_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 195 48 | sort | ../reducer.py > ./prediction_195_48.txt
+echo 'Bands 195, Rows 48:' >> _results.txt
+../check.py ./prediction_195_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_195_55.txt ]; then
-touch ./prediction_195_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 195 55 | sort | ../reducer.py > ./prediction_195_55.txt
-echo 'Bands 195, Rows 55:' >> _results.txt
-../check.py ./prediction_195_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_195_51.txt ]; then
+touch ./prediction_195_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 195 51 | sort | ../reducer.py > ./prediction_195_51.txt
+echo 'Bands 195, Rows 51:' >> _results.txt
+../check.py ./prediction_195_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_195_54.txt ]; then
+touch ./prediction_195_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 195 54 | sort | ../reducer.py > ./prediction_195_54.txt
+echo 'Bands 195, Rows 54:' >> _results.txt
+../check.py ./prediction_195_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_195_57.txt ]; then
+touch ./prediction_195_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 195 57 | sort | ../reducer.py > ./prediction_195_57.txt
+echo 'Bands 195, Rows 57:' >> _results.txt
+../check.py ./prediction_195_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_195_60.txt ]; then
@@ -2528,53 +2570,32 @@ echo 'Bands 195, Rows 60:' >> _results.txt
 ../check.py ./prediction_195_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_195_65.txt ]; then
-touch ./prediction_195_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 195 65 | sort | ../reducer.py > ./prediction_195_65.txt
-echo 'Bands 195, Rows 65:' >> _results.txt
-../check.py ./prediction_195_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_195_63.txt ]; then
+touch ./prediction_195_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 195 63 | sort | ../reducer.py > ./prediction_195_63.txt
+echo 'Bands 195, Rows 63:' >> _results.txt
+../check.py ./prediction_195_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_195_70.txt ]; then
-touch ./prediction_195_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 195 70 | sort | ../reducer.py > ./prediction_195_70.txt
-echo 'Bands 195, Rows 70:' >> _results.txt
-../check.py ./prediction_195_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_195_66.txt ]; then
+touch ./prediction_195_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 195 66 | sort | ../reducer.py > ./prediction_195_66.txt
+echo 'Bands 195, Rows 66:' >> _results.txt
+../check.py ./prediction_195_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_200_20.txt ]; then
-touch ./prediction_200_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 200 20 | sort | ../reducer.py > ./prediction_200_20.txt
-echo 'Bands 200, Rows 20:' >> _results.txt
-../check.py ./prediction_200_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_195_69.txt ]; then
+touch ./prediction_195_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 195 69 | sort | ../reducer.py > ./prediction_195_69.txt
+echo 'Bands 195, Rows 69:' >> _results.txt
+../check.py ./prediction_195_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_200_25.txt ]; then
-touch ./prediction_200_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 200 25 | sort | ../reducer.py > ./prediction_200_25.txt
-echo 'Bands 200, Rows 25:' >> _results.txt
-../check.py ./prediction_200_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_200_30.txt ]; then
-touch ./prediction_200_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 200 30 | sort | ../reducer.py > ./prediction_200_30.txt
-echo 'Bands 200, Rows 30:' >> _results.txt
-../check.py ./prediction_200_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_200_35.txt ]; then
-touch ./prediction_200_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 200 35 | sort | ../reducer.py > ./prediction_200_35.txt
-echo 'Bands 200, Rows 35:' >> _results.txt
-../check.py ./prediction_200_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_200_40.txt ]; then
-touch ./prediction_200_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 200 40 | sort | ../reducer.py > ./prediction_200_40.txt
-echo 'Bands 200, Rows 40:' >> _results.txt
-../check.py ./prediction_200_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_200_42.txt ]; then
+touch ./prediction_200_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 200 42 | sort | ../reducer.py > ./prediction_200_42.txt
+echo 'Bands 200, Rows 42:' >> _results.txt
+../check.py ./prediction_200_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_200_45.txt ]; then
@@ -2584,18 +2605,32 @@ echo 'Bands 200, Rows 45:' >> _results.txt
 ../check.py ./prediction_200_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_200_50.txt ]; then
-touch ./prediction_200_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 200 50 | sort | ../reducer.py > ./prediction_200_50.txt
-echo 'Bands 200, Rows 50:' >> _results.txt
-../check.py ./prediction_200_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_200_48.txt ]; then
+touch ./prediction_200_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 200 48 | sort | ../reducer.py > ./prediction_200_48.txt
+echo 'Bands 200, Rows 48:' >> _results.txt
+../check.py ./prediction_200_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_200_55.txt ]; then
-touch ./prediction_200_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 200 55 | sort | ../reducer.py > ./prediction_200_55.txt
-echo 'Bands 200, Rows 55:' >> _results.txt
-../check.py ./prediction_200_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_200_51.txt ]; then
+touch ./prediction_200_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 200 51 | sort | ../reducer.py > ./prediction_200_51.txt
+echo 'Bands 200, Rows 51:' >> _results.txt
+../check.py ./prediction_200_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_200_54.txt ]; then
+touch ./prediction_200_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 200 54 | sort | ../reducer.py > ./prediction_200_54.txt
+echo 'Bands 200, Rows 54:' >> _results.txt
+../check.py ./prediction_200_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_200_57.txt ]; then
+touch ./prediction_200_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 200 57 | sort | ../reducer.py > ./prediction_200_57.txt
+echo 'Bands 200, Rows 57:' >> _results.txt
+../check.py ./prediction_200_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_200_60.txt ]; then
@@ -2605,53 +2640,32 @@ echo 'Bands 200, Rows 60:' >> _results.txt
 ../check.py ./prediction_200_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_200_65.txt ]; then
-touch ./prediction_200_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 200 65 | sort | ../reducer.py > ./prediction_200_65.txt
-echo 'Bands 200, Rows 65:' >> _results.txt
-../check.py ./prediction_200_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_200_63.txt ]; then
+touch ./prediction_200_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 200 63 | sort | ../reducer.py > ./prediction_200_63.txt
+echo 'Bands 200, Rows 63:' >> _results.txt
+../check.py ./prediction_200_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_200_70.txt ]; then
-touch ./prediction_200_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 200 70 | sort | ../reducer.py > ./prediction_200_70.txt
-echo 'Bands 200, Rows 70:' >> _results.txt
-../check.py ./prediction_200_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_200_66.txt ]; then
+touch ./prediction_200_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 200 66 | sort | ../reducer.py > ./prediction_200_66.txt
+echo 'Bands 200, Rows 66:' >> _results.txt
+../check.py ./prediction_200_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_205_20.txt ]; then
-touch ./prediction_205_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 205 20 | sort | ../reducer.py > ./prediction_205_20.txt
-echo 'Bands 205, Rows 20:' >> _results.txt
-../check.py ./prediction_205_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_200_69.txt ]; then
+touch ./prediction_200_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 200 69 | sort | ../reducer.py > ./prediction_200_69.txt
+echo 'Bands 200, Rows 69:' >> _results.txt
+../check.py ./prediction_200_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_205_25.txt ]; then
-touch ./prediction_205_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 205 25 | sort | ../reducer.py > ./prediction_205_25.txt
-echo 'Bands 205, Rows 25:' >> _results.txt
-../check.py ./prediction_205_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_205_30.txt ]; then
-touch ./prediction_205_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 205 30 | sort | ../reducer.py > ./prediction_205_30.txt
-echo 'Bands 205, Rows 30:' >> _results.txt
-../check.py ./prediction_205_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_205_35.txt ]; then
-touch ./prediction_205_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 205 35 | sort | ../reducer.py > ./prediction_205_35.txt
-echo 'Bands 205, Rows 35:' >> _results.txt
-../check.py ./prediction_205_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_205_40.txt ]; then
-touch ./prediction_205_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 205 40 | sort | ../reducer.py > ./prediction_205_40.txt
-echo 'Bands 205, Rows 40:' >> _results.txt
-../check.py ./prediction_205_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_205_42.txt ]; then
+touch ./prediction_205_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 205 42 | sort | ../reducer.py > ./prediction_205_42.txt
+echo 'Bands 205, Rows 42:' >> _results.txt
+../check.py ./prediction_205_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_205_45.txt ]; then
@@ -2661,18 +2675,32 @@ echo 'Bands 205, Rows 45:' >> _results.txt
 ../check.py ./prediction_205_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_205_50.txt ]; then
-touch ./prediction_205_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 205 50 | sort | ../reducer.py > ./prediction_205_50.txt
-echo 'Bands 205, Rows 50:' >> _results.txt
-../check.py ./prediction_205_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_205_48.txt ]; then
+touch ./prediction_205_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 205 48 | sort | ../reducer.py > ./prediction_205_48.txt
+echo 'Bands 205, Rows 48:' >> _results.txt
+../check.py ./prediction_205_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_205_55.txt ]; then
-touch ./prediction_205_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 205 55 | sort | ../reducer.py > ./prediction_205_55.txt
-echo 'Bands 205, Rows 55:' >> _results.txt
-../check.py ./prediction_205_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_205_51.txt ]; then
+touch ./prediction_205_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 205 51 | sort | ../reducer.py > ./prediction_205_51.txt
+echo 'Bands 205, Rows 51:' >> _results.txt
+../check.py ./prediction_205_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_205_54.txt ]; then
+touch ./prediction_205_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 205 54 | sort | ../reducer.py > ./prediction_205_54.txt
+echo 'Bands 205, Rows 54:' >> _results.txt
+../check.py ./prediction_205_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_205_57.txt ]; then
+touch ./prediction_205_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 205 57 | sort | ../reducer.py > ./prediction_205_57.txt
+echo 'Bands 205, Rows 57:' >> _results.txt
+../check.py ./prediction_205_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_205_60.txt ]; then
@@ -2682,53 +2710,32 @@ echo 'Bands 205, Rows 60:' >> _results.txt
 ../check.py ./prediction_205_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_205_65.txt ]; then
-touch ./prediction_205_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 205 65 | sort | ../reducer.py > ./prediction_205_65.txt
-echo 'Bands 205, Rows 65:' >> _results.txt
-../check.py ./prediction_205_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_205_63.txt ]; then
+touch ./prediction_205_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 205 63 | sort | ../reducer.py > ./prediction_205_63.txt
+echo 'Bands 205, Rows 63:' >> _results.txt
+../check.py ./prediction_205_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_205_70.txt ]; then
-touch ./prediction_205_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 205 70 | sort | ../reducer.py > ./prediction_205_70.txt
-echo 'Bands 205, Rows 70:' >> _results.txt
-../check.py ./prediction_205_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_205_66.txt ]; then
+touch ./prediction_205_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 205 66 | sort | ../reducer.py > ./prediction_205_66.txt
+echo 'Bands 205, Rows 66:' >> _results.txt
+../check.py ./prediction_205_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_210_20.txt ]; then
-touch ./prediction_210_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 210 20 | sort | ../reducer.py > ./prediction_210_20.txt
-echo 'Bands 210, Rows 20:' >> _results.txt
-../check.py ./prediction_210_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_205_69.txt ]; then
+touch ./prediction_205_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 205 69 | sort | ../reducer.py > ./prediction_205_69.txt
+echo 'Bands 205, Rows 69:' >> _results.txt
+../check.py ./prediction_205_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_210_25.txt ]; then
-touch ./prediction_210_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 210 25 | sort | ../reducer.py > ./prediction_210_25.txt
-echo 'Bands 210, Rows 25:' >> _results.txt
-../check.py ./prediction_210_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_210_30.txt ]; then
-touch ./prediction_210_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 210 30 | sort | ../reducer.py > ./prediction_210_30.txt
-echo 'Bands 210, Rows 30:' >> _results.txt
-../check.py ./prediction_210_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_210_35.txt ]; then
-touch ./prediction_210_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 210 35 | sort | ../reducer.py > ./prediction_210_35.txt
-echo 'Bands 210, Rows 35:' >> _results.txt
-../check.py ./prediction_210_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_210_40.txt ]; then
-touch ./prediction_210_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 210 40 | sort | ../reducer.py > ./prediction_210_40.txt
-echo 'Bands 210, Rows 40:' >> _results.txt
-../check.py ./prediction_210_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_210_42.txt ]; then
+touch ./prediction_210_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 210 42 | sort | ../reducer.py > ./prediction_210_42.txt
+echo 'Bands 210, Rows 42:' >> _results.txt
+../check.py ./prediction_210_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_210_45.txt ]; then
@@ -2738,18 +2745,32 @@ echo 'Bands 210, Rows 45:' >> _results.txt
 ../check.py ./prediction_210_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_210_50.txt ]; then
-touch ./prediction_210_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 210 50 | sort | ../reducer.py > ./prediction_210_50.txt
-echo 'Bands 210, Rows 50:' >> _results.txt
-../check.py ./prediction_210_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_210_48.txt ]; then
+touch ./prediction_210_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 210 48 | sort | ../reducer.py > ./prediction_210_48.txt
+echo 'Bands 210, Rows 48:' >> _results.txt
+../check.py ./prediction_210_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_210_55.txt ]; then
-touch ./prediction_210_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 210 55 | sort | ../reducer.py > ./prediction_210_55.txt
-echo 'Bands 210, Rows 55:' >> _results.txt
-../check.py ./prediction_210_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_210_51.txt ]; then
+touch ./prediction_210_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 210 51 | sort | ../reducer.py > ./prediction_210_51.txt
+echo 'Bands 210, Rows 51:' >> _results.txt
+../check.py ./prediction_210_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_210_54.txt ]; then
+touch ./prediction_210_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 210 54 | sort | ../reducer.py > ./prediction_210_54.txt
+echo 'Bands 210, Rows 54:' >> _results.txt
+../check.py ./prediction_210_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_210_57.txt ]; then
+touch ./prediction_210_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 210 57 | sort | ../reducer.py > ./prediction_210_57.txt
+echo 'Bands 210, Rows 57:' >> _results.txt
+../check.py ./prediction_210_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_210_60.txt ]; then
@@ -2759,53 +2780,32 @@ echo 'Bands 210, Rows 60:' >> _results.txt
 ../check.py ./prediction_210_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_210_65.txt ]; then
-touch ./prediction_210_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 210 65 | sort | ../reducer.py > ./prediction_210_65.txt
-echo 'Bands 210, Rows 65:' >> _results.txt
-../check.py ./prediction_210_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_210_63.txt ]; then
+touch ./prediction_210_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 210 63 | sort | ../reducer.py > ./prediction_210_63.txt
+echo 'Bands 210, Rows 63:' >> _results.txt
+../check.py ./prediction_210_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_210_70.txt ]; then
-touch ./prediction_210_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 210 70 | sort | ../reducer.py > ./prediction_210_70.txt
-echo 'Bands 210, Rows 70:' >> _results.txt
-../check.py ./prediction_210_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_210_66.txt ]; then
+touch ./prediction_210_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 210 66 | sort | ../reducer.py > ./prediction_210_66.txt
+echo 'Bands 210, Rows 66:' >> _results.txt
+../check.py ./prediction_210_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_215_20.txt ]; then
-touch ./prediction_215_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 215 20 | sort | ../reducer.py > ./prediction_215_20.txt
-echo 'Bands 215, Rows 20:' >> _results.txt
-../check.py ./prediction_215_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_210_69.txt ]; then
+touch ./prediction_210_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 210 69 | sort | ../reducer.py > ./prediction_210_69.txt
+echo 'Bands 210, Rows 69:' >> _results.txt
+../check.py ./prediction_210_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_215_25.txt ]; then
-touch ./prediction_215_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 215 25 | sort | ../reducer.py > ./prediction_215_25.txt
-echo 'Bands 215, Rows 25:' >> _results.txt
-../check.py ./prediction_215_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_215_30.txt ]; then
-touch ./prediction_215_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 215 30 | sort | ../reducer.py > ./prediction_215_30.txt
-echo 'Bands 215, Rows 30:' >> _results.txt
-../check.py ./prediction_215_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_215_35.txt ]; then
-touch ./prediction_215_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 215 35 | sort | ../reducer.py > ./prediction_215_35.txt
-echo 'Bands 215, Rows 35:' >> _results.txt
-../check.py ./prediction_215_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_215_40.txt ]; then
-touch ./prediction_215_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 215 40 | sort | ../reducer.py > ./prediction_215_40.txt
-echo 'Bands 215, Rows 40:' >> _results.txt
-../check.py ./prediction_215_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_215_42.txt ]; then
+touch ./prediction_215_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 215 42 | sort | ../reducer.py > ./prediction_215_42.txt
+echo 'Bands 215, Rows 42:' >> _results.txt
+../check.py ./prediction_215_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_215_45.txt ]; then
@@ -2815,18 +2815,32 @@ echo 'Bands 215, Rows 45:' >> _results.txt
 ../check.py ./prediction_215_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_215_50.txt ]; then
-touch ./prediction_215_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 215 50 | sort | ../reducer.py > ./prediction_215_50.txt
-echo 'Bands 215, Rows 50:' >> _results.txt
-../check.py ./prediction_215_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_215_48.txt ]; then
+touch ./prediction_215_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 215 48 | sort | ../reducer.py > ./prediction_215_48.txt
+echo 'Bands 215, Rows 48:' >> _results.txt
+../check.py ./prediction_215_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_215_55.txt ]; then
-touch ./prediction_215_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 215 55 | sort | ../reducer.py > ./prediction_215_55.txt
-echo 'Bands 215, Rows 55:' >> _results.txt
-../check.py ./prediction_215_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_215_51.txt ]; then
+touch ./prediction_215_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 215 51 | sort | ../reducer.py > ./prediction_215_51.txt
+echo 'Bands 215, Rows 51:' >> _results.txt
+../check.py ./prediction_215_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_215_54.txt ]; then
+touch ./prediction_215_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 215 54 | sort | ../reducer.py > ./prediction_215_54.txt
+echo 'Bands 215, Rows 54:' >> _results.txt
+../check.py ./prediction_215_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_215_57.txt ]; then
+touch ./prediction_215_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 215 57 | sort | ../reducer.py > ./prediction_215_57.txt
+echo 'Bands 215, Rows 57:' >> _results.txt
+../check.py ./prediction_215_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_215_60.txt ]; then
@@ -2836,53 +2850,32 @@ echo 'Bands 215, Rows 60:' >> _results.txt
 ../check.py ./prediction_215_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_215_65.txt ]; then
-touch ./prediction_215_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 215 65 | sort | ../reducer.py > ./prediction_215_65.txt
-echo 'Bands 215, Rows 65:' >> _results.txt
-../check.py ./prediction_215_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_215_63.txt ]; then
+touch ./prediction_215_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 215 63 | sort | ../reducer.py > ./prediction_215_63.txt
+echo 'Bands 215, Rows 63:' >> _results.txt
+../check.py ./prediction_215_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_215_70.txt ]; then
-touch ./prediction_215_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 215 70 | sort | ../reducer.py > ./prediction_215_70.txt
-echo 'Bands 215, Rows 70:' >> _results.txt
-../check.py ./prediction_215_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_215_66.txt ]; then
+touch ./prediction_215_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 215 66 | sort | ../reducer.py > ./prediction_215_66.txt
+echo 'Bands 215, Rows 66:' >> _results.txt
+../check.py ./prediction_215_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_220_20.txt ]; then
-touch ./prediction_220_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 220 20 | sort | ../reducer.py > ./prediction_220_20.txt
-echo 'Bands 220, Rows 20:' >> _results.txt
-../check.py ./prediction_220_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_215_69.txt ]; then
+touch ./prediction_215_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 215 69 | sort | ../reducer.py > ./prediction_215_69.txt
+echo 'Bands 215, Rows 69:' >> _results.txt
+../check.py ./prediction_215_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_220_25.txt ]; then
-touch ./prediction_220_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 220 25 | sort | ../reducer.py > ./prediction_220_25.txt
-echo 'Bands 220, Rows 25:' >> _results.txt
-../check.py ./prediction_220_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_220_30.txt ]; then
-touch ./prediction_220_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 220 30 | sort | ../reducer.py > ./prediction_220_30.txt
-echo 'Bands 220, Rows 30:' >> _results.txt
-../check.py ./prediction_220_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_220_35.txt ]; then
-touch ./prediction_220_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 220 35 | sort | ../reducer.py > ./prediction_220_35.txt
-echo 'Bands 220, Rows 35:' >> _results.txt
-../check.py ./prediction_220_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_220_40.txt ]; then
-touch ./prediction_220_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 220 40 | sort | ../reducer.py > ./prediction_220_40.txt
-echo 'Bands 220, Rows 40:' >> _results.txt
-../check.py ./prediction_220_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_220_42.txt ]; then
+touch ./prediction_220_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 220 42 | sort | ../reducer.py > ./prediction_220_42.txt
+echo 'Bands 220, Rows 42:' >> _results.txt
+../check.py ./prediction_220_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_220_45.txt ]; then
@@ -2892,18 +2885,32 @@ echo 'Bands 220, Rows 45:' >> _results.txt
 ../check.py ./prediction_220_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_220_50.txt ]; then
-touch ./prediction_220_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 220 50 | sort | ../reducer.py > ./prediction_220_50.txt
-echo 'Bands 220, Rows 50:' >> _results.txt
-../check.py ./prediction_220_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_220_48.txt ]; then
+touch ./prediction_220_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 220 48 | sort | ../reducer.py > ./prediction_220_48.txt
+echo 'Bands 220, Rows 48:' >> _results.txt
+../check.py ./prediction_220_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_220_55.txt ]; then
-touch ./prediction_220_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 220 55 | sort | ../reducer.py > ./prediction_220_55.txt
-echo 'Bands 220, Rows 55:' >> _results.txt
-../check.py ./prediction_220_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_220_51.txt ]; then
+touch ./prediction_220_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 220 51 | sort | ../reducer.py > ./prediction_220_51.txt
+echo 'Bands 220, Rows 51:' >> _results.txt
+../check.py ./prediction_220_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_220_54.txt ]; then
+touch ./prediction_220_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 220 54 | sort | ../reducer.py > ./prediction_220_54.txt
+echo 'Bands 220, Rows 54:' >> _results.txt
+../check.py ./prediction_220_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_220_57.txt ]; then
+touch ./prediction_220_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 220 57 | sort | ../reducer.py > ./prediction_220_57.txt
+echo 'Bands 220, Rows 57:' >> _results.txt
+../check.py ./prediction_220_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_220_60.txt ]; then
@@ -2913,53 +2920,32 @@ echo 'Bands 220, Rows 60:' >> _results.txt
 ../check.py ./prediction_220_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_220_65.txt ]; then
-touch ./prediction_220_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 220 65 | sort | ../reducer.py > ./prediction_220_65.txt
-echo 'Bands 220, Rows 65:' >> _results.txt
-../check.py ./prediction_220_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_220_63.txt ]; then
+touch ./prediction_220_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 220 63 | sort | ../reducer.py > ./prediction_220_63.txt
+echo 'Bands 220, Rows 63:' >> _results.txt
+../check.py ./prediction_220_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_220_70.txt ]; then
-touch ./prediction_220_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 220 70 | sort | ../reducer.py > ./prediction_220_70.txt
-echo 'Bands 220, Rows 70:' >> _results.txt
-../check.py ./prediction_220_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_220_66.txt ]; then
+touch ./prediction_220_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 220 66 | sort | ../reducer.py > ./prediction_220_66.txt
+echo 'Bands 220, Rows 66:' >> _results.txt
+../check.py ./prediction_220_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_225_20.txt ]; then
-touch ./prediction_225_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 225 20 | sort | ../reducer.py > ./prediction_225_20.txt
-echo 'Bands 225, Rows 20:' >> _results.txt
-../check.py ./prediction_225_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_220_69.txt ]; then
+touch ./prediction_220_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 220 69 | sort | ../reducer.py > ./prediction_220_69.txt
+echo 'Bands 220, Rows 69:' >> _results.txt
+../check.py ./prediction_220_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_225_25.txt ]; then
-touch ./prediction_225_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 225 25 | sort | ../reducer.py > ./prediction_225_25.txt
-echo 'Bands 225, Rows 25:' >> _results.txt
-../check.py ./prediction_225_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_225_30.txt ]; then
-touch ./prediction_225_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 225 30 | sort | ../reducer.py > ./prediction_225_30.txt
-echo 'Bands 225, Rows 30:' >> _results.txt
-../check.py ./prediction_225_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_225_35.txt ]; then
-touch ./prediction_225_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 225 35 | sort | ../reducer.py > ./prediction_225_35.txt
-echo 'Bands 225, Rows 35:' >> _results.txt
-../check.py ./prediction_225_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_225_40.txt ]; then
-touch ./prediction_225_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 225 40 | sort | ../reducer.py > ./prediction_225_40.txt
-echo 'Bands 225, Rows 40:' >> _results.txt
-../check.py ./prediction_225_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_225_42.txt ]; then
+touch ./prediction_225_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 225 42 | sort | ../reducer.py > ./prediction_225_42.txt
+echo 'Bands 225, Rows 42:' >> _results.txt
+../check.py ./prediction_225_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_225_45.txt ]; then
@@ -2969,18 +2955,32 @@ echo 'Bands 225, Rows 45:' >> _results.txt
 ../check.py ./prediction_225_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_225_50.txt ]; then
-touch ./prediction_225_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 225 50 | sort | ../reducer.py > ./prediction_225_50.txt
-echo 'Bands 225, Rows 50:' >> _results.txt
-../check.py ./prediction_225_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_225_48.txt ]; then
+touch ./prediction_225_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 225 48 | sort | ../reducer.py > ./prediction_225_48.txt
+echo 'Bands 225, Rows 48:' >> _results.txt
+../check.py ./prediction_225_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_225_55.txt ]; then
-touch ./prediction_225_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 225 55 | sort | ../reducer.py > ./prediction_225_55.txt
-echo 'Bands 225, Rows 55:' >> _results.txt
-../check.py ./prediction_225_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_225_51.txt ]; then
+touch ./prediction_225_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 225 51 | sort | ../reducer.py > ./prediction_225_51.txt
+echo 'Bands 225, Rows 51:' >> _results.txt
+../check.py ./prediction_225_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_225_54.txt ]; then
+touch ./prediction_225_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 225 54 | sort | ../reducer.py > ./prediction_225_54.txt
+echo 'Bands 225, Rows 54:' >> _results.txt
+../check.py ./prediction_225_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_225_57.txt ]; then
+touch ./prediction_225_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 225 57 | sort | ../reducer.py > ./prediction_225_57.txt
+echo 'Bands 225, Rows 57:' >> _results.txt
+../check.py ./prediction_225_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_225_60.txt ]; then
@@ -2990,53 +2990,32 @@ echo 'Bands 225, Rows 60:' >> _results.txt
 ../check.py ./prediction_225_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_225_65.txt ]; then
-touch ./prediction_225_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 225 65 | sort | ../reducer.py > ./prediction_225_65.txt
-echo 'Bands 225, Rows 65:' >> _results.txt
-../check.py ./prediction_225_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_225_63.txt ]; then
+touch ./prediction_225_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 225 63 | sort | ../reducer.py > ./prediction_225_63.txt
+echo 'Bands 225, Rows 63:' >> _results.txt
+../check.py ./prediction_225_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_225_70.txt ]; then
-touch ./prediction_225_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 225 70 | sort | ../reducer.py > ./prediction_225_70.txt
-echo 'Bands 225, Rows 70:' >> _results.txt
-../check.py ./prediction_225_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_225_66.txt ]; then
+touch ./prediction_225_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 225 66 | sort | ../reducer.py > ./prediction_225_66.txt
+echo 'Bands 225, Rows 66:' >> _results.txt
+../check.py ./prediction_225_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_230_20.txt ]; then
-touch ./prediction_230_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 230 20 | sort | ../reducer.py > ./prediction_230_20.txt
-echo 'Bands 230, Rows 20:' >> _results.txt
-../check.py ./prediction_230_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_225_69.txt ]; then
+touch ./prediction_225_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 225 69 | sort | ../reducer.py > ./prediction_225_69.txt
+echo 'Bands 225, Rows 69:' >> _results.txt
+../check.py ./prediction_225_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_230_25.txt ]; then
-touch ./prediction_230_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 230 25 | sort | ../reducer.py > ./prediction_230_25.txt
-echo 'Bands 230, Rows 25:' >> _results.txt
-../check.py ./prediction_230_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_230_30.txt ]; then
-touch ./prediction_230_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 230 30 | sort | ../reducer.py > ./prediction_230_30.txt
-echo 'Bands 230, Rows 30:' >> _results.txt
-../check.py ./prediction_230_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_230_35.txt ]; then
-touch ./prediction_230_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 230 35 | sort | ../reducer.py > ./prediction_230_35.txt
-echo 'Bands 230, Rows 35:' >> _results.txt
-../check.py ./prediction_230_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_230_40.txt ]; then
-touch ./prediction_230_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 230 40 | sort | ../reducer.py > ./prediction_230_40.txt
-echo 'Bands 230, Rows 40:' >> _results.txt
-../check.py ./prediction_230_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_230_42.txt ]; then
+touch ./prediction_230_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 230 42 | sort | ../reducer.py > ./prediction_230_42.txt
+echo 'Bands 230, Rows 42:' >> _results.txt
+../check.py ./prediction_230_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_230_45.txt ]; then
@@ -3046,18 +3025,32 @@ echo 'Bands 230, Rows 45:' >> _results.txt
 ../check.py ./prediction_230_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_230_50.txt ]; then
-touch ./prediction_230_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 230 50 | sort | ../reducer.py > ./prediction_230_50.txt
-echo 'Bands 230, Rows 50:' >> _results.txt
-../check.py ./prediction_230_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_230_48.txt ]; then
+touch ./prediction_230_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 230 48 | sort | ../reducer.py > ./prediction_230_48.txt
+echo 'Bands 230, Rows 48:' >> _results.txt
+../check.py ./prediction_230_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_230_55.txt ]; then
-touch ./prediction_230_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 230 55 | sort | ../reducer.py > ./prediction_230_55.txt
-echo 'Bands 230, Rows 55:' >> _results.txt
-../check.py ./prediction_230_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_230_51.txt ]; then
+touch ./prediction_230_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 230 51 | sort | ../reducer.py > ./prediction_230_51.txt
+echo 'Bands 230, Rows 51:' >> _results.txt
+../check.py ./prediction_230_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_230_54.txt ]; then
+touch ./prediction_230_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 230 54 | sort | ../reducer.py > ./prediction_230_54.txt
+echo 'Bands 230, Rows 54:' >> _results.txt
+../check.py ./prediction_230_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_230_57.txt ]; then
+touch ./prediction_230_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 230 57 | sort | ../reducer.py > ./prediction_230_57.txt
+echo 'Bands 230, Rows 57:' >> _results.txt
+../check.py ./prediction_230_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_230_60.txt ]; then
@@ -3067,53 +3060,32 @@ echo 'Bands 230, Rows 60:' >> _results.txt
 ../check.py ./prediction_230_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_230_65.txt ]; then
-touch ./prediction_230_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 230 65 | sort | ../reducer.py > ./prediction_230_65.txt
-echo 'Bands 230, Rows 65:' >> _results.txt
-../check.py ./prediction_230_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_230_63.txt ]; then
+touch ./prediction_230_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 230 63 | sort | ../reducer.py > ./prediction_230_63.txt
+echo 'Bands 230, Rows 63:' >> _results.txt
+../check.py ./prediction_230_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_230_70.txt ]; then
-touch ./prediction_230_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 230 70 | sort | ../reducer.py > ./prediction_230_70.txt
-echo 'Bands 230, Rows 70:' >> _results.txt
-../check.py ./prediction_230_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_230_66.txt ]; then
+touch ./prediction_230_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 230 66 | sort | ../reducer.py > ./prediction_230_66.txt
+echo 'Bands 230, Rows 66:' >> _results.txt
+../check.py ./prediction_230_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_235_20.txt ]; then
-touch ./prediction_235_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 235 20 | sort | ../reducer.py > ./prediction_235_20.txt
-echo 'Bands 235, Rows 20:' >> _results.txt
-../check.py ./prediction_235_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_230_69.txt ]; then
+touch ./prediction_230_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 230 69 | sort | ../reducer.py > ./prediction_230_69.txt
+echo 'Bands 230, Rows 69:' >> _results.txt
+../check.py ./prediction_230_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_235_25.txt ]; then
-touch ./prediction_235_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 235 25 | sort | ../reducer.py > ./prediction_235_25.txt
-echo 'Bands 235, Rows 25:' >> _results.txt
-../check.py ./prediction_235_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_235_30.txt ]; then
-touch ./prediction_235_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 235 30 | sort | ../reducer.py > ./prediction_235_30.txt
-echo 'Bands 235, Rows 30:' >> _results.txt
-../check.py ./prediction_235_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_235_35.txt ]; then
-touch ./prediction_235_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 235 35 | sort | ../reducer.py > ./prediction_235_35.txt
-echo 'Bands 235, Rows 35:' >> _results.txt
-../check.py ./prediction_235_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_235_40.txt ]; then
-touch ./prediction_235_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 235 40 | sort | ../reducer.py > ./prediction_235_40.txt
-echo 'Bands 235, Rows 40:' >> _results.txt
-../check.py ./prediction_235_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_235_42.txt ]; then
+touch ./prediction_235_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 235 42 | sort | ../reducer.py > ./prediction_235_42.txt
+echo 'Bands 235, Rows 42:' >> _results.txt
+../check.py ./prediction_235_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_235_45.txt ]; then
@@ -3123,18 +3095,32 @@ echo 'Bands 235, Rows 45:' >> _results.txt
 ../check.py ./prediction_235_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_235_50.txt ]; then
-touch ./prediction_235_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 235 50 | sort | ../reducer.py > ./prediction_235_50.txt
-echo 'Bands 235, Rows 50:' >> _results.txt
-../check.py ./prediction_235_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_235_48.txt ]; then
+touch ./prediction_235_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 235 48 | sort | ../reducer.py > ./prediction_235_48.txt
+echo 'Bands 235, Rows 48:' >> _results.txt
+../check.py ./prediction_235_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_235_55.txt ]; then
-touch ./prediction_235_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 235 55 | sort | ../reducer.py > ./prediction_235_55.txt
-echo 'Bands 235, Rows 55:' >> _results.txt
-../check.py ./prediction_235_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_235_51.txt ]; then
+touch ./prediction_235_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 235 51 | sort | ../reducer.py > ./prediction_235_51.txt
+echo 'Bands 235, Rows 51:' >> _results.txt
+../check.py ./prediction_235_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_235_54.txt ]; then
+touch ./prediction_235_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 235 54 | sort | ../reducer.py > ./prediction_235_54.txt
+echo 'Bands 235, Rows 54:' >> _results.txt
+../check.py ./prediction_235_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_235_57.txt ]; then
+touch ./prediction_235_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 235 57 | sort | ../reducer.py > ./prediction_235_57.txt
+echo 'Bands 235, Rows 57:' >> _results.txt
+../check.py ./prediction_235_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_235_60.txt ]; then
@@ -3144,53 +3130,32 @@ echo 'Bands 235, Rows 60:' >> _results.txt
 ../check.py ./prediction_235_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_235_65.txt ]; then
-touch ./prediction_235_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 235 65 | sort | ../reducer.py > ./prediction_235_65.txt
-echo 'Bands 235, Rows 65:' >> _results.txt
-../check.py ./prediction_235_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_235_63.txt ]; then
+touch ./prediction_235_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 235 63 | sort | ../reducer.py > ./prediction_235_63.txt
+echo 'Bands 235, Rows 63:' >> _results.txt
+../check.py ./prediction_235_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_235_70.txt ]; then
-touch ./prediction_235_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 235 70 | sort | ../reducer.py > ./prediction_235_70.txt
-echo 'Bands 235, Rows 70:' >> _results.txt
-../check.py ./prediction_235_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_235_66.txt ]; then
+touch ./prediction_235_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 235 66 | sort | ../reducer.py > ./prediction_235_66.txt
+echo 'Bands 235, Rows 66:' >> _results.txt
+../check.py ./prediction_235_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_240_20.txt ]; then
-touch ./prediction_240_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 240 20 | sort | ../reducer.py > ./prediction_240_20.txt
-echo 'Bands 240, Rows 20:' >> _results.txt
-../check.py ./prediction_240_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_235_69.txt ]; then
+touch ./prediction_235_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 235 69 | sort | ../reducer.py > ./prediction_235_69.txt
+echo 'Bands 235, Rows 69:' >> _results.txt
+../check.py ./prediction_235_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_240_25.txt ]; then
-touch ./prediction_240_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 240 25 | sort | ../reducer.py > ./prediction_240_25.txt
-echo 'Bands 240, Rows 25:' >> _results.txt
-../check.py ./prediction_240_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_240_30.txt ]; then
-touch ./prediction_240_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 240 30 | sort | ../reducer.py > ./prediction_240_30.txt
-echo 'Bands 240, Rows 30:' >> _results.txt
-../check.py ./prediction_240_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_240_35.txt ]; then
-touch ./prediction_240_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 240 35 | sort | ../reducer.py > ./prediction_240_35.txt
-echo 'Bands 240, Rows 35:' >> _results.txt
-../check.py ./prediction_240_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_240_40.txt ]; then
-touch ./prediction_240_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 240 40 | sort | ../reducer.py > ./prediction_240_40.txt
-echo 'Bands 240, Rows 40:' >> _results.txt
-../check.py ./prediction_240_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_240_42.txt ]; then
+touch ./prediction_240_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 240 42 | sort | ../reducer.py > ./prediction_240_42.txt
+echo 'Bands 240, Rows 42:' >> _results.txt
+../check.py ./prediction_240_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_240_45.txt ]; then
@@ -3200,18 +3165,32 @@ echo 'Bands 240, Rows 45:' >> _results.txt
 ../check.py ./prediction_240_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_240_50.txt ]; then
-touch ./prediction_240_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 240 50 | sort | ../reducer.py > ./prediction_240_50.txt
-echo 'Bands 240, Rows 50:' >> _results.txt
-../check.py ./prediction_240_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_240_48.txt ]; then
+touch ./prediction_240_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 240 48 | sort | ../reducer.py > ./prediction_240_48.txt
+echo 'Bands 240, Rows 48:' >> _results.txt
+../check.py ./prediction_240_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_240_55.txt ]; then
-touch ./prediction_240_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 240 55 | sort | ../reducer.py > ./prediction_240_55.txt
-echo 'Bands 240, Rows 55:' >> _results.txt
-../check.py ./prediction_240_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_240_51.txt ]; then
+touch ./prediction_240_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 240 51 | sort | ../reducer.py > ./prediction_240_51.txt
+echo 'Bands 240, Rows 51:' >> _results.txt
+../check.py ./prediction_240_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_240_54.txt ]; then
+touch ./prediction_240_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 240 54 | sort | ../reducer.py > ./prediction_240_54.txt
+echo 'Bands 240, Rows 54:' >> _results.txt
+../check.py ./prediction_240_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_240_57.txt ]; then
+touch ./prediction_240_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 240 57 | sort | ../reducer.py > ./prediction_240_57.txt
+echo 'Bands 240, Rows 57:' >> _results.txt
+../check.py ./prediction_240_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_240_60.txt ]; then
@@ -3221,53 +3200,32 @@ echo 'Bands 240, Rows 60:' >> _results.txt
 ../check.py ./prediction_240_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_240_65.txt ]; then
-touch ./prediction_240_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 240 65 | sort | ../reducer.py > ./prediction_240_65.txt
-echo 'Bands 240, Rows 65:' >> _results.txt
-../check.py ./prediction_240_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_240_63.txt ]; then
+touch ./prediction_240_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 240 63 | sort | ../reducer.py > ./prediction_240_63.txt
+echo 'Bands 240, Rows 63:' >> _results.txt
+../check.py ./prediction_240_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_240_70.txt ]; then
-touch ./prediction_240_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 240 70 | sort | ../reducer.py > ./prediction_240_70.txt
-echo 'Bands 240, Rows 70:' >> _results.txt
-../check.py ./prediction_240_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_240_66.txt ]; then
+touch ./prediction_240_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 240 66 | sort | ../reducer.py > ./prediction_240_66.txt
+echo 'Bands 240, Rows 66:' >> _results.txt
+../check.py ./prediction_240_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_245_20.txt ]; then
-touch ./prediction_245_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 245 20 | sort | ../reducer.py > ./prediction_245_20.txt
-echo 'Bands 245, Rows 20:' >> _results.txt
-../check.py ./prediction_245_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_240_69.txt ]; then
+touch ./prediction_240_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 240 69 | sort | ../reducer.py > ./prediction_240_69.txt
+echo 'Bands 240, Rows 69:' >> _results.txt
+../check.py ./prediction_240_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_245_25.txt ]; then
-touch ./prediction_245_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 245 25 | sort | ../reducer.py > ./prediction_245_25.txt
-echo 'Bands 245, Rows 25:' >> _results.txt
-../check.py ./prediction_245_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_245_30.txt ]; then
-touch ./prediction_245_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 245 30 | sort | ../reducer.py > ./prediction_245_30.txt
-echo 'Bands 245, Rows 30:' >> _results.txt
-../check.py ./prediction_245_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_245_35.txt ]; then
-touch ./prediction_245_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 245 35 | sort | ../reducer.py > ./prediction_245_35.txt
-echo 'Bands 245, Rows 35:' >> _results.txt
-../check.py ./prediction_245_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_245_40.txt ]; then
-touch ./prediction_245_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 245 40 | sort | ../reducer.py > ./prediction_245_40.txt
-echo 'Bands 245, Rows 40:' >> _results.txt
-../check.py ./prediction_245_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_245_42.txt ]; then
+touch ./prediction_245_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 245 42 | sort | ../reducer.py > ./prediction_245_42.txt
+echo 'Bands 245, Rows 42:' >> _results.txt
+../check.py ./prediction_245_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_245_45.txt ]; then
@@ -3277,18 +3235,32 @@ echo 'Bands 245, Rows 45:' >> _results.txt
 ../check.py ./prediction_245_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_245_50.txt ]; then
-touch ./prediction_245_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 245 50 | sort | ../reducer.py > ./prediction_245_50.txt
-echo 'Bands 245, Rows 50:' >> _results.txt
-../check.py ./prediction_245_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_245_48.txt ]; then
+touch ./prediction_245_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 245 48 | sort | ../reducer.py > ./prediction_245_48.txt
+echo 'Bands 245, Rows 48:' >> _results.txt
+../check.py ./prediction_245_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_245_55.txt ]; then
-touch ./prediction_245_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 245 55 | sort | ../reducer.py > ./prediction_245_55.txt
-echo 'Bands 245, Rows 55:' >> _results.txt
-../check.py ./prediction_245_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_245_51.txt ]; then
+touch ./prediction_245_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 245 51 | sort | ../reducer.py > ./prediction_245_51.txt
+echo 'Bands 245, Rows 51:' >> _results.txt
+../check.py ./prediction_245_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_245_54.txt ]; then
+touch ./prediction_245_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 245 54 | sort | ../reducer.py > ./prediction_245_54.txt
+echo 'Bands 245, Rows 54:' >> _results.txt
+../check.py ./prediction_245_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_245_57.txt ]; then
+touch ./prediction_245_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 245 57 | sort | ../reducer.py > ./prediction_245_57.txt
+echo 'Bands 245, Rows 57:' >> _results.txt
+../check.py ./prediction_245_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_245_60.txt ]; then
@@ -3298,53 +3270,32 @@ echo 'Bands 245, Rows 60:' >> _results.txt
 ../check.py ./prediction_245_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_245_65.txt ]; then
-touch ./prediction_245_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 245 65 | sort | ../reducer.py > ./prediction_245_65.txt
-echo 'Bands 245, Rows 65:' >> _results.txt
-../check.py ./prediction_245_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_245_63.txt ]; then
+touch ./prediction_245_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 245 63 | sort | ../reducer.py > ./prediction_245_63.txt
+echo 'Bands 245, Rows 63:' >> _results.txt
+../check.py ./prediction_245_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_245_70.txt ]; then
-touch ./prediction_245_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 245 70 | sort | ../reducer.py > ./prediction_245_70.txt
-echo 'Bands 245, Rows 70:' >> _results.txt
-../check.py ./prediction_245_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_245_66.txt ]; then
+touch ./prediction_245_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 245 66 | sort | ../reducer.py > ./prediction_245_66.txt
+echo 'Bands 245, Rows 66:' >> _results.txt
+../check.py ./prediction_245_66.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_250_20.txt ]; then
-touch ./prediction_250_20.txt
-cat ../1_data/train.txt | ../src/mapper.py 250 20 | sort | ../reducer.py > ./prediction_250_20.txt
-echo 'Bands 250, Rows 20:' >> _results.txt
-../check.py ./prediction_250_20.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_245_69.txt ]; then
+touch ./prediction_245_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 245 69 | sort | ../reducer.py > ./prediction_245_69.txt
+echo 'Bands 245, Rows 69:' >> _results.txt
+../check.py ./prediction_245_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_250_25.txt ]; then
-touch ./prediction_250_25.txt
-cat ../1_data/train.txt | ../src/mapper.py 250 25 | sort | ../reducer.py > ./prediction_250_25.txt
-echo 'Bands 250, Rows 25:' >> _results.txt
-../check.py ./prediction_250_25.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_250_30.txt ]; then
-touch ./prediction_250_30.txt
-cat ../1_data/train.txt | ../src/mapper.py 250 30 | sort | ../reducer.py > ./prediction_250_30.txt
-echo 'Bands 250, Rows 30:' >> _results.txt
-../check.py ./prediction_250_30.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_250_35.txt ]; then
-touch ./prediction_250_35.txt
-cat ../1_data/train.txt | ../src/mapper.py 250 35 | sort | ../reducer.py > ./prediction_250_35.txt
-echo 'Bands 250, Rows 35:' >> _results.txt
-../check.py ./prediction_250_35.txt ../1_data/duplicates.txt >> _results.txt
-echo '' >> _results.txt
-fi
-if [ ! -f ./prediction_250_40.txt ]; then
-touch ./prediction_250_40.txt
-cat ../1_data/train.txt | ../src/mapper.py 250 40 | sort | ../reducer.py > ./prediction_250_40.txt
-echo 'Bands 250, Rows 40:' >> _results.txt
-../check.py ./prediction_250_40.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_250_42.txt ]; then
+touch ./prediction_250_42.txt
+cat ../1_data/train.txt | ../src/mapper.py 250 42 | sort | ../reducer.py > ./prediction_250_42.txt
+echo 'Bands 250, Rows 42:' >> _results.txt
+../check.py ./prediction_250_42.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_250_45.txt ]; then
@@ -3354,18 +3305,32 @@ echo 'Bands 250, Rows 45:' >> _results.txt
 ../check.py ./prediction_250_45.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_250_50.txt ]; then
-touch ./prediction_250_50.txt
-cat ../1_data/train.txt | ../src/mapper.py 250 50 | sort | ../reducer.py > ./prediction_250_50.txt
-echo 'Bands 250, Rows 50:' >> _results.txt
-../check.py ./prediction_250_50.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_250_48.txt ]; then
+touch ./prediction_250_48.txt
+cat ../1_data/train.txt | ../src/mapper.py 250 48 | sort | ../reducer.py > ./prediction_250_48.txt
+echo 'Bands 250, Rows 48:' >> _results.txt
+../check.py ./prediction_250_48.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_250_55.txt ]; then
-touch ./prediction_250_55.txt
-cat ../1_data/train.txt | ../src/mapper.py 250 55 | sort | ../reducer.py > ./prediction_250_55.txt
-echo 'Bands 250, Rows 55:' >> _results.txt
-../check.py ./prediction_250_55.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_250_51.txt ]; then
+touch ./prediction_250_51.txt
+cat ../1_data/train.txt | ../src/mapper.py 250 51 | sort | ../reducer.py > ./prediction_250_51.txt
+echo 'Bands 250, Rows 51:' >> _results.txt
+../check.py ./prediction_250_51.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_250_54.txt ]; then
+touch ./prediction_250_54.txt
+cat ../1_data/train.txt | ../src/mapper.py 250 54 | sort | ../reducer.py > ./prediction_250_54.txt
+echo 'Bands 250, Rows 54:' >> _results.txt
+../check.py ./prediction_250_54.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_250_57.txt ]; then
+touch ./prediction_250_57.txt
+cat ../1_data/train.txt | ../src/mapper.py 250 57 | sort | ../reducer.py > ./prediction_250_57.txt
+echo 'Bands 250, Rows 57:' >> _results.txt
+../check.py ./prediction_250_57.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
 if [ ! -f ./prediction_250_60.txt ]; then
@@ -3375,17 +3340,24 @@ echo 'Bands 250, Rows 60:' >> _results.txt
 ../check.py ./prediction_250_60.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_250_65.txt ]; then
-touch ./prediction_250_65.txt
-cat ../1_data/train.txt | ../src/mapper.py 250 65 | sort | ../reducer.py > ./prediction_250_65.txt
-echo 'Bands 250, Rows 65:' >> _results.txt
-../check.py ./prediction_250_65.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_250_63.txt ]; then
+touch ./prediction_250_63.txt
+cat ../1_data/train.txt | ../src/mapper.py 250 63 | sort | ../reducer.py > ./prediction_250_63.txt
+echo 'Bands 250, Rows 63:' >> _results.txt
+../check.py ./prediction_250_63.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi
-if [ ! -f ./prediction_250_70.txt ]; then
-touch ./prediction_250_70.txt
-cat ../1_data/train.txt | ../src/mapper.py 250 70 | sort | ../reducer.py > ./prediction_250_70.txt
-echo 'Bands 250, Rows 70:' >> _results.txt
-../check.py ./prediction_250_70.txt ../1_data/duplicates.txt >> _results.txt
+if [ ! -f ./prediction_250_66.txt ]; then
+touch ./prediction_250_66.txt
+cat ../1_data/train.txt | ../src/mapper.py 250 66 | sort | ../reducer.py > ./prediction_250_66.txt
+echo 'Bands 250, Rows 66:' >> _results.txt
+../check.py ./prediction_250_66.txt ../1_data/duplicates.txt >> _results.txt
+echo '' >> _results.txt
+fi
+if [ ! -f ./prediction_250_69.txt ]; then
+touch ./prediction_250_69.txt
+cat ../1_data/train.txt | ../src/mapper.py 250 69 | sort | ../reducer.py > ./prediction_250_69.txt
+echo 'Bands 250, Rows 69:' >> _results.txt
+../check.py ./prediction_250_69.txt ../1_data/duplicates.txt >> _results.txt
 echo '' >> _results.txt
 fi

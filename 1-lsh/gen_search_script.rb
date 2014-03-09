@@ -8,8 +8,8 @@ File.open('search_script.sh', 'w') do |f|
   f.puts "cd search"
 
 
-  bands = (32..250).select { |i| i%5 == 0 }
-  rows = (20..70).select { |i| i%5 == 0 }
+  bands = ([256,255,254,253] + (32..250).select { |i| i%5 == 0 }).uniq
+  rows = (42..70).select { |i| i%3 == 0 }
 
   bands.each do |band|
     rows.each do |row|
