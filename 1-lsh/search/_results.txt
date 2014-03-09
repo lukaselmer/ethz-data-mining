@@ -290,3 +290,107 @@ Bands 65, Rows 50:
 TP = 116 FP = 0 FN = 76
 Precision = 1.000000, recall = 0.604167, F1 = 0.753247
 
+Bands 65, Rows 55:
+TP = 98 FP = 0 FN = 94
+Precision = 1.000000, recall = 0.510417, F1 = 0.675862
+
+Bands 65, Rows 60:
+TP = 78 FP = 0 FN = 114
+Precision = 1.000000, recall = 0.406250, F1 = 0.577778
+
+Bands 65, Rows 65:
+TP = 68 FP = 0 FN = 124
+Precision = 1.000000, recall = 0.354167, F1 = 0.523077
+
+Bands 65, Rows 70:
+TP = 74 FP = 0 FN = 118
+Precision = 1.000000, recall = 0.385417, F1 = 0.556391
+
+Bands 70, Rows 20:
+TP = 192 FP = 133 FN = 0
+Precision = 0.590769, recall = 1.000000, F1 = 0.742747
+
+Bands 70, Rows 25:
+TP = 190 FP = 67 FN = 2
+Precision = 0.739300, recall = 0.989583, F1 = 0.846325
+
+Bands 70, Rows 30:
+TP = 188 FP = 30 FN = 4
+Precision = 0.862385, recall = 0.979167, F1 = 0.917073
+
+Bands 70, Rows 35:
+TP = 184 FP = 8 FN = 8
+Precision = 0.958333, recall = 0.958333, F1 = 0.958333
+
+Bands 70, Rows 40:
+TP = 162 FP = 6 FN = 30
+Precision = 0.964286, recall = 0.843750, F1 = 0.900000
+
+Bands 70, Rows 45:
+TP = 142 FP = 2 FN = 50
+Precision = 0.986111, recall = 0.739583, F1 = 0.845238
+
+Bands 70, Rows 55:
+TP = 100 FP = 0 FN = 92
+Precision = 1.000000, recall = 0.520833, F1 = 0.684932
+
+Bands 70, Rows 60:
+TP = 78 FP = 0 FN = 114
+Precision = 1.000000, recall = 0.406250, F1 = 0.577778
+
+Bands 75, Rows 20:
+TP = 192 FP = 138 FN = 0
+Precision = 0.581818, recall = 1.000000, F1 = 0.735632
+
+Bands 75, Rows 25:
+TP = 192 FP = 70 FN = 0
+Precision = 0.732824, recall = 1.000000, F1 = 0.845815
+
+Bands 70, Rows 65:
+TP = 68 FP = 0 FN = 124
+Precision = 1.000000, recall = 0.354167, F1 = 0.523077
+
+Bands 75, Rows 30:
+TP = 188 FP = 32 FN = 4
+Precision = 0.854545, recall = 0.979167, F1 = 0.912621
+
+Bands 70, Rows 70:
+TP = 74 FP = 0 FN = 118
+Precision = 1.000000, recall = 0.385417, F1 = 0.556391
+
+Bands 75, Rows 35:
+TP = 186 FP = 10 FN = 6
+Precision = 0.948980, recall = 0.968750, F1 = 0.958763
+
+Bands 75, Rows 40:
+TP = 162 FP = 8 FN = 30
+Precision = 0.952941, recall = 0.843750, F1 = 0.895028
+
+Bands 75, Rows 45:
+TP = 144 FP = 2 FN = 48
+Precision = 0.986301, recall = 0.750000, F1 = 0.852071
+
+Bands 80, Rows 20:
+TP = 192 FP = 145 FN = 0
+Precision = 0.569733, recall = 1.000000, F1 = 0.725898
+
+Bands 80, Rows 25:
+TP = 192 FP = 74 FN = 0
+Precision = 0.721805, recall = 1.000000, F1 = 0.838428
+
+Bands 75, Rows 50:
+TP = 118 FP = 2 FN = 74
+Precision = 0.983333, recall = 0.614583, F1 = 0.756410
+
+Bands 75, Rows 55:
+TP = 102 FP = 0 FN = 90
+Precision = 1.000000, recall = 0.531250, F1 = 0.693878
+
+Bands 80, Rows 30:
+TP = 190 FP = 32 FN = 2
+Precision = 0.855856, recall = 0.989583, F1 = 0.917874
+
+Bands 80, Rows 35:
+TP = 188 FP = 10 FN = 4
+Precision = 0.949495, recall = 0.979167, F1 = 0.964103
+
