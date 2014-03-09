@@ -30,6 +30,8 @@ nosetests.xml
 # Translations
 *.mo
 
+.DS_Store
+
 # Mr Developer
 .mr.developer.cfg
 .project
