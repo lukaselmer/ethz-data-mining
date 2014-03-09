@@ -33,12 +33,8 @@ class DMHash:
         return sum(a)
 
 
-def partition(video_id, shingles):
-    pass
-
-
 class Mapper:
-    def __init__(self, permuter, number_of_bands=64, number_of_rows_per_band=32):
+    def __init__(self, permuter, number_of_bands=200, number_of_rows_per_band=43):
         self.permuter = permuter
         self.number_of_bands = number_of_bands
         self.number_of_rows_per_band = number_of_rows_per_band
