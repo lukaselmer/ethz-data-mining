@@ -80,7 +80,11 @@ if __name__ == "__main__":
     # Very important. Make sure that each machine is using the
     # same seed when generating random numbers for the hash functions.
 
-    m = Mapper(IDPermutation())
+    m = None
+    if len(sys.argv) > 1:
+        m = Mapper(IDPermutation(), int(sys.argv[1]), int(sys.argv[2]))
+    else:
+        m = Mapper(IDPermutation())
 
     for line in sys.stdin:
         line = line.strip()
