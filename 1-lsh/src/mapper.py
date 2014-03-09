@@ -38,7 +38,7 @@ def partition(video_id, shingles):
 
 
 class Mapper:
-    def __init__(self, permuter, number_of_bands=3, number_of_rows_per_band=3):
+    def __init__(self, permuter, number_of_bands=64, number_of_rows_per_band=32):
         self.permuter = permuter
         self.number_of_bands = number_of_bands
         self.number_of_rows_per_band = number_of_rows_per_band
@@ -49,7 +49,7 @@ class Mapper:
         video_id = int(line[6:15])
 
         # get vector representation of video data
-        shingles = np.fromstring(line[16:], sep=" ")
+        shingles = np.fromstring(line[16:], dtype=int, sep=" ")
 
         sig = self.generate_signature(shingles, self.permutations)
 
@@ -58,7 +58,7 @@ class Mapper:
             hash = d.generateHash(sig[i*self.number_of_rows_per_band : (i+1)*self.number_of_rows_per_band])
 
             # generate signature for this movie (1 column in signature matrix)
-            self.print_res(i + ":" + hash, video_id)
+            self.print_res(str(i) + ":" + str(hash[0]), video_id)
 
     def print_res(self, key, value):
         print('%s\t%d' % (key, value))
@@ -71,14 +71,9 @@ class Mapper:
     def generate_signature(self, shingles, permutations):
 
         num_permutations = np.size(permutations, 1)
-        signature_column = np.zeros([num_permutations, 1], dtype = np.int)
-        signature_column[:] = np.inf
 
-        for index in shingles:
-            permuted_index = np.reshape(np.where(permutations == index)[0], [num_permutations, 1])
-            signature_column[:, 1] = np.minimum(signature_column[:, 1], permuted_index)
-
-        return signature_column
+        minvalues = np.min(permutations[shingles,:], 0)
+        return np.reshape(minvalues, [num_permutations,1])
 
 
 if __name__ == "__main__":
