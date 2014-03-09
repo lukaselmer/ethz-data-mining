@@ -26,3 +26,4 @@ File.open('search_script.sh', 'w') do |f|
 
 end
 
+%x{chmod 755 search_script.sh}
