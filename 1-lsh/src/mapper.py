@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+
+import sys
+
 import numpy as np
 
 np.random.seed(seed=42)
@@ -62,3 +66,15 @@ class Mapper:
             min_hash = min(min_hash, (a * index + b) % p)
 
         return min_hash
+
+
+if __name__ == "__main__":
+    # Very important. Make sure that each machine is using the
+    # same seed when generating random numbers for the hash functions.
+
+    m = Mapper(IDPermutation())
+
+    for line in sys.stdin:
+        line = line.strip()
+
+        m.map(line)

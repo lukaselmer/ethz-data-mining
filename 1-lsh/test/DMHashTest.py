@@ -3,7 +3,7 @@ import unittest
 from src import mapper
 
 
-class MyTestCase(unittest.TestCase):
+class DMHashTestCase(unittest.TestCase):
     def test_dm_hash0(self):
         d = mapper.DMHash(3);
         self.assertEqual(d.generateHash([0]), 0)
