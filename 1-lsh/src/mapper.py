@@ -3,8 +3,18 @@
 import sys
 
 import numpy as np
+from numpy.core.multiarray import dtype
 
 np.random.seed(seed=42)
+
+def generate_permutations(num_permutations, num_shingles):
+    indexes = np.arange(num_shingles).reshape(num_shingles, 1)
+    indexes = np.tile(indexes, [1, num_permutations])  # replicate column vector
+
+    for i in xrange(num_permutations):
+        indexes[:, i] = np.random.permutation(indexes[:, i])
+
+    return indexes
 
 
 class IDPermutation:
@@ -28,9 +38,11 @@ def partition(video_id, shingles):
 
 
 class Mapper:
-    def __init__(self, permuter, number_of_buckets=34):
+    def __init__(self, permuter, number_of_bands=3, number_of_rows_per_band=3):
         self.permuter = permuter
-        self.number_of_buckets = number_of_buckets
+        self.number_of_bands = number_of_bands
+        self.number_of_rows_per_band = number_of_rows_per_band
+        self.permutations = generate_permutations(number_of_bands * number_of_rows_per_band, 10000)
 
     def map(self, line):
         # extract video id
@@ -39,33 +51,34 @@ class Mapper:
         # get vector representation of video data
         shingles = np.fromstring(line[16:], sep=" ")
 
-        for i in range(0, self.number_of_buckets):
-            permuted_vector = self.permuter.permute(shingles, i)
-            sig = self.generate_signature(permuted_vector)
+        sig = self.generate_signature(shingles, self.permutations)
+
+        for i in range(0, self.number_of_bands):
+            d = DMHash(10000)
+            hash = d.generateHash(sig[i*self.number_of_rows_per_band : (i+1)*self.number_of_rows_per_band])
 
             # generate signature for this movie (1 column in signature matrix)
-            self.print_res(sig, video_id)
-
-            #print '%s, %s' % (video_id, shingles)
-            # WTF?
-            #partition(video_id, shingles)
+            self.print_res(i + ":" + hash, video_id)
 
     def print_res(self, key, value):
-        print('%d\t%d' % (key, value))
+        print('%s\t%d' % (key, value))
 
-    # shingles is a list of indexes (if index is present it means that the movie contains the shingle with this index)
-    def generate_signature(self, shingles):
+    # Input:
+    #   shingles is a list of indexes (if index is present it means that the movie contains the shingle with this index)
+    #   permutations is a mxn matrix where each column represents a permutation of the range [0, 10000)
+    # Output:
+    #   signature_column:   a nx1 vector which represents the signature of this video
+    def generate_signature(self, shingles, permutations):
 
-        # TODO: generate random hash function for row permutation of form: ax + b mod p
-        p = 10000
-        a = 431
-        b = 151
+        num_permutations = np.size(permutations, 1)
+        signature_column = np.zeros([num_permutations, 1], dtype = np.int)
+        signature_column[:] = np.inf
 
-        min_hash = np.inf
         for index in shingles:
-            min_hash = min(min_hash, (a * index + b) % p)
+            permuted_index = np.reshape(np.where(permutations == index)[0], [num_permutations, 1])
+            signature_column[:, 1] = np.minimum(signature_column[:, 1], permuted_index)
 
-        return min_hash
+        return signature_column
 
 
 if __name__ == "__main__":
