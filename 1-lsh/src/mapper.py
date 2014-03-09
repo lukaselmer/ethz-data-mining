@@ -34,7 +34,7 @@ class DMHash:
 
 
 class Mapper:
-    def __init__(self, permuter, number_of_bands=200, number_of_rows_per_band=43):
+    def __init__(self, permuter, number_of_bands=256, number_of_rows_per_band=42):
         self.permuter = permuter
         self.number_of_bands = number_of_bands
         self.number_of_rows_per_band = number_of_rows_per_band
