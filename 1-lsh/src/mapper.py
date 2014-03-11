@@ -5,7 +5,6 @@ import sys
 import numpy as np
 from numpy.core.multiarray import dtype
 
-np.random.seed(seed=42)
 
 def generate_permutations(num_permutations, num_shingles):
     indexes = np.arange(num_shingles).reshape(num_shingles, 1)
@@ -17,20 +16,18 @@ def generate_permutations(num_permutations, num_shingles):
     return indexes
 
 
-
 class DMHash:
-    def __init__(self, max):
-        self.max = max
+    def __init__(self, max_value):
+        self.max = max_value
 
-    def generateHash(self, vector):
-        def power(x): return pow(self.max, x)
-
-        a = [power(i) * v for i, v in enumerate(vector)]
+    def generate_hash(self, vector):
+        a = [pow(self.max, i) * v for i, v in enumerate(vector)]
         return sum(a)
 
 
 class Mapper:
-    def __init__(self, number_of_bands=165, number_of_rows_per_band=28): # best until now: 256, 42
+    def __init__(self, number_of_bands=165, number_of_rows_per_band=28, seed=42):  # best until now: 165, 28 (no false negatives) or 256, 42 (F1, without post-processing)
+        np.random.seed(seed=seed)
         self.number_of_bands = number_of_bands
         self.number_of_rows_per_band = number_of_rows_per_band
         self.permutations = generate_permutations(number_of_bands * number_of_rows_per_band, 10000)
@@ -46,7 +43,7 @@ class Mapper:
 
         for i in range(0, self.number_of_bands):
             d = DMHash(10000)
-            hash = d.generateHash(sig[i*self.number_of_rows_per_band : (i+1)*self.number_of_rows_per_band])
+            hash = d.generate_hash(sig[i * self.number_of_rows_per_band: (i + 1) * self.number_of_rows_per_band])
 
             # generate signature for this movie (1 column in signature matrix)
             self.print_res(str(i) + ":" + str(hash[0]), video_id, shingles)
@@ -61,11 +58,10 @@ class Mapper:
     # Output:
     #   signature_column:   a nx1 vector which represents the signature of this video
     def generate_signature(self, shingles, permutations):
-
         num_permutations = np.size(permutations, 1)
 
-        minvalues = np.min(permutations[shingles,:], 0)
-        return np.reshape(minvalues, [num_permutations,1])
+        minvalues = np.min(permutations[shingles, :], 0)
+        return np.reshape(minvalues, [num_permutations, 1])
 
 
 if __name__ == "__main__":
