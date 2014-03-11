@@ -7,7 +7,7 @@ some_data_line = "VIDEO_000000000 123 747 2776 7633 3906 2788 3336 3488 8544 313
 
 class MapperTestCase(unittest.TestCase):
     def test_mapper(self):
-        m = mapper.Mapper(mapper.IDPermutation())
+        m = mapper.Mapper(3,3)
 
         res = []
 
@@ -22,3 +22,4 @@ class MapperTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
