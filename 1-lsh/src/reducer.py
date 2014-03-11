@@ -22,9 +22,6 @@ class JaccardDistance:
             return 0.0
         return float(intersection_len) / float(union_len)
 
-        # TOOD: implement this
-        return 1.0
-
 
 class Reducer:
     def __init__(self, lines):
