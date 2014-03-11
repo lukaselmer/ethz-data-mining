@@ -92,6 +92,13 @@ class ReducerTestCase(unittest.TestCase):
 
         self.assertEqual(len(res), 0)
 
+    def test_jaccard_distance(self):
+        j = reducer.JaccardDistance()
+        self.assertEqual(j.calculate_similarity([1,2,3], [1,2,3]), 1.0)
+        self.assertEqual(j.calculate_similarity([1,2,3], [1,2,4]), (3.0/2.0))
+        self.assertEqual(j.calculate_similarity([1,2,3], [1,4,5]), (4.0/1.0))
+        self.assertEqual(j.calculate_similarity([1,2,3], [4,5,6]), 0.0)
+
 if __name__ == '__main__':
     unittest.main()
 
