@@ -30,7 +30,7 @@ class DMHash:
 
 
 class Mapper:
-    def __init__(self, number_of_bands=165, number_of_rows_per_band=35): # best until now: 256, 42
+    def __init__(self, number_of_bands=165, number_of_rows_per_band=28): # best until now: 256, 42
         self.number_of_bands = number_of_bands
         self.number_of_rows_per_band = number_of_rows_per_band
         self.permutations = generate_permutations(number_of_bands * number_of_rows_per_band, 10000)
