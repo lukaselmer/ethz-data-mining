@@ -52,7 +52,8 @@ class Mapper:
             self.print_res(str(i) + ":" + str(hash[0]), video_id, shingles)
 
     def print_res(self, key, value, shingles):
-        print('%s\t%d\t%s' % (key, value, shingles))
+        # generates something like <key>\t<value>;<shingle1>,<shingle2>,...
+        print('%s\t%d;%s' % (key, value, ','.join(str(s) for s in shingles)))
 
     # Input:
     #   shingles is a list of indexes (if index is present it means that the movie contains the shingle with this index)
