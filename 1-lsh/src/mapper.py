@@ -17,10 +17,6 @@ def generate_permutations(num_permutations, num_shingles):
     return indexes
 
 
-class IDPermutation:
-    def permute(self, vector, i):
-        return vector
-
 
 class DMHash:
     def __init__(self, max):
@@ -34,8 +30,7 @@ class DMHash:
 
 
 class Mapper:
-    def __init__(self, permuter, number_of_bands=256, number_of_rows_per_band=42):
-        self.permuter = permuter
+    def __init__(self, number_of_bands=165, number_of_rows_per_band=35): # best until now: 256, 42
         self.number_of_bands = number_of_bands
         self.number_of_rows_per_band = number_of_rows_per_band
         self.permutations = generate_permutations(number_of_bands * number_of_rows_per_band, 10000)
@@ -54,10 +49,11 @@ class Mapper:
             hash = d.generateHash(sig[i*self.number_of_rows_per_band : (i+1)*self.number_of_rows_per_band])
 
             # generate signature for this movie (1 column in signature matrix)
-            self.print_res(str(i) + ":" + str(hash[0]), video_id)
+            self.print_res(str(i) + ":" + str(hash[0]), video_id, shingles)
 
-    def print_res(self, key, value):
-        print('%s\t%d' % (key, value))
+    def print_res(self, key, value, shingles):
+        # generates something like <key>\t<value>;<shingle1>,<shingle2>,...
+        print('%s\t%d;%s' % (key, value, ','.join(str(s) for s in shingles)))
 
     # Input:
     #   shingles is a list of indexes (if index is present it means that the movie contains the shingle with this index)
@@ -73,16 +69,12 @@ class Mapper:
 
 
 if __name__ == "__main__":
-    # Very important. Make sure that each machine is using the
-    # same seed when generating random numbers for the hash functions.
-
     m = None
     if len(sys.argv) > 1:
-        m = Mapper(IDPermutation(), int(sys.argv[1]), int(sys.argv[2]))
+        m = Mapper(int(sys.argv[1]), int(sys.argv[2]))
     else:
-        m = Mapper(IDPermutation())
+        m = Mapper()
 
     for line in sys.stdin:
         line = line.strip()
-
         m.map(line)
