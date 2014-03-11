@@ -10,7 +10,7 @@ some_data_line5 = "3:995043920039\t555;4,5,6,7"
 
 same_hash_other_shingles1 = "3:995043920039\t666;4,5,6,7"
 # Note: only 75% matching, but generated same hash!
-same_hash_other_shingles2 = "3:995043920039\t777;4,5,6,7"
+same_hash_other_shingles2 = "3:995043920039\t777;4,5,6,8"
 
 class ReducerTestCase(unittest.TestCase):
     def test_line_parser(self):
@@ -95,8 +95,8 @@ class ReducerTestCase(unittest.TestCase):
     def test_jaccard_distance(self):
         j = reducer.JaccardDistance()
         self.assertEqual(j.calculate_similarity([1,2,3], [1,2,3]), 1.0)
-        self.assertEqual(j.calculate_similarity([1,2,3], [1,2,4]), (3.0/2.0))
-        self.assertEqual(j.calculate_similarity([1,2,3], [1,4,5]), (4.0/1.0))
+        self.assertEqual(j.calculate_similarity([1,2,3], [1,2,4]), (2.0/4.0))
+        self.assertEqual(j.calculate_similarity([1,2,3], [1,4,5]), (1.0/5.0))
         self.assertEqual(j.calculate_similarity([1,2,3], [4,5,6]), 0.0)
 
 if __name__ == '__main__':
