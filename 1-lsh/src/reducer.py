@@ -16,8 +16,8 @@ class JaccardDistance:
     def calculate_similarity(self, set1, set2):
         s1 = set(set1)
         s2 = set(set2)
-        intersection_len = len(s1.intersection(s2))
-        union_len = len(s1.union(s2))
+        intersection_len = len(s1 & s2)
+        union_len = len(s1 | s2)
         if intersection_len == 0:
             return 0.0
         return float(intersection_len) / float(union_len)
