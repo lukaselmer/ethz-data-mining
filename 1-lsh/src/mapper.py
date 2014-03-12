@@ -26,7 +26,7 @@ class DMHash:
 
 
 class Mapper:
-    def __init__(self, number_of_bands=165, number_of_rows_per_band=28, seed=42):  # best until now: 165, 28 (no false negatives) or 256, 42 (F1, without post-processing)
+    def __init__(self, number_of_bands=35, number_of_rows_per_band=20, seed=42):  # best until now: 165, 28 (no false negatives) or 256, 42 (F1, without post-processing)
         np.random.seed(seed=seed)
         self.number_of_bands = number_of_bands
         self.number_of_rows_per_band = number_of_rows_per_band
