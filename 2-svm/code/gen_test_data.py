@@ -20,8 +20,8 @@ if __name__ == "__main__":
     Train = []
 
     reader = open('./1-data/training', 'r')
-    max_test = 100
-    max_train = 1000
+    max_test = 50
+    max_train = 500
 
     count = 0
 
@@ -32,8 +32,8 @@ if __name__ == "__main__":
         if max_train_reached and max_train_reached:
             break
 
-        train = np.rand() < 0.01 and not max_train_reached
-        test = (not train) and np.rand() < 0.01 and not max_test_reached
+        train = np.random.random() < 0.01 and not max_train_reached
+        test = (not train) and np.random.random() < 0.01 and not max_test_reached
 
         if not (test or train):
             continue
@@ -42,19 +42,25 @@ if __name__ == "__main__":
             ly.append(x)
             ly.append(y)
 
-        line = line.strip().split(' ')
-        a = line.pop(0)
-        b = " ".join(line)
+        l = line.strip().split(' ')
+        a = l.pop(0)
+        b = " ".join(l)
 
         if test:
-            Xtest.append(a)
-            Ytest.append(b)
+            Ytest.append(a)
+            Xtest.append(b)
         else:
-            Train.append(line)
+            Train.append(line.strip())
 
-open('./1-data/training.txt', 'w').writelines(Train)
-open('./1-data/test_data.txt', 'w').writelines(Xtest)
-open('./1-data/test_labels.txt', 'w').writelines(Ytest)
+
+def write_array(stream, array):
+    for a in array:
+        stream.write(a + "\n")
+
+
+write_array(open('./1-data/training.txt', 'w'), Train)
+write_array(open('./1-data/test_data.txt', 'w'), Xtest)
+write_array(open('./1-data/test_labels.txt', 'w'), Ytest)
 
 
 
