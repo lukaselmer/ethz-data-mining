@@ -23,9 +23,9 @@ def transform(x_original, make_np=True):
     def e_pow(x):
         return math.exp(x)
 
-    x.extend(map(sqr, x_original))
-    x.extend(map(e_pow, x_original))
-    x.extend(map(math.sin, x_original))
+    #x.extend(map(sqr, x_original))
+    #x.extend(map(e_pow, x_original))
+    #x.extend(map(math.sin, x_original))
     #x.extend(map(math.log, x_original))
 
     if make_np:
