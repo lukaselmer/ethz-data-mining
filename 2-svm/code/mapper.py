@@ -21,12 +21,22 @@ def transform(x_original, make_np=True):
     def sqr(x):
         return x * x
 
+    def sqr3(x):
+        return x * x * x
+
     def e_pow(x):
         return math.exp(x)
 
+    def me_pow(x):
+        return math.exp(-x)
+
+
     x.extend(map(sqr, x_original))
     x.extend(map(e_pow, x_original))
-    x.extend(map(math.sin, x_original))
+    x.extend(map(math.sqrt, x_original))
+    #x.extend(map(sqr3, x_original))
+    #x.extend(map(math.sin, x_original))
+    #x.extend(map(me_pow, x_original))
     #x.extend(map(math.log, x_original))
 
     if make_np:
@@ -42,7 +52,8 @@ if __name__ == "__main__":
 
     MAX_LINES = -1
 
-    clf = LinearSVC(dual=False)
+    clf = LinearSVC(dual=False, C=1.1, loss='l2', penalty='l2')
+    #clf = LinearSVC(dual=True, C=1.1, loss='l1', penalty='l2')
     #clf = linear_model.SGDClassifier()
     X = []
     Y = []
