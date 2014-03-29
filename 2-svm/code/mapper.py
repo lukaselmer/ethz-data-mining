@@ -3,7 +3,7 @@
 import sys
 import numpy as np
 import scipy
-from sklearn.svm import SVC
+from sklearn.svm import LinearSVC
 
 #from sklearn.multiclass import OneVsRestClassifier
 #from sklearn.svm import LinearSVC
@@ -15,37 +15,31 @@ from sklearn.svm import SVC
 def transform(x_original):
     return x_original
 
-
 if __name__ == "__main__":
-    pass
+    MAX_LINES = -1
 
-MAX_LINES = 20
+    clf = LinearSVC()
+    X = []
+    Y = []
 
-clf = SVC()
-X = []
-Y = []
+    read_from_file = "--read_from_file=1" in sys.argv
+    reader = open('./1-data/training', 'r') if read_from_file else sys.stdin
+    if read_from_file:
+        MAX_LINES = 100
 
-read_from_file = "--read_from_file=1" in sys.argv
+    count = 0
 
-reader = open('./1-data/training', 'r') if read_from_file else sys.stdin
+    for line in reader:
+        count += 1
+        if count > MAX_LINES > 0:
+            break
 
-count = 0
+        line = line.strip().split(' ')
+        Y.append(int(line.pop(0)))
+        X.append(map(float, line))
 
-for line in reader:
-    count += 1
-    if count > MAX_LINES:
-        break
+    X = np.array(X)
+    Y = np.array(Y)
 
-    line = line.strip().split(' ')
-    Y.append(int(line.pop(0)))
-    X.append(map(float, line))
-
-X = np.array(X)
-Y = np.array(Y)
-
-z = clf.fit(X, Y)
-
-
-
-
-
+    z = clf.fit(X, Y)
+    print("1\t%s" % ",".join(map(str, z.coef_[0])))

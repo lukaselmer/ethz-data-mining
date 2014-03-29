@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # generate prediction file
-head -1 ./1-data/training | ./mapper.py #| ./reducer.py #> 1_data/prediction.txt
+#head -20 ./1-data/training | ./mapper.py | ./reducer.py > 1_data/weights.txt
+cat ./1-data/training | ./mapper.py | ./reducer.py > 1-data/weights.txt
+
 
 # run check.py for seeing results
-#./check.py 1_data/prediction.txt 1_data/duplicates.txt
+./evaluate.py 1-data/weights.txt 1-data/test_data.txt 1_data/test_labels.txt
