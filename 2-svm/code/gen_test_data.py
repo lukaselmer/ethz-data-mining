@@ -20,8 +20,8 @@ if __name__ == "__main__":
     Train = []
 
     reader = open('./1-data/training', 'r')
-    max_test = 50
-    max_train = 500
+    max_test = 500
+    max_train = 5000
 
     count = 0
 
@@ -32,8 +32,8 @@ if __name__ == "__main__":
         if max_train_reached and max_train_reached:
             break
 
-        train = np.random.random() < 0.01 and not max_train_reached
-        test = (not train) and np.random.random() < 0.01 and not max_test_reached
+        train = np.random.random() < 0.9 and not max_train_reached
+        test = (not train) and np.random.random() < 0.9 and not max_test_reached
 
         if not (test or train):
             continue
