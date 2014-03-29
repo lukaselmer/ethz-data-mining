@@ -39,10 +39,10 @@ if __name__ == "__main__":
                     logging.error("Shapes of weight vector and transformed "
                                   "data don't match")
                     sys.exit(3)
-                if (np.inner(weights, x) < 0):
-                    print -1
-                else:
-                    print 1
+                #if (np.inner(weights, x) < 0):
+                #    print -1
+                #else:
+                #    print 1
                 if label*np.inner(weights, x) >= 0:
 
                     accuracy += 1
