@@ -37,7 +37,7 @@ def transform(x_original, make_np=True):
 if __name__ == "__main__":
     MAX_LINES = -1
 
-    clf = LinearSVC()
+    clf = LinearSVC(dual=False)
     X = []
     Y = []
 
