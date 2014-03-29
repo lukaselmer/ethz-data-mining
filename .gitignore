@@ -1246,3 +1246,5 @@ _logs
 ~$_data.xlsx
 weights.txt
 training.txt
+2-svm/code/1-data/test_data.txt
+2-svm/code/1-data/test_labels.txt
