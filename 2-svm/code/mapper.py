@@ -1,6 +1,7 @@
 #!/usr/bin/env python2.7
 
 import sys
+import math
 import numpy as np
 import scipy
 from sklearn.svm import LinearSVC
@@ -13,7 +14,22 @@ from sklearn.svm import LinearSVC
 # This function has to either stay in this form or implement the
 # feature mapping. For details refer to the handout pdf.
 def transform(x_original):
-    return x_original
+    x = []
+    x.extend(x_original)
+
+    def sqr(x):
+        return x * x
+
+    def e_pow(x):
+        return math.exp(x)
+
+    x.extend(map(sqr, x_original))
+    x.extend(map(e_pow, x_original))
+    x.extend(map(math.sin, x_original))
+    #x.extend(map(math.log, x_original))
+
+    return x
+
 
 if __name__ == "__main__":
     MAX_LINES = -1
@@ -22,9 +38,10 @@ if __name__ == "__main__":
     X = []
     Y = []
 
+    reader = sys.stdin
     read_from_file = "--read_from_file=1" in sys.argv
-    reader = open('./1-data/training', 'r') if read_from_file else sys.stdin
     if read_from_file:
+        reader = open('./1-data/training', 'r')
         MAX_LINES = 100
 
     count = 0
@@ -36,7 +53,7 @@ if __name__ == "__main__":
 
         line = line.strip().split(' ')
         Y.append(int(line.pop(0)))
-        X.append(map(float, line))
+        X.append(transform(map(float, line)))
 
     X = np.array(X)
     Y = np.array(Y)
