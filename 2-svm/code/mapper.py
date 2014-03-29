@@ -34,6 +34,8 @@ def transform(x_original, make_np=True):
     x.extend(map(sqr, x_original))
     x.extend(map(e_pow, x_original))
     x.extend(map(math.sqrt, x_original))
+    x.extend([sum(np.abs(x_original))])
+    x.extend(map(np.abs, x_original))
     #x.extend(map(sqr3, x_original))
     #x.extend(map(math.sin, x_original))
     #x.extend(map(me_pow, x_original))
