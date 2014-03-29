@@ -23,9 +23,9 @@ def transform(x_original, make_np=True):
     def e_pow(x):
         return math.exp(x)
 
-    #x.extend(map(sqr, x_original))
-    #x.extend(map(e_pow, x_original))
-    #x.extend(map(math.sin, x_original))
+    x.extend(map(sqr, x_original))
+    x.extend(map(e_pow, x_original))
+    x.extend(map(math.sin, x_original))
     #x.extend(map(math.log, x_original))
 
     if make_np:
@@ -35,6 +35,10 @@ def transform(x_original, make_np=True):
 
 
 if __name__ == "__main__":
+    def list_split(l):
+        center = len(l) / 2
+        return l[:center], l[center:]
+
     MAX_LINES = -1
 
     clf = LinearSVC(dual=False)
@@ -61,5 +65,28 @@ if __name__ == "__main__":
     X = np.array(X)
     Y = np.array(Y)
 
-    z = clf.fit(X, Y)
-    print("1\t%s" % ",".join(map(str, z.coef_[0])))
+    def fit(X, Y):
+        z = clf.fit(X, Y)
+        print("1\t%s" % ",".join(map(str, z.coef_[0])))
+
+    q, w = list_split(X)
+    x1, x2 = list_split(q)
+    x3, x4 = list_split(w)
+
+    q, w = list_split(Y)
+    y1, y2 = list_split(q)
+    y3, y4 = list_split(w)
+
+    fit(x1, y1)
+    fit(x2, y2)
+    fit(x3, y3)
+    fit(x4, y4)
+
+
+
+
+
+
+
+
+
