@@ -4,6 +4,7 @@ import sys
 import math
 import numpy as np
 import scipy
+from sklearn import linear_model
 from sklearn.svm import LinearSVC
 
 #from sklearn.multiclass import OneVsRestClassifier
@@ -42,6 +43,7 @@ if __name__ == "__main__":
     MAX_LINES = -1
 
     clf = LinearSVC(dual=False)
+    #clf = linear_model.SGDClassifier()
     X = []
     Y = []
 
@@ -69,18 +71,14 @@ if __name__ == "__main__":
         z = clf.fit(X, Y)
         print("1\t%s" % ",".join(map(str, z.coef_[0])))
 
-    q, w = list_split(X)
-    x1, x2 = list_split(q)
-    x3, x4 = list_split(w)
+    #q, w = list_split(X)
+    #x1, x2 = list_split(q)
+    #x3, x4 = list_split(w)
+    #q, w = list_split(Y)
+    #y1, y2 = list_split(q)
+    #y3, y4 = list_split(w)
 
-    q, w = list_split(Y)
-    y1, y2 = list_split(q)
-    y3, y4 = list_split(w)
-
-    fit(x1, y1)
-    fit(x2, y2)
-    fit(x3, y3)
-    fit(x4, y4)
+    fit(X, Y)
 
 
 
