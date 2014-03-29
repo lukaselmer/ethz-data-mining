@@ -13,7 +13,7 @@ from sklearn.svm import LinearSVC
 
 # This function has to either stay in this form or implement the
 # feature mapping. For details refer to the handout pdf.
-def transform(x_original):
+def transform(x_original, make_np=True):
     x = []
     x.extend(x_original)
 
@@ -27,6 +27,9 @@ def transform(x_original):
     x.extend(map(e_pow, x_original))
     x.extend(map(math.sin, x_original))
     #x.extend(map(math.log, x_original))
+
+    if make_np:
+        return np.array(x)
 
     return x
 
@@ -53,7 +56,7 @@ if __name__ == "__main__":
 
         line = line.strip().split(' ')
         Y.append(int(line.pop(0)))
-        X.append(transform(map(float, line)))
+        X.append(transform(map(float, line), False))
 
     X = np.array(X)
     Y = np.array(Y)
