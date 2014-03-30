@@ -34,8 +34,9 @@ def transform(x_original, make_np=True):
 
     def extend_x(arr):
         x.extend(arr)
+        x.append(scipy.std(arr))
         x.append(scipy.var(arr))
-        x.append(sum(arr))
+        x.append(sum(arr) / len(arr))
         x.append(min(arr))
         x.append(max(arr))
         x.append(scipy.mean(arr))
@@ -44,17 +45,21 @@ def transform(x_original, make_np=True):
     extend_x(x_original)
     extend_x(map(sqr, x_original))
     extend_x(map(e_pow, x_original))
+    extend_x(map(me_pow, x_original))
     extend_x(map(math.sqrt, x_original))
     extend_x(map(np.abs, x_original))
     extend_x(map(sqr, map(e_pow, x_original)))
+    #x.extend(map(math.sin, x_original))
+    #x.extend(map(math.sin, map(math.sqrt, x_original)))
+
     #extend_x(map(math.sqrt, map(e_pow, x_original)))
     #extend_x(map(math.sqrt, map(math.sqrt, x_original)))
 
-    x.append(sum(np.abs(x_original)))
+    x.append(sum(np.abs(x_original)) / len(x_original))
+    x.append(1.)
 
     #x.extend(map(fred, x_original))
     #x.extend(map(sqr3, x_original))
-    #x.extend(map(math.sin, x_original))
     #x.extend(map(me_pow, x_original))
     #x.extend(map(math.log, x_original))
 
