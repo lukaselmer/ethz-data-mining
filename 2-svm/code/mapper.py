@@ -46,6 +46,9 @@ def transform(x_original, make_np=True):
     extend_x(map(e_pow, x_original))
     extend_x(map(math.sqrt, x_original))
     extend_x(map(np.abs, x_original))
+    extend_x(map(sqr, map(e_pow, x_original)))
+    #extend_x(map(math.sqrt, map(e_pow, x_original)))
+    #extend_x(map(math.sqrt, map(math.sqrt, x_original)))
 
     x.append(sum(np.abs(x_original)))
 
