@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     MAX_LINES = -1
 
-    clf = LinearSVC(dual=False, C=1.1, loss='l2', penalty='l2')
+    clf = LinearSVC(dual=False, C=1.0, loss='l2', penalty='l2')
     #clf = LinearSVC(dual=True, C=1.1, loss='l1', penalty='l2')
     #clf = linear_model.SGDClassifier()
     X = []
