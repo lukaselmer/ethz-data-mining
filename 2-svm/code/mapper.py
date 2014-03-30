@@ -16,7 +16,6 @@ from sklearn.svm import LinearSVC
 # feature mapping. For details refer to the handout pdf.
 def transform(x_original, make_np=True):
     x = []
-    x.extend(x_original)
 
     def sqr(x):
         return x * x
@@ -30,12 +29,27 @@ def transform(x_original, make_np=True):
     def me_pow(x):
         return math.exp(-x)
 
+    def fred(x):
+        return round(math.fabs(x) * 1000)
 
-    x.extend(map(sqr, x_original))
-    x.extend(map(e_pow, x_original))
-    x.extend(map(math.sqrt, x_original))
-    x.extend([sum(np.abs(x_original))])
-    x.extend(map(np.abs, x_original))
+    def extend_x(arr):
+        x.extend(arr)
+        x.append(scipy.var(arr))
+        x.append(sum(arr))
+        x.append(min(arr))
+        x.append(max(arr))
+        x.append(scipy.mean(arr))
+        x.append(scipy.median(arr))
+
+    extend_x(x_original)
+    extend_x(map(sqr, x_original))
+    extend_x(map(e_pow, x_original))
+    extend_x(map(math.sqrt, x_original))
+    extend_x(map(np.abs, x_original))
+
+    x.append(sum(np.abs(x_original)))
+
+    #x.extend(map(fred, x_original))
     #x.extend(map(sqr3, x_original))
     #x.extend(map(math.sin, x_original))
     #x.extend(map(me_pow, x_original))
