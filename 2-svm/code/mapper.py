@@ -84,9 +84,11 @@ if __name__ == "__main__":
 
     reader = sys.stdin
     read_from_file = "--read_from_file=1" in sys.argv
+    print_svm_score = "--print_svm_score=1" in sys.argv
     if read_from_file:
-        reader = open('./1-data/training', 'r')
-        MAX_LINES = 100
+        reader = open('./1-data/training.txt', 'r')
+        if not print_svm_score:
+            MAX_LINES = 100
 
     count = 0
 
@@ -104,7 +106,10 @@ if __name__ == "__main__":
 
     def fit(X, Y):
         z = clf.fit(X, Y)
-        print("1\t%s" % ",".join(map(str, z.coef_[0])))
+        if print_svm_score:
+            print(clf.score(X,Y))
+        else:
+            print("1\t%s" % ",".join(map(str, z.coef_[0])))
 
     #q, w = list_split(X)
     #x1, x2 = list_split(q)
