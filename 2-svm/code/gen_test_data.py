@@ -20,7 +20,7 @@ if __name__ == "__main__":
     Train = []
 
     reader = open('./1-data/training', 'r')
-    max_test = 500
+    max_test = 1000
     max_train = 5000
 
     count = 0
@@ -61,6 +61,4 @@ def write_array(stream, array):
 write_array(open('./1-data/training.txt', 'w'), Train)
 write_array(open('./1-data/test_data.txt', 'w'), Xtest)
 write_array(open('./1-data/test_labels.txt', 'w'), Ytest)
-
-
 
