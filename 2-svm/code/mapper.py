@@ -118,7 +118,7 @@ def transform(x_original, make_np=True):
         return sum(1 if el <= delta else 0 for el in arr) / len(arr)
 
 
-    if False:
+    if True:
         extend_x(x_original)
         extend_x(np.sqrt(np.abs(x_original)))
         extend_x(np.abs(x_original))
@@ -127,7 +127,7 @@ def transform(x_original, make_np=True):
         #zzz = rbf_feature.fit_transform(np.array(x))[0]
         #extend_x(list(zzz))
 
-    if True:
+    if False:
         extend_x(x_original)
         extend_x(np.sqrt(np.abs(x_original)))
         extend_x(np.abs(x_original))
