@@ -6,12 +6,61 @@ import numpy as np
 import scipy
 from sklearn import linear_model
 from sklearn.svm import LinearSVC
-from sklearn.kernel_approximation import SkewedChi2Sampler
+from sklearn.kernel_approximation import SkewedChi2Sampler, RBFSampler
 
 #from sklearn.multiclass import OneVsRestClassifier
 #from sklearn.svm import LinearSVC
 #from sklearn.metrics import accuracy_score
 #from sklearn import cross_validation
+
+#features_ordered_by_importance = [41, 61, 347, 373, 23, 27, 20, 123, 206, 249, 190, 10, 43, 252, 198, 305, 392, 108,
+#                                  233, 304, 11, 22, 361, 303, 64, 150, 241, 260, 220, 270, 116, 322, 160, 196, 54,
+#                                  262, 78, 50, 231, 209, 178, 59, 46, 277, 103, 273, 109, 17, 144, 24, 132, 92, 5,
+#                                  341, 174, 99, 118, 188, 170, 205, 34, 239, 130, 279, 12, 139, 31, 53, 4, 55, 9,
+#                                  290, 71, 268, 2, 369, 261, 327, 70, 256, 100, 30, 1, 288, 364, 275, 328, 396, 371,
+#                                  253, 343, 377, 183, 325, 151, 278, 191, 86, 207, 102, 399, 159, 52, 189, 317, 285,
+#                                  346, 213, 236, 95, 48, 140, 388, 35, 350, 158, 370, 13, 171, 299, 162, 284, 77,
+#                                  26, 192, 39, 230, 143, 368, 246, 127, 283, 223, 334, 19, 320, 155, 308, 87, 335,
+#                                   177, 114, 289, 45, 337, 342, 204, 157, 93, 311, 96, 391, 181, 83, 148, 264, 68,
+#                                   307, 79, 210, 316, 133, 82, 104, 394, 383, 63, 166, 44, 72, 33, 367, 75, 374, 81,
+#                                   358, 164, 340, 217, 152, 18, 234, 269, 378, 372, 293, 352, 42, 240, 324, 276, 309,
+#                                   112, 362, 363, 32, 301, 186, 60, 255, 145, 355, 187, 85, 251, 216, 271, 141, 58,
+#                                   221, 197, 21, 228, 153, 101, 117, 125, 168, 106, 128, 287, 259, 345, 195, 194,
+#                                   211, 280, 91, 131, 222, 381, 219, 138, 14, 266, 66, 120, 333, 89, 227, 7, 74, 235,
+#                                   90, 16, 267, 182, 274, 291, 36, 154, 38, 0, 121, 124, 395, 265, 281, 385, 135, 47,
+#                                   245, 49, 165, 348, 134, 119, 360, 318, 169, 6, 215, 218, 8, 176, 84, 314, 315,
+#                                   376, 28, 51, 29, 257, 113, 232, 310, 15, 296, 319, 351, 3, 390, 156, 254, 356,
+#                                   380, 40, 329, 331, 349, 326, 76, 359, 393, 111, 243, 214, 136, 339, 357, 295, 313,
+#                                   208, 122, 332, 353, 300, 149, 237, 292, 107, 323, 389, 97, 212, 272, 387, 57, 184,
+#                                   282, 88, 336, 62, 37, 126, 69, 185, 398, 384, 173, 238, 147, 379, 375, 306, 105,
+#                                   175, 73, 200, 344, 242, 263, 180, 129, 146, 365, 67, 312, 224, 80, 202, 98, 203,
+#                                   286, 298, 226, 56, 65, 382, 386, 250, 248, 247, 172, 94, 25, 161, 115, 321, 199,
+#                                   354, 366, 294, 110, 244, 142, 297, 179, 330, 201, 258, 229, 397, 163, 193, 302,
+#                                   167, 338, 137, 225]
+features_ordered_by_importance2 = [20, 347, 249, 27, 61, 5, 40, 123, 31, 41, 132, 170, 26, 359, 256, 183, 392, 23,
+                                   12, 285, 322, 108, 196, 150, 206, 39, 283, 231, 161, 264, 198, 202, 303, 361,
+                                   199, 260, 363, 72, 233, 330, 25, 103, 43, 6, 159, 167, 304, 242, 273, 277, 286,
+                                   209, 46, 225, 302, 193, 338, 111, 98, 226, 241, 335, 115, 362, 364, 190, 137, 4,
+                                   173, 325, 252, 354, 95, 76, 10, 262, 257, 270, 373, 160, 178, 387, 357, 320, 53,
+                                   182, 109, 156, 127, 67, 179, 118, 308, 269, 34, 55, 54, 339, 93, 70, 246, 332,
+                                   370, 229, 174, 81, 148, 151, 341, 374, 86, 215, 191, 205, 279, 367, 139, 1, 107,
+                                   117, 164, 212, 119, 63, 288, 2, 99, 238, 64, 17, 254, 15, 18, 71, 147, 291, 281,
+                                   213, 290, 297, 30, 105, 301, 37, 323, 130, 78, 8, 276, 180, 185, 371, 305, 141,
+                                   110, 216, 326, 92, 9, 219, 307, 168, 186, 11, 349, 353, 57, 14, 328, 77, 350,
+                                   292, 122, 268, 207, 152, 345, 294, 251, 396, 184, 299, 258, 386, 321, 201, 22, 3,
+                                   142, 336, 144, 120, 248, 240, 35, 397, 261, 158, 50, 342, 311, 97, 38, 244, 329,
+                                   274, 163, 218, 337, 203, 327, 24, 197, 52, 369, 60, 172, 51, 390, 100, 189, 75,
+                                   138, 222, 316, 114, 344, 368, 379, 188, 102, 169, 157, 358, 318, 243, 210, 162,
+                                   149, 181, 255, 250, 94, 315, 80, 366, 101, 317, 247, 319, 140, 388, 126, 377,
+                                   116, 175, 176, 13, 398, 309, 200, 153, 19, 220, 192, 145, 79, 391, 275, 306, 121,
+                                   355, 165, 44, 58, 21, 382, 360, 59, 85, 343, 42, 65, 278, 82, 221, 352, 289, 271,
+                                   385, 378, 384, 346, 36, 284, 131, 134, 187, 383, 389, 62, 239, 235, 171, 399,
+                                   351, 245, 267, 334, 128, 83, 272, 90, 143, 228, 287, 266, 154, 69, 96, 223, 0,
+                                   146, 310, 393, 312, 227, 124, 106, 204, 177, 29, 394, 280, 230, 88, 66, 87, 45,
+                                   259, 16, 365, 380, 155, 324, 194, 73, 166, 236, 135, 104, 314, 214, 47, 253, 74,
+                                   234, 195, 136, 217, 293, 211, 372, 133, 263, 68, 232, 33, 113, 298, 333, 48, 89,
+                                   340, 224, 381, 295, 331, 112, 129, 395, 91, 376, 375, 7, 32, 296, 84, 208, 125,
+                                   348, 28, 265, 56, 282, 237, 49, 313, 300, 356]
 
 # This function has to either stay in this form or implement the
 # feature mapping. For details refer to the handout pdf.
@@ -25,11 +74,16 @@ def transform(x_original, make_np=True):
     #variances = np.array(map(float, variances_str.split(" ")))
     means = np.fromstring(means_str, sep=' ')
 
+
+
     x_original = np.array(x_original)
     #x_original -= means
     #x_original /= variances
     x_original -= means
     x_original /= variances
+
+    #x_original = np.delete(xxxx_original, features_ordered_by_importance2[-1:])
+    #most_important_features1 = np.delete(x_original, features_ordered_by_importance2[5:])
 
     x = []
 
@@ -65,6 +119,28 @@ def transform(x_original, make_np=True):
     def count_smaller_ratio(arr, delta):
         return sum(1 if el <= delta else 0 for el in arr) / len(arr)
 
+
+    if False:
+        extend_x(x_original)
+        extend_x(np.sqrt(np.abs(x_original)))
+        extend_x(np.abs(x_original))
+        #z = x
+        #x = []
+        rbf_feature = RBFSampler(gamma=0.0025, random_state=2, n_components=1000)
+        zzz = rbf_feature.fit_transform(np.array(x))[0]
+        extend_x(list(zzz))
+
+    if False:
+        rbf_feature = RBFSampler(gamma=0.0025, random_state=2, n_components=100)
+        zzz = rbf_feature.fit_transform(np.array(x_original))[0]
+        extend_x(list(zzz))
+
+    if True:
+        extend_x(x_original)
+        extend_x(np.sqrt(np.abs(x_original)))
+        extend_x(np.abs(x_original))
+
+
     #for i in x_original:
     #    print i
     #
@@ -96,11 +172,15 @@ def transform(x_original, make_np=True):
     #x.append(count_smaller_ratio(x_original, 0.000001))
     #x.append(count_smaller_ratio(x_original, 0.00000000001))
 
-    extend_x(x_original)
+    # Do something with most_important_features1
+
+    #extend_x(np.expm1(x_original))
     #extend_x(np.square(x_original))
     #extend_x(map(me_pow, x_original))
-    extend_x(np.sqrt(np.abs(x_original)))
-    extend_x(np.abs(x_original))
+    #extend_x(np.sqrt(np.sqrt(np.abs(x_original))))
+    #extend_x((np.sqrt(np.sqrt(orig)) - np.sqrt(np.sqrt(means))) / np.sqrt(np.sqrt(variances)))
+
+    #extend_x([(-1 if i < 0 else (0 if i == 0 else 1)) for i in x_original])
     #x.append(sum([i if i > 0 else 0 for i in x_original]) / len(x_original))
     #x.append(sum([i if i < 0 else 0 for i in x_original]) / len(x_original))
     #extend_x(np.tanh(x_original))
