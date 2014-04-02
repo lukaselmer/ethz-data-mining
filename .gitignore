@@ -1249,3 +1249,7 @@ training.txt
 2-svm/code/1-data/test_data.txt
 2-svm/code/1-data/test_labels.txt
 2-svm/code/mapper_tmp
+~$data_and_test_runs.xlsx
+results.html
+prediction.txt
+exact_prediction.txt

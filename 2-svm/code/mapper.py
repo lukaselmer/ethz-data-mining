@@ -6,7 +6,7 @@ import numpy as np
 import scipy
 from sklearn import linear_model
 from sklearn.svm import LinearSVC
-from sklearn.kernel_approximation import SkewedChi2Sampler, RBFSampler
+from sklearn.kernel_approximation import SkewedChi2Sampler, RBFSampler, AdditiveChi2Sampler, Nystroem
 
 #from sklearn.multiclass import OneVsRestClassifier
 #from sklearn.svm import LinearSVC
@@ -74,8 +74,6 @@ def transform(x_original, make_np=True):
     #variances = np.array(map(float, variances_str.split(" ")))
     means = np.fromstring(means_str, sep=' ')
 
-
-
     x_original = np.array(x_original)
     #x_original -= means
     #x_original /= variances
@@ -124,18 +122,40 @@ def transform(x_original, make_np=True):
         extend_x(x_original)
         extend_x(np.sqrt(np.abs(x_original)))
         extend_x(np.abs(x_original))
-        #z = x
-        #x = []
-        rbf_feature = RBFSampler(gamma=0.0025, random_state=2, n_components=1000)
-        zzz = rbf_feature.fit_transform(np.array(x))[0]
-        extend_x(list(zzz))
 
-    if False:
-        rbf_feature = RBFSampler(gamma=0.0025, random_state=2, n_components=100)
-        zzz = rbf_feature.fit_transform(np.array(x_original))[0]
-        extend_x(list(zzz))
+        #rbf_feature = RBFSampler(gamma=0.0025, random_state=2, n_components=20)
+        #zzz = rbf_feature.fit_transform(np.array(x))[0]
+        #extend_x(list(zzz))
 
     if True:
+        extend_x(x_original)
+        extend_x(np.sqrt(np.abs(x_original)))
+        extend_x(np.abs(x_original))
+
+        sampler1 = SkewedChi2Sampler(skewedness=0.022, n_components=50, random_state=1)
+        zzz1 = sampler1.fit_transform(np.array(orig))[0]
+
+        #sampler2 = SkewedChi2Sampler(skewedness=8.5, n_components=50, random_state=1)
+        #zzz2 = sampler2.fit_transform(np.array([i + 1.0 for i in x]))[0]
+
+        sampler3 = RBFSampler(gamma=0.0025, random_state=2, n_components=20)
+        zzz3 = sampler3.fit_transform(np.array(x))[0]
+        x = []
+        extend_x(x_original)
+        #extend_x(np.abs(x_original))
+        #extend_x(np.sqrt(np.abs(x_original)))
+
+        extend_x(list(zzz1))
+        #extend_x(list(zzz2))
+        extend_x(list(zzz3))
+
+    if False:
+        #rbf_feature = RBFSampler(gamma=0.0025, random_state=2, n_components=100)
+        #zzz = rbf_feature.fit_transform(np.array(x_original))[0]
+        #extend_x(list(zzz))
+        pass
+
+    if False:
         extend_x(x_original)
         extend_x(np.sqrt(np.abs(x_original)))
         extend_x(np.abs(x_original))
@@ -224,7 +244,7 @@ if __name__ == "__main__":
     MAX_LINES = -1
 
     #clf = LinearSVC(dual=False, C=1.1, loss='l2', penalty='l2', tol=1e-4)
-    clf = LinearSVC(dual=False, C=1.1, loss='l2', penalty='l1', tol=1e-4)
+    clf = LinearSVC(dual=False, C=1.1, loss='l2', penalty='l2', tol=1e-4)
     #clf = LinearSVC(dual=True, C=1.1, loss='l1', penalty='l2')
     #clf = linear_model.SGDClassifier()
     X = []
