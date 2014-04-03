@@ -123,9 +123,9 @@ def transform(x_original, make_np=True):
         extend_x(np.sqrt(np.abs(x_original)))
         extend_x(np.abs(x_original))
 
-        rbf_feature = RBFSampler(gamma=0.0025, random_state=2, n_components=20)
-        zzz = rbf_feature.fit_transform(np.array(x))[0]
-        extend_x(list(zzz))
+        #rbf_feature = RBFSampler(gamma=0.0025, random_state=2, n_components=20)
+        #zzz = rbf_feature.fit_transform(np.array(x))[0]
+        #extend_x(list(zzz))
 
     if False:
         extend_x(x_original)
