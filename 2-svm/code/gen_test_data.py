@@ -20,8 +20,8 @@ if __name__ == "__main__":
     Train = []
 
     reader = open('./1-data/training', 'r')
-    max_test = 1000
-    max_train = 5000
+    max_test = 5000
+    max_train = 20000
 
     count = 0
 
