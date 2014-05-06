@@ -55,3 +55,8 @@ _logs
 ~$_data.xlsx
 ~$data_and_test_runs.xlsx
 
+2-svm/code/2-visual_test/exact_prediction.txt
+2-svm/code/2-visual_test/prediction.txt
+2-svm/code/2-visual_test/results.html
+2-svm/code/2-visual_test/weights.txt
+arr_0.npy
