@@ -60,3 +60,6 @@ _logs
 2-svm/code/2-visual_test/results.html
 2-svm/code/2-visual_test/weights.txt
 arr_0.npy
+training.npz
+3-kmeans/code/1-data/run_result.csv
+3-kmeans/code/1-data/training.csv
