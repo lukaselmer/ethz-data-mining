@@ -9,8 +9,8 @@ if __name__ == "__main__":
     reader = sys.stdin
     arr = []
     for line in reader:
-        key, w = line.split("\t")
-        arr.append(map(np.float, w.split(",")))
+        key, data = line.split("\t")
+        arr.append(np.fromstring(data, dtype=np.float, sep=' '))
 
     arr = np.array(arr)
 
