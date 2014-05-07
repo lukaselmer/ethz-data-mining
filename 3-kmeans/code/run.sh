@@ -13,16 +13,17 @@ cp ../../../mapper.py mapper.py
 cp ../../../evaluate.py evaluate.py
 cp ../../../reducer.py reducer.py
 
-for i in {2..5}
+for i in {2..3}
 do
-    echo "starting part $i..."
+    echo $(date +%H:%M:%S)
+    echo "Starting part $i..."
     cat "../../training_part$i.csv" | ./mapper.py > "c$i.txt"
-    echo "...done!"
 done
 
-echo "starting reducer..."
+echo $(date +%H:%M:%S)
+echo "Starting reducer..."
 cat ./c*.txt | ./reducer.py > centers.txt
-echo "...done!"
 
-echo "Finally: evaluation:"
+echo $(date +%H:%M:%S)
+echo "Starting evaluation:"
 ./evaluate.py
