@@ -13,7 +13,7 @@ cp ../../../mapper.py mapper.py
 cp ../../../evaluate.py evaluate.py
 cp ../../../reducer.py reducer.py
 
-for i in {2..3}
+for i in {1..9}
 do
     echo $(date +%H:%M:%S)
     echo "Starting part $i..."
