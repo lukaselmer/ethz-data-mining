@@ -1,11 +1,28 @@
 #!/bin/sh
 
+date=$(date +%Y%m%d_%H-%M-%S)
+fdir="1-data/results/results_${date}"
+mkdir -p $fdir
+fname="mapper.py"
+fres="mapper_tmp/${date}/res.txt"
+fev="run_tmp/${date}/evaluate.py"
+fred="run_tmp/${date}/reducer.py"
+echo "Results are saved under ${fdir}."
+cd $fdir
+cp ../../../mapper.py mapper.py
+cp ../../../evaluate.py evaluate.py
+cp ../../../reducer.py reducer.py
 
-mkdir ./1-data/results
+for i in {2..5}
+do
+    echo "starting part $i..."
+    cat "../../training_part$i.csv" | ./mapper.py > "c$i.txt"
+    echo "...done!"
+done
 
-cat ./1-data/training_part1.csv | ./mapper.py > ./1-data/results/c1.txt
-cat ./1-data/training_part2.csv | ./mapper.py > ./1-data/results/c2.txt
-cat ./1-data/training_part3.csv | ./mapper.py > ./1-data/results/c3.txt
-cat ./1-data/training_part4.csv | ./mapper.py > ./1-data/results/c4.txt
+echo "starting reducer..."
+cat ./c*.txt | ./reducer.py > centers.txt
+echo "...done!"
 
-cat ./1-data/results/c*.txt | ./reducer.py > ./1-data/results/out.txt
+echo "Finally: evaluation:"
+./evaluate.py
