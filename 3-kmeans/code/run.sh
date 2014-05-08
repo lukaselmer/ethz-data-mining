@@ -17,7 +17,7 @@ for i in {1..9}
 do
     echo $(date +%H:%M:%S)
     echo "Starting part $i..."
-    cat "../../training_part$i.csv" | ./mapper.py > "c$i.txt"
+    cat "../../training_part$i.csv" | ./mapper.py --local > "c$i.txt"
 done
 
 echo $(date +%H:%M:%S)

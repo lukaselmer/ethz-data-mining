@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 
 import sys
-from sklearn.cluster import k_means
+from sklearn.cluster import k_means, MiniBatchKMeans
 import numpy as np
 import datetime
 
