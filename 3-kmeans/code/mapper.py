@@ -4,7 +4,7 @@ import sys
 import math
 import numpy as np
 import scipy
-from sklearn.cluster import k_means, KMeans, MiniBatchKMeans
+from sklearn.cluster import MiniBatchKMeans
 import datetime
 
 
@@ -23,17 +23,13 @@ def read_input():
 
 
 def cluster(data):
-    #centers, _, score = k_means(data, n_clusters=200)
-    #
-    m = MiniBatchKMeans(n_clusters=200, batch_size=6000) #, init_size=1000
-    m.fit(data)
-    centers = m.cluster_centers_
-    score = m.score(data) * -1
-
-    for r in centers:
+    mbk = MiniBatchKMeans(init='k-means++', n_clusters=200,n_init=10, max_no_improvement=10, verbose=0)
+    mbk.fit(data)
+    #mbk_means_labels = mbk.labels_
+    mbk_means_cluster_centers = mbk.cluster_centers_
+    #mbk_means_labels_unique = np.unique(mbk_means_labels)
+    for r in mbk_means_cluster_centers[:,:]:
         print("1\t%s" % " ".join(map(str, r)))
-    if "--local" in sys.argv:
-        print >> sys.stderr, score / len(data)
 
 
 if __name__ == "__main__":
