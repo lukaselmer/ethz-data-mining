@@ -23,15 +23,14 @@ def read_input():
 
 
 def cluster(data):
-    res = k_means(data, n_clusters=200)
-    for r in res[0]:
+    np.random.shuffle(data)
+    num_mappers = (10 if "--local" in sys.argv else 300)
+    total_in_reducer = 9999
+    per_reducer = total_in_reducer / num_mappers
+    for r in data[0:per_reducer]:
         print("1\t%s" % " ".join(map(str, r)))
 
 
 if __name__ == "__main__":
     data = read_input()
     cluster(data)
-
-
-
-
