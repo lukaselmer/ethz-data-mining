@@ -15,7 +15,7 @@ done
 
 #sed -n '10000,20000 p' ./1-data/training_part1.csv | ./mapper.py > ./1-data/results/c1.txt
 
-
+echo "start reducing..."
 cat ./1-data/results/mapper_results_*.txt | ./reducer.py > ./1-data/results/centers.txt
 
 END=$(date +%s)

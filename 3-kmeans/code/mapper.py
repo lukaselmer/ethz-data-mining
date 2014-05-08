@@ -23,13 +23,8 @@ def read_input():
 
 
 def cluster(data):
-    mbk = MiniBatchKMeans(init='k-means++', n_clusters=200,n_init=10, max_no_improvement=10, verbose=0)
-    mbk.fit(data)
-    #mbk_means_labels = mbk.labels_
-    mbk_means_cluster_centers = mbk.cluster_centers_
-    #mbk_means_labels_unique = np.unique(mbk_means_labels)
-    for r in mbk_means_cluster_centers[:,:]:
-        print("1\t%s" % " ".join(map(str, r)))
+    for i in range(data.shape[0]):
+        print("1\t%s" % " ".join(map(str, data[i, :])))
 
 
 if __name__ == "__main__":
