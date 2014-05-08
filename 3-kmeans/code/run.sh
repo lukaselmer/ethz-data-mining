@@ -22,6 +22,6 @@ END=$(date +%s)
 DIFF=$(( $END - $START ))
 echo "It took $DIFF seconds"
 
-#echo "Starting evaluation:"
+echo "Starting evaluation:"
 ./evaluate.py $((i-1))
 
