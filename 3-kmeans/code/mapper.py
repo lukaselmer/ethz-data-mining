@@ -23,7 +23,7 @@ def read_input():
 
 
 def cluster(data):
-    res = k_means(data, n_clusters=200)
+    res = k_means(data, n_clusters=100, init='k-means++', n_init=10, precompute_distances=True)
     for r in res[0]:
         print("1\t%s" % " ".join(map(str, r)))
 

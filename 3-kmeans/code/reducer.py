@@ -14,6 +14,7 @@ if __name__ == "__main__":
 
     arr = np.array(arr)
 
-    res = k_means(arr, n_clusters=200)
+
+    res = k_means(arr, n_clusters=200, init='k-means++', n_init=5, precompute_distances=True, n_jobs=-1)
     for r in res[0]:
         print("%s" % " ".join(map(str, r)))
