@@ -18,18 +18,20 @@ if __name__ == "__main__":
     print('Data loaded')
 
     #m = MiniBatchKMeans(n_clusters=200, n_init=1, batch_size=200000, verbose=1)#, batch_size=6000) #, init_size=1000
-    m = KMeans(n_clusters=200, n_init=1, verbose=1, n_jobs=4)#, batch_size=6000) #, init_size=1000
-    m.fit(data)
+    #m = KMeans(n_clusters=200, n_init=1, verbose=1, n_jobs=4)#, batch_size=6000) #, init_size=1000
+    #m.fit(data)
+    centers, _, score = k_means(data, n_clusters=200, verbose=1, n_jobs=4)
 
     print("Fitted!")
 
-    centers = m.cluster_centers_
-    score = m.score(data) / len(data) * -1
+    #centers = m.cluster_centers_
+    #score = m.score(data) / len(data) * -1
 
+    score = score / len(data) * -1
     print("Score: %f" % score)
 
     print('Saving results')
-    np.savetxt('./centers.csv', centers)
+    np.savetxt('./centers5.csv', centers)
 
     #res = k_means(data, n_clusters=200)
     #np.savetxt('1-data/run_result.csv', res[0])
