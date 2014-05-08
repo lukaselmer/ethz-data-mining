@@ -9,7 +9,7 @@ import datetime
 
 
 def load_prediction():
-    reader = open('./1-data/results/centers.txt', 'r')
+    reader = open('./centers.txt', 'r')
     cluster_centers = []
     for line in reader:
         cluster_centers.append(np.fromstring(line, dtype=np.float, sep=' '))
@@ -17,7 +17,7 @@ def load_prediction():
 
 
 def load_test_data(test_set_id):
-    reader = open('./1-data/training_part%i.csv' % test_set_id, 'r')
+    reader = open('../../../1-data/training_part%i.csv' % test_set_id, 'r')
     test_data = []
     for line in reader:
         test_data.append(np.fromstring(line, dtype=np.float, sep=' '))
