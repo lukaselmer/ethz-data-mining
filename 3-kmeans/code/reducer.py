@@ -33,9 +33,10 @@ if __name__ == "__main__":
     clusters = data[indices, :]
 
     # run weighted k-means
-    for t in range(200):
-        km = KMeans(n_clusters=200)
-        km.cluster_centers_ = clusters
+    km = KMeans(n_clusters=200)
+    km.cluster_centers_ = clusters
+    for t in range(500):
+
         cluster_indices = km.predict(data) # get the indices to which each data sample belongs
 
         for i in range(clusters.shape[0]):
@@ -46,6 +47,8 @@ if __name__ == "__main__":
 
             data_normalized = data[data_indices, :] * weights_normalized
             clusters[i, :] = np.sum(data_normalized, axis=0)
+
+        km.cluster_centers_ = clusters
 
 
     for r in range(clusters.shape[0]):

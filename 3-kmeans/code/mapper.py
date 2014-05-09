@@ -41,15 +41,30 @@ def generateCoreset(data):
     Dprime = data
     B = np.empty(shape=(0,data.shape[1]))
 
-    while Dprime.shape[0] >0:
-        indices=np.random.randint(Dprime.shape[0], size=200)
-        S=Dprime[indices,:]
-        minDist=distancestocentres(Dprime,S)
-        indices2keep = np.where(minDist>np.median(minDist))[0]
-        Dprime=Dprime[indices2keep,:]
+    while Dprime.shape[0] > 0:
 
-        B=np.vstack([B,S])
+        nPointsToSample = int(np.ceil(np.log2(Dprime.shape[0])))
+        indices = np.random.choice(Dprime.shape[0], nPointsToSample, replace=False)
 
+
+        if Dprime.shape[0] >= 5:
+            S = Dprime[indices, :]
+            Dprime = np.delete(Dprime, indices, axis=0) # remove chosen samples from remaining dataset
+
+            # remove 1/2 of the closest samples
+            minDist = distancestocentres(Dprime, S)
+            indices2keep = np.where(minDist > np.median(minDist))[0]
+            Dprime = Dprime[indices2keep,:]
+
+            # Add chosen samples to the set B
+            B = np.vstack([B,S])
+        else:
+            # if only 5 points left => take all points and stop
+            B = np.vstack([B, Dprime])
+            break
+
+
+    # compute
     distance = sp.spatial.distance.cdist(data, B, 'sqeuclidean')
     indicesToSmallestCluster = np.argmin(distance, 1)
 
@@ -61,9 +76,9 @@ def generateCoreset(data):
         total_cell_dist = sum(distance[row_indices, b])
         for i in row_indices:
             if total_cell_dist==0: # in case of just 1 element, then element = cluster center => distance = 0
-                q[i] = np.ceil( 5/float(D_b.shape[0]))
+                q[i] = np.ceil( 200/float(D_b.shape[0]))
             else:
-                q[i] = np.ceil( 5/float(D_b.shape[0]) +  distance[i, b] / total_cell_dist)
+                q[i] = np.ceil( 200/float(D_b.shape[0]) +  distance[i, b] / total_cell_dist)
 
     q_normalized=q/float(sum(q)) #normalize
     q_distribution = sp.stats.rv_discrete(name='q_distribution', values=(range(data.shape[0]),q_normalized))
