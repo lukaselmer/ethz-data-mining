@@ -6,7 +6,7 @@ import numpy as np
 import datetime
 
 # centers10.txt
-# submission: 2922
+# submission: 2922 / 2926
 # score: ???
 # Avg (local): 737.396751
 
