@@ -219,8 +219,7 @@ def load_good_centers():
 
 if __name__ == "__main__":
     reader = sys.stdin
-    mbk = MiniBatchKMeans(n_clusters=200, n_init=1, random_state=42, batch_size=200000)
-    mbk.cluster_centers_ = load_good_centers()
+    mbk = MiniBatchKMeans(n_clusters=200, n_init=1, random_state=42, batch_size=200000, init=load_good_centers())
 
     arr = []
     for line in reader:
