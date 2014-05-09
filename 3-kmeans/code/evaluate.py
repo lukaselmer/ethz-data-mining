@@ -42,6 +42,10 @@ def run(lastFile):
 
     print("Avg: %f" % (tot / n))
 
+def distancestocentres( test_data, cluster_centers):
+    D = sp.spatial.distance.cdist(test_data, cluster_centers, 'sqeuclidean')
+    return D.min(axis=1)  # all the distances
+
 
 if __name__ == "__main__":
     run(int(sys.argv[1]))
