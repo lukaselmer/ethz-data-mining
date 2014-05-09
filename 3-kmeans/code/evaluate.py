@@ -38,9 +38,10 @@ def run(lastFile):
         test_data = load_test_data(i)
         dist = distancestocentres(test_data,cluster_centers)
         tot+=sum(dist)
+        print("Score on set %i (local): %f" % (i, tot / len(test_data)))
         n += test_data.shape[0]
 
-    print("Avg: %f" % (tot / n))
+    print("Avg (local): %f" % (tot / n))
 
 
 if __name__ == "__main__":
