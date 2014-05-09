@@ -61,13 +61,13 @@ def generateCoreset(data):
         total_cell_dist = sum(distance[row_indices, b])
         for i in row_indices:
             if total_cell_dist==0: # in case of just 1 element, then element = cluster center => distance = 0
-                q[i] = np.ceil( 20/float(D_b.shape[0]))
+                q[i] = np.ceil( 5/float(D_b.shape[0]))
             else:
-                q[i] = np.ceil( 20/float(D_b.shape[0]) +  distance[i, b] / total_cell_dist)
+                q[i] = np.ceil( 5/float(D_b.shape[0]) +  distance[i, b] / total_cell_dist)
 
     q_normalized=q/float(sum(q)) #normalize
     q_distribution = sp.stats.rv_discrete(name='q_distribution', values=(range(data.shape[0]),q_normalized))
-    indices_of_samples = q_distribution.rvs(size=100)
+    indices_of_samples = q_distribution.rvs(size=800)
     weights = 1/q;
 
     for i in indices_of_samples:
