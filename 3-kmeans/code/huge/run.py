@@ -11,6 +11,9 @@ if __name__ == "__main__":
     #arr.append(np.fromstring(line, dtype=np.float, sep=' '))
     #print np.array(arr)
 
+    save_to = './centers%s.csv' % sys.argv[1]
+    print 'Will save to %s' % save_to
+
     c = datetime.datetime.now()
     print(c)
     data = np.load("../1-data/training.npz")['arr_0']
@@ -31,7 +34,7 @@ if __name__ == "__main__":
     print("Score: %f" % score)
 
     print('Saving results')
-    np.savetxt('./centers6.csv', centers)
+    np.savetxt(save_to, centers)
 
     #res = k_means(data, n_clusters=200)
     #np.savetxt('1-data/run_result.csv', res[0])
