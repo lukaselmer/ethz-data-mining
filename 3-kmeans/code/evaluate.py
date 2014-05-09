@@ -16,32 +16,18 @@ def load_prediction():
     return np.array(cluster_centers)
 
 
-def load_test_data(test_set_id):
-    reader = open('../../../1-data/training_part%i.csv' % test_set_id, 'r')
-    test_data = []
-    for line in reader:
-        test_data.append(np.fromstring(line, dtype=np.float, sep=' '))
-    return np.array(test_data)
-
-def distancestocentres( test_data, cluster_centers):
-    D = sp.spatial.distance.cdist(test_data, cluster_centers, 'sqeuclidean')
-    return D.min(axis=1)  # all the distances
+def load_test_data():
+    return np.load("../../../1-data/training.npz")['arr_0']
 
 
-def run(lastFile):
+def run():
     cluster_centers = load_prediction()
-    tot = 0
-    n = 0
-    rg = range(1, lastFile+1)
-    for i in rg:
-        print "computing score of set %i" % i
-        test_data = load_test_data(i)
-        dist = distancestocentres(test_data,cluster_centers)
-        tot+=sum(dist)
-        n += test_data.shape[0]
-
-    print("Avg: %f" % (tot / n))
+    test_data = load_test_data()
+    k = KMeans(n_clusters=200)
+    k.cluster_centers_ = cluster_centers
+    score = k.score(test_data)
+    print("Score: %f" % (score / len(test_data) * -1))
 
 
 if __name__ == "__main__":
-    run(int(sys.argv[1]))
+    run()
