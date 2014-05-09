@@ -22,7 +22,7 @@ def read_input():
 
 
 def cluster(data):
-    total_rows_in_reducer = 120000.0
+    total_rows_in_reducer = 150000.0
     mappers = 14.0 if "--local" in sys.argv else 300.0
     p_out = (total_rows_in_reducer / mappers) / len(data)
 
