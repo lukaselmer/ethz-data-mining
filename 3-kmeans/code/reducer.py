@@ -45,7 +45,7 @@ if __name__ == "__main__":
             weights_normalized = np.reshape(weights_normalized, [data_indices.shape[0], 1])
 
             data_normalized = data[data_indices, :] * weights_normalized
-            clusters[i, :] = np.sum(data_normalized, axis=1)
+            clusters[i, :] = np.sum(data_normalized, axis=0)
 
 
     for r in range(clusters.shape[0]):
