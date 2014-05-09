@@ -19,6 +19,7 @@ class Helper:
     def dist_func(center, point):
         return euclidean_distances(center, point, squared=True)
 
+
 class ClusterCenter():
     def __init__(self, center):
         self.center = center
@@ -47,16 +48,20 @@ class DataPoint():
     def __init__(self, point, cluster):
         self.point = point
         self.cluster = cluster
-        self.cluster.addPoint(point)
+        self.cluster.add_point(point)
         self.q = None
         self.dp_sum = None
 
     def calc_sampling_weight(self):
         if self.q is None:
             # Formula slide 33, dm-09
+            center_dist_ratio = 1.0
+            if Helper.dist_func(self.cluster.center, self.point) != 0.0:
+                center_dist_ratio = Helper.dist_func(self.cluster.center, self.point) / self.cluster.dist_point_sum()
+
             self.q = np.ceil(
                 (5.0 / len(self.cluster)) +
-                (Helper.dist_func(self.cluster.center, self.point) / self.cluster.dist_point_sum())
+                center_dist_ratio
             )
         return self.q
 
@@ -116,7 +121,7 @@ class Mapper:
         self.cluster_centers = [ClusterCenter(c) for c in k.cluster_centers_]
         self.data_points = [DataPoint(data[i], self.cluster_centers[assigned_clusters[i]]) for i in range(len(data))]
 
-        dp_sum = sum([dp.calc_sampling_weight() for dp in self.data_points])
+        dp_sum = np.sum([dp.calc_sampling_weight() for dp in self.data_points])
 
         for dp in self.data_points:
             if not self.can_write_more_features():
