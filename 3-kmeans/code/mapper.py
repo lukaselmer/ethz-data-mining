@@ -67,7 +67,7 @@ def generateCoreset(data):
 
     q_normalized=q/float(sum(q)) #normalize
     q_distribution = sp.stats.rv_discrete(name='q_distribution', values=(range(data.shape[0]),q_normalized))
-    indices_of_samples = q_distribution.rvs(size=800)
+    indices_of_samples = q_distribution.rvs(size=200)
     weights = 1/q;
 
     for i in indices_of_samples:
@@ -78,7 +78,6 @@ def generateCoreset(data):
 
 if __name__ == "__main__":
     data = read_input()
-    #cluster(data)
     generateCoreset(data)
 
 
