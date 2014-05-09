@@ -13,19 +13,24 @@ if __name__ == "__main__":
 
     c = datetime.datetime.now()
     print(c)
-    data = np.load("1-data/training.npz")['arr_0']
-    #data = data[:60000]
+    data_orig = np.load("1-data/training.npz")['arr_0']
+    data = data_orig[:90000]
+    test = data_orig[90000:100000]
     print('Data loaded')
 
-    m = MiniBatchKMeans(n_clusters=200, n_init=1, batch_size=200000, verbose=1)#, batch_size=6000) #, init_size=1000
+    #m = MiniBatchKMeans(n_clusters=200, n_init=1, batch_size=200000, verbose=1)#, batch_size=6000) #, init_size=1000
+    m = MiniBatchKMeans(n_clusters=200, n_init=1, batch_size=100000, verbose=1)#, batch_size=6000) #, init_size=1000
     m.fit(data)
 
     print("Fitted!")
 
     centers = m.cluster_centers_
-    score = m.score(data) / len(data) * -1
 
-    print("Score: %f" % score)
+    score = m.score(data) / len(data) * -1
+    print("Score data: %f" % score)
+
+    score = m.score(test) / len(test) * -1
+    print("Score test: %f" % score)
 
     print('Saving results')
     np.savetxt('1-data/centers.csv', centers)
