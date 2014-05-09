@@ -1,15 +1,27 @@
 #!/bin/sh
 
-echo $(date +%H:%M:%S)
-echo "Starting mapper..."
-sed -n 1,6000p 1-data/training.csv | ./mapper.py > "c1.txt"
-sed -n 6001,12000p 1-data/training.csv | ./mapper.py > "c2.txt"
+mkdir ./1-data/results
 
+START=$(date +%s)
 
-echo $(date +%H:%M:%S)
-echo "Starting reducer..."
-cat ./c*.txt | ./reducer.py > centers.txt
+i=1
 
-#echo $(date +%H:%M:%S)
-#echo "Starting evaluation:"
-#./evaluate.py
+for f in `ls 1-data/training_part*.csv`; do
+    echo $(date +%H:%M:%S)
+    echo "mapper part $i..."
+    cat "$f" | ./mapper.py > "./1-data/results/mapper_results_$i.txt"
+  i=$((i+1))
+done
+
+#sed -n '10000,20000 p' ./1-data/training_part1.csv | ./mapper.py > ./1-data/results/c1.txt
+
+echo "Start reducing..."
+cat ./1-data/results/mapper_results_*.txt | ./reducer.py > ./1-data/results/centers.txt
+
+END=$(date +%s)
+DIFF=$(( $END - $START ))
+echo "It took $DIFF seconds"
+
+echo "Starting evaluation:"
+./evaluate.py $((i-1))
+

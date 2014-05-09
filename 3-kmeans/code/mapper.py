@@ -4,7 +4,7 @@ import sys
 import math
 import numpy as np
 import scipy
-from sklearn.cluster import k_means
+from sklearn.cluster import k_means, KMeans
 import datetime
 
 
@@ -23,9 +23,13 @@ def read_input():
 
 
 def cluster(data):
-    res = k_means(data, n_clusters=100, init='k-means++', n_init=10, precompute_distances=True)
-    for r in res[0]:
-        print("1\t%s" % " ".join(map(str, r)))
+    k_means = KMeans(n_clusters=100, init='k-means++', n_init=10, precompute_distances=True)
+    k_means.fit(data)
+    k_means_labels = k_means.labels_
+    k_means_cluster_centers = k_means.cluster_centers_
+
+    for i in range(k_means_cluster_centers.shape[0]):
+        print("1\t%d\t%s" % (np.where(k_means_labels == i)[0].size, " ".join(map(str, k_means_cluster_centers[i, :]))))
 
 
 if __name__ == "__main__":
