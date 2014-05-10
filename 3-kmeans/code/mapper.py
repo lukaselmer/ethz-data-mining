@@ -10,6 +10,7 @@ from sklearn.metrics import euclidean_distances
 import datetime
 #import good_data
 
+# Best: submission 2951, error = 741.813149201
 
 class Helper:
     def __init__(self):
