@@ -82,11 +82,15 @@ class Mapper:
         self.num_per_mapper = 6667
         self.avg_cluster_size = float(self.num_per_mapper / self.no_clusters)
         self.cluster_centers = None
+        self.cluster_center_points = None
         self.data_points = None
 
     def run(self):
-        data = self.read_input()
-        self.cluster(data)
+        self.data = self.read_input()
+        np.random.shuffle(self.data)
+        self.cluster_center_points = self.build_coresets()
+        self.cluster_centers = [ClusterCenter(c) for c in self.cluster_center_points]
+        self.sample_points()
 
     def read_input(self):
         reader = sys.stdin
@@ -113,13 +117,38 @@ class Mapper:
     def cluster_center(self, cluster_index):
         return self.cluster_centers[cluster_index]
 
-    def cluster(self, data):
-        np.random.shuffle(data)
+    def build_coresets(self):
+        # The number of elements to take into the coreset at each iteration
+        # should be 10 * d * k * ln(1/epsilon) = 10 * 750 * 200 * ln(1/0.1) = HUGE!?
+        # Hmm...
+        # From: http://www.mit.edu/~michaf/Code/SVDCoresetAlg.m: "Should be equal to k / epsilon^2"
+        # k / epsilon^2
+        # for epsilon = 0.99: 200/(0.99)^2 = 205
+        # for epsilon = 0.5: 200/(0.5)^2   = 800
+        # for epsilon = 0.4: 200/(0.4)^2   = 1250
+        # for epsilon = 0.3: 200/(0.3)^2   = 2223
+        # for epsilon = 0.2: 200/(0.2)^2   = 5000
+        # for epsilon = 0.1: 200/(0.1)^2   = 20000
+        # for epsilon = 0.05: 200/(0.05)^2 = 80000
+        # => to have at most 60'000 dp's at the reducer, chose at most 200 per mapper => gives an epsilon = 0.99??
+        # => have to merge coresets at the reducer!
+        # TODO: use higher value here, and merge coresets at reducer
+        magic_constant = 3
 
+
+        # TODO: implement this
         k = KMeans(n_clusters=self.no_clusters, n_init=1, random_state=42, init=good_data.load_good_centers_data())
-        assigned_clusters = k.fit_predict(data)
-        self.cluster_centers = [ClusterCenter(c) for c in k.cluster_centers_]
-        self.data_points = [DataPoint(data[i], self.cluster_centers[assigned_clusters[i]]) for i in range(len(data))]
+        k.fit(self.data)
+        return k.cluster_centers_
+
+    def sample_points(self):
+        k = KMeans(n_clusters=self.no_clusters, n_init=1, random_state=42, init=good_data.load_good_centers_data())
+        k.cluster_centers_ = self.cluster_center_points
+        assigned_clusters = k.predict(self.data)
+
+        self.cluster_centers = [ClusterCenter(c) for c in self.cluster_center_points]
+        self.data_points = [DataPoint(self.data[i], self.cluster_centers[assigned_clusters[i]]) for i in
+                            range(len(self.data))]
 
         dp_sum = np.sum([dp.calc_sampling_weight() for dp in self.data_points])
 
