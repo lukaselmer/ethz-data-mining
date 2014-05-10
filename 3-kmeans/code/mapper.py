@@ -85,7 +85,7 @@ class DataPoint():
 
 class Mapper:
     def __init__(self):
-        total_rows_in_reducer, mappers = [85000, 14] if "--local" in sys.argv else [85000, 300]
+        total_rows_in_reducer, mappers = [65000, 14] if "--local" in sys.argv else [65000, 300]
 
         self.no_clusters = 200
         self.out_per_mapper = total_rows_in_reducer / mappers
@@ -154,7 +154,7 @@ class Mapper:
         # => to have at most 60'000 dp's at the reducer, chose at most 200 per mapper => gives an epsilon = 0.99??
         # => have to merge coresets at the reducer!
         # TODO: use higher value here, and merge coresets at reducer
-        magic_constant = int(self.out_per_mapper / np.log2(len(self.data)) + 1)
+        magic_constant = int(self.out_per_mapper / np.log2(len(self.data)) * 2.0 + 1)
 
         # self.data is shuffled already => it's ok to take the first n points for uniform sampling
         dat = self.data.tolist()
