@@ -17,6 +17,7 @@ import datetime
 # 65'000: Submission: 2958, score: 738.644914845 => 19 minutes, magic / 2
 # 75'000: Submission: 2955, score: 738.478742513 => 19 minutes
 # 85'000: Submission: 2956, score: ? => ? minutes
+# 95'000: Submission: 2959, score: ? => ? minutes
 
 class Helper:
     def __init__(self):
@@ -87,7 +88,7 @@ class DataPoint():
 
 class Mapper:
     def __init__(self):
-        total_rows_in_reducer, mappers = [65000, 14] if "--local" in sys.argv else [65000, 300]
+        total_rows_in_reducer, mappers = [95000, 14] if "--local" in sys.argv else [95000, 300]
 
         self.no_clusters = 200
         self.out_per_mapper = total_rows_in_reducer / mappers
