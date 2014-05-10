@@ -17,12 +17,33 @@ if __name__ == "__main__":
         weights.append(weight)
         arr.append(np.fromstring(data, dtype=np.float64, sep=' '))
 
-    # TODO: use / implement WeightedKMeans
 
+    data = np.array(arr)
+    nSamples = data.shape[0]
+    weights = np.array(weights)
 
-    #mbk = KMeans(n_clusters=200, n_init=1, random_state=42, init=load_good_centers())
-    k = KMeans(n_clusters=200, n_init=1, random_state=42)
-    k.fit(arr)
+    # initialize 200 clusters
+    indices = np.random.randint(nSamples, size=200)
+    clusters = data[indices, :]
 
-    for row in k.cluster_centers_:
-        print("%s" % " ".join(map(str, row)))
+    # run weighted k-means
+    km = KMeans(n_clusters=200)
+    km.cluster_centers_ = clusters
+    for t in range(500):
+
+        cluster_indices = km.predict(data)  # get the indices to which each data sample belongs
+
+        for i in range(clusters.shape[0]):
+            data_indices = np.where(cluster_indices == i)[0]  # get all sample indices associated to cluster i
+
+            weights_normalized = weights[data_indices] / float(sum(weights[data_indices]))
+            weights_normalized = np.reshape(weights_normalized, [data_indices.shape[0], 1])
+
+            data_normalized = data[data_indices, :] * weights_normalized
+            clusters[i, :] = np.sum(data_normalized, axis=0)
+
+        km.cluster_centers_ = clusters
+
+    for r in range(clusters.shape[0]):
+        print("%s" % " ".join(map(str, clusters[r, :])))
+
