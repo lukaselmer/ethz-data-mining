@@ -10,7 +10,8 @@ from sklearn.metrics import euclidean_distances
 import datetime
 #import good_data
 
-# Better! Submission 2952, score: 740.608811745
+# 40'000: Submission 2952, score: 740.608811745 => 12 minutes
+# Submission: 2953
 
 class Helper:
     def __init__(self):
@@ -81,7 +82,7 @@ class DataPoint():
 
 class Mapper:
     def __init__(self):
-        total_rows_in_reducer, mappers = [40000, 14] if "--local" in sys.argv else [40000, 300]
+        total_rows_in_reducer, mappers = [55000, 14] if "--local" in sys.argv else [55000, 300]
 
         self.no_clusters = 200
         self.out_per_mapper = total_rows_in_reducer / mappers
