@@ -85,13 +85,13 @@ class DataPoint():
     def calc_sampling_probability(self):
         return self.calc_sampling_weight() / self.dp_sum
 
-    def calc_weight(self):
-        return 1.0 / self.calc_sampling_probability()
+    def calc_weight(self, out_per_mapper):
+        return 1.0 / self.calc_sampling_weight() / out_per_mapper
 
 
 class Mapper:
     def __init__(self):
-        total_rows_in_reducer, mappers = [80000, 14] if "--local" in sys.argv else [80000, 300]
+        total_rows_in_reducer, mappers = [8000, 15] if "--local" in sys.argv else [80000, 300]
 
         self.no_clusters = 200
         self.out_per_mapper = total_rows_in_reducer / mappers
@@ -198,7 +198,7 @@ class Mapper:
 
                 dp.dp_sum = dp_sum
                 if np.random.sample() < dp.calc_sampling_probability():
-                    self.write_feature(dp.point, dp.calc_sampling_weight())
+                    self.write_feature(dp.point, dp.calc_weight(self.out_per_mapper))
 
     def remove_half_nearest_points(self, center_points, data):
         k = KMeans(n_clusters=self.no_clusters)
