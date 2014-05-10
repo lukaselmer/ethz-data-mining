@@ -12,14 +12,14 @@ import datetime
 
 # 40'000: Submission 2952, score: 740.608811745 => 12 minutes
 # 55'000: Submission: 2953, score: 739.711630341 => 20 minutes
-# 65'000: Submission: 2954, score: 739.300944969 => ? minutes
+# 65'000: Submission: 2954, score: 739.300944969 => 20 minutes
 # 65'000: Submission: 2957, score: 739.690196805 => 15 minutes, magic * 2
 # 65'000: Submission: 2958, score: 738.644914845 => 19 minutes, magic / 2
 # 75'000: Submission: 2955, score: 738.478742513 => 19 minutes
-# 85'000: Submission: 2956, score: ? => ? minutes
-# 95'000: Submission: 2959, score: ? => ? minutes
-#100'000: Submission: 2960, score: ? => ? minutes
-# 80'000: Submission: 2961, score: ? => ? minutes
+# 85'000: Submission: 2956, score: FAILED => FAILED
+# 95'000: Submission: 2959, score: FAILED => FAILED
+#100'000: Submission: 2960, score: FAILED => FAILED
+# 80'000: Submission: 2961, score: 738.669749628 => 25 minutes
 
 
 class Helper:
