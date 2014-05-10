@@ -8,7 +8,7 @@ import scipy
 from sklearn.cluster import MiniBatchKMeans, KMeans
 from sklearn.metrics import euclidean_distances
 import datetime
-import good_data
+#import good_data
 
 
 class Helper:
