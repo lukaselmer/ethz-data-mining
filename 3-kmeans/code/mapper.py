@@ -43,6 +43,12 @@ class ClusterCenter():
     def __getitem__(self, item):
         return self.points[item]
 
+    def get_half_farthest_points(self):
+        dist_points = [[Helper.dist_func(self.center, p), p] for p in self.points]
+        sorted_dist_points = sorted(dist_points, key=lambda dist_point: dist_point[0])
+        to_keep = len(self.points) / 2
+        return [dist_point[1] for dist_point in sorted_dist_points][0:to_keep]
+
 
 class DataPoint():
     def __init__(self, point, cluster):
@@ -133,18 +139,22 @@ class Mapper:
         # => to have at most 60'000 dp's at the reducer, chose at most 200 per mapper => gives an epsilon = 0.99??
         # => have to merge coresets at the reducer!
         # TODO: use higher value here, and merge coresets at reducer
-        magic_constant = 3
+        magic_constant = int(self.out_per_mapper / np.log2(len(self.data)) + 1)
 
-
-        # TODO: implement this
-        k = KMeans(n_clusters=self.no_clusters, n_init=1, random_state=42, init=good_data.load_good_centers_data())
-        k.fit(self.data)
-        return k.cluster_centers_
+        # self.data is shuffled already => it's ok to take the first n points for uniform sampling
+        dat = self.data.tolist()
+        coreset = []
+        while len(dat) > 0:
+            coreset_part = dat[0:magic_constant]
+            coreset += coreset_part
+            dat = np.delete(dat, range(0, min(magic_constant, len(dat))), axis=0)
+            dat = self.remove_half_nearest_points(coreset_part, dat)
+        return coreset
 
     def sample_points(self):
-        k = KMeans(n_clusters=self.no_clusters, n_init=1, random_state=42, init=good_data.load_good_centers_data())
-        k.cluster_centers_ = self.cluster_center_points
-        assigned_clusters = k.predict(self.data)
+        k = KMeans(n_clusters=self.no_clusters)
+        k.cluster_centers_ = np.array(self.cluster_center_points)
+        assigned_clusters = k.predict(np.array(self.data))
 
         self.cluster_centers = [ClusterCenter(c) for c in self.cluster_center_points]
         self.data_points = [DataPoint(self.data[i], self.cluster_centers[assigned_clusters[i]]) for i in
@@ -161,6 +171,19 @@ class Mapper:
                 continue
 
             self.write_feature(dp.point, dp.calc_sampling_weight())
+
+    def remove_half_nearest_points(self, center_points, data):
+        k = KMeans(n_clusters=self.no_clusters)
+        k.cluster_centers_ = np.array(center_points)
+        assigned_clusters = k.predict(np.array(data))
+        clusters = [ClusterCenter(c) for c in center_points]
+        for i in range(0, len(assigned_clusters)):
+            clusters[assigned_clusters[i]].add_point(data[i])
+
+        ret = []
+        for c in clusters:
+            ret += c.get_half_farthest_points()
+        return ret
 
 
 if __name__ == "__main__":
