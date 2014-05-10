@@ -85,18 +85,28 @@ class Mapper:
         self.no_clusters = 200
         self.out_per_mapper = total_rows_in_reducer / mappers
         self.written = 0
+
         self.num_per_mapper = 6667
-        self.avg_cluster_size = float(self.num_per_mapper / self.no_clusters)
+        self.avg_cluster_size = None
+        self.keep_ratio = None
+
         self.cluster_centers = None
         self.cluster_center_points = None
         self.data_points = None
 
     def run(self):
         self.data = self.read_input()
+
+        self.num_per_mapper = len(self.data)
+        self.avg_cluster_size = float(self.num_per_mapper) / float(self.no_clusters)
+        self.keep_ratio = float(self.out_per_mapper) / float(self.num_per_mapper)
+
         np.random.shuffle(self.data)
         self.cluster_center_points = self.build_coresets()
         self.cluster_centers = [ClusterCenter(c) for c in self.cluster_center_points]
         self.sample_points()
+        #logging.warn("Written %i" % self.written)
+        #logging.warn(self.out_per_mapper)
 
     def read_input(self):
         reader = sys.stdin
@@ -160,17 +170,24 @@ class Mapper:
         self.data_points = [DataPoint(self.data[i], self.cluster_centers[assigned_clusters[i]]) for i in
                             range(len(self.data))]
 
-        dp_sum = np.sum([dp.calc_sampling_weight() for dp in self.data_points])
+        dp_sum = np.sum([dp.calc_sampling_weight() for dp in self.data_points]) / self.out_per_mapper
 
         for dp in self.data_points:
-            if not self.can_write_more_features():
-                return
-
             dp.dp_sum = dp_sum
-            if np.random.sample() < dp.calc_sampling_probability():
-                continue
 
-            self.write_feature(dp.point, dp.calc_sampling_weight())
+        #logging.warn("Tot!")
+        #logging.warn(sum([dp.calc_sampling_probability() for dp in self.data_points]))
+        #logging.error(len(self.data_points))
+
+        while self.can_write_more_features():
+            np.random.shuffle(self.data_points)
+            for dp in self.data_points:
+                if not self.can_write_more_features():
+                    return
+
+                dp.dp_sum = dp_sum
+                if np.random.sample() < dp.calc_sampling_probability():
+                    self.write_feature(dp.point, dp.calc_sampling_weight())
 
     def remove_half_nearest_points(self, center_points, data):
         k = KMeans(n_clusters=self.no_clusters)
