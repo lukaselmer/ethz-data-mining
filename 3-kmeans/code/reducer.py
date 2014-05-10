@@ -5,6 +5,7 @@ from sklearn.cluster import MiniBatchKMeans, KMeans
 from sklearn.metrics import euclidean_distances
 import numpy as np
 import datetime
+import logging
 
 
 if __name__ == "__main__":
@@ -14,9 +15,8 @@ if __name__ == "__main__":
     weights = []
     for line in reader:
         key, weight, data = line.split("\t")
-        weights.append(weight)
+        weights.append(np.float64(weight))
         arr.append(np.fromstring(data, dtype=np.float64, sep=' '))
-
 
     data = np.array(arr)
     nSamples = data.shape[0]
@@ -27,10 +27,10 @@ if __name__ == "__main__":
     clusters = data[indices, :]
 
     # run weighted k-means
-    km = KMeans(n_clusters=200)
+    km = KMeans(n_clusters=200, n_init=1)
+    #km.fit(data)
     km.cluster_centers_ = clusters
-    for t in range(500):
-
+    for t in range(200):
         cluster_indices = km.predict(data)  # get the indices to which each data sample belongs
 
         for i in range(clusters.shape[0]):
@@ -43,6 +43,8 @@ if __name__ == "__main__":
             clusters[i, :] = np.sum(data_normalized, axis=0)
 
         km.cluster_centers_ = clusters
+        #logging.warn("Iteration %i, %f" % t)
+
 
     for r in range(clusters.shape[0]):
         print("%s" % " ".join(map(str, clusters[r, :])))
