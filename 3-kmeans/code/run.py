@@ -14,10 +14,15 @@ if __name__ == "__main__":
     c = datetime.datetime.now()
     print(c)
     data = np.load("1-data/training.npz")['arr_0']
-    #data = data[:60000]
+    data = data[:8000]
     print('Data loaded')
 
-    m = MiniBatchKMeans(n_clusters=200, n_init=1, batch_size=200000, verbose=1)#, batch_size=6000) #, init_size=1000
+    data = data.tolist()
+    data = data + data + data + data + data + data + data + data + data + data + data + data + data + data + data + data + data
+    data = np.array(data)
+
+    #m = MiniBatchKMeans(n_clusters=200, n_init=1, batch_size=200000, verbose=1)#, batch_size=6000) #, init_size=1000
+    m = KMeans(n_clusters=200, n_init=1, verbose=1)  #, batch_size=6000) #, init_size=1000
     m.fit(data)
 
     print("Fitted!")
