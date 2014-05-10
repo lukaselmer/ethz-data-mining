@@ -13,7 +13,9 @@ import datetime
 # 40'000: Submission 2952, score: 740.608811745 => 12 minutes
 # 55'000: Submission: 2953, score: 739.711630341 => 20 minutes
 # 65'000: Submission: 2954, score: 739.300944969 => ? minutes
-# 75'000: Submission: 2955, score: ? => ? minutes
+# 65'000: Submission: 2957, score: 739.690196805 => 15 minutes, magic * 2
+# 65'000: Submission: 2958, score: 738.644914845 => 19 minutes, magic / 2
+# 75'000: Submission: 2955, score: 738.478742513 => 19 minutes
 # 85'000: Submission: 2956, score: ? => ? minutes
 
 class Helper:
@@ -154,7 +156,7 @@ class Mapper:
         # => to have at most 60'000 dp's at the reducer, chose at most 200 per mapper => gives an epsilon = 0.99??
         # => have to merge coresets at the reducer!
         # TODO: use higher value here, and merge coresets at reducer
-        magic_constant = int(self.out_per_mapper / np.log2(len(self.data)) / 2.0 + 1)
+        magic_constant = int(self.out_per_mapper / np.log2(len(self.data)) + 1)
 
         # self.data is shuffled already => it's ok to take the first n points for uniform sampling
         dat = self.data.tolist()
