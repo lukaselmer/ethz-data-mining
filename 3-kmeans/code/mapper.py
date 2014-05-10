@@ -12,7 +12,7 @@ import datetime
 
 # 40'000: Submission 2952, score: 740.608811745 => 12 minutes
 # 55'000: Submission: 2953, score: 739.711630341 => 20 minutes
-# 65'000: Submission: 2954, score: ? => ? minutes
+# 65'000: Submission: 2954, score: 739.300944969 => ? minutes
 # 75'000: Submission: 2955, score: ? => ? minutes
 # 85'000: Submission: 2956, score: ? => ? minutes
 
