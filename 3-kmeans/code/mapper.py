@@ -10,7 +10,7 @@ from sklearn.metrics import euclidean_distances
 import datetime
 #import good_data
 
-# Better?? Submission 2952.
+# Better! Submission 2952, score: 740.608811745
 
 class Helper:
     def __init__(self):
