@@ -11,10 +11,14 @@ print 'Loading npz...'
 # Load the file stored in NPZ format
 data = np.load("1-data/training.npz")['arr_0']
 
-print 'Saving csv...'
-
-# To store the file in CSV format
-#np.savetxt('1-data/training.csv', data)
+firstDimOfEachCSV = 6500
+filesToGenerate = 15
+for i in range(0,filesToGenerate):
+    fileName = './1-data/training_part' + str(i+1) + '.csv'
+    print 'Saving: ' + fileName
+    currentCSVData = data[i*firstDimOfEachCSV:firstDimOfEachCSV+i*firstDimOfEachCSV,:]
+    # To store the file in CSV format
+    np.savetxt(fileName, currentCSVData)
 
 print 'Loading csv...'
 
