@@ -275,13 +275,13 @@ class DataPoint():
                 (np.float64(5.0) / np.float64(len(self.cluster))) +
                 center_dist_ratio
             )
-        return self.q * self.dp.probability
+        return self.q
 
     def calc_sampling_probability(self):
         return self.calc_sampling_weight() / self.dp_sum
 
     def calc_weight(self, out_per_mapper):
-        return 1.0 / self.calc_sampling_weight() / out_per_mapper
+        return np.float64(1.0) / self.calc_sampling_weight() / out_per_mapper * self.dp.weight
 
 
 class Dp:
@@ -293,7 +293,7 @@ class Dp:
 
 class Reducer:
     def __init__(self):
-        self.out_per_mapper = 5000 if "--local" in sys.argv else 65000
+        self.out_per_mapper = 5000 if "--local" in sys.argv else 75000
 
         self.data = []
 
