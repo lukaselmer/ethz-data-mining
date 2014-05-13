@@ -92,7 +92,7 @@ class DataPoint():
 
 class Mapper:
     def __init__(self):
-        total_rows_in_reducer, mappers = [100000, 15] if "--local" in sys.argv else [75000*2, 300]
+        total_rows_in_reducer, mappers = [100000, 15] if "--local" in sys.argv else [75000*3, 300]
 
         self.no_clusters = 200
         self.out_per_mapper = total_rows_in_reducer / mappers

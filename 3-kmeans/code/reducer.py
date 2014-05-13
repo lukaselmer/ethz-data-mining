@@ -269,7 +269,8 @@ class DataPoint():
             # Formula slide 33, dm-09
             center_dist_ratio = np.float64(1.0)
             if Helper.dist_func(self.cluster.center.point, self.point) != np.float64(0.0):
-                center_dist_ratio = Helper.dist_func(self.cluster.center.point, self.point) / self.cluster.dist_point_sum()
+                center_dist_ratio = Helper.dist_func(self.cluster.center.point,
+                                                     self.point) / self.cluster.dist_point_sum()
 
             self.q = np.ceil(
                 (np.float64(5.0) / np.float64(len(self.cluster))) +
@@ -291,10 +292,9 @@ class Dp:
         self.weight = weight
 
 
-
 class Reducer:
     def __init__(self):
-        self.out_per_mapper = 20000 if "--local" in sys.argv else 70000
+        self.out_per_mapper = 20000 if "--local" in sys.argv else 50000
 
         self.data = []
 
