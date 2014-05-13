@@ -294,7 +294,7 @@ class Dp:
 
 class Reducer:
     def __init__(self):
-        self.out_per_mapper = 20000 if "--local" in sys.argv else 50000
+        self.out_per_mapper = 20000 if "--local" in sys.argv else 75000
 
         self.data = []
 
