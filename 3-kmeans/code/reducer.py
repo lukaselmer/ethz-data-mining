@@ -213,64 +213,248 @@ good_data = """1.631949120646969120e-01 -1.220252231709780144e+00 1.135657447843
 def load_good_centers_data():
     return np.array([np.fromstring(line, dtype=np.float64, sep=' ') for line in good_data.split("\n")])
 
-if __name__ == "__main__":
-    reader = sys.stdin
 
-    arr = []
-    weights = []
-    probabilities = []
-    for line in reader:
-        key, weight, probability, data = line.split("\t")
-        weights.append(np.float64(weight))
-        probabilities.append(np.float64(probability))
-        arr.append(np.fromstring(data, dtype=np.float64, sep=' '))
+class Helper:
+    def __init__(self):
+        pass
 
-    logging.warn("Starting transformation")
-    logging.warn(datetime.datetime.now())
+    @staticmethod
+    def dist_func(center, point):
+        return np.float64(euclidean_distances(center, point, squared=True))
 
-    probabilities = probabilities / np.sum(probabilities) / np.float64(4.0) * np.float64(75000.0)
-    data = []
-    weights2 = []
-    for i in range(0, len(probabilities)):
-        if np.random.sample() < probabilities[i]:
-            data.append(arr[i])
-            weights2.append(weights[i])
 
-    logging.warn("Transformation done!")
-    logging.warn(datetime.datetime.now())
+class ClusterCenter():
+    def __init__(self, center):
+        self.center = center
+        self.points = []
+        self.dist_sum = None
 
-    data = np.array(data)
-    #nSamples = data.shape[0]
-    weights = np.array(weights2)
+    def add_point(self, point):
+        self.points.append(point)
+        self.dist_sum = None
 
-    # initialize 200 clusters
-    #indices = np.random.randint(nSamples, size=200)
-    #clusters = data[indices, :]
-    clusters = load_good_centers_data()
+    def dist_point_sum(self):
+        if self.dist_sum is None:
+            self.dist_sum = np.float64(0.0)
+            for point in self:
+                self.dist_sum += Helper.dist_func(self.center.point, point.point)
+        return self.dist_sum
 
-    # run weighted k-means
-    km = KMeans(n_clusters=200, n_init=1)
-    #km.fit(data)
-    km.cluster_centers_ = clusters
-    for t in range(200):
-        cluster_indices = km.predict(data)  # get the indices to which each data sample belongs
+    def __len__(self):
+        return len(self.points)
 
-        for i in range(clusters.shape[0]):
-            data_indices = np.where(cluster_indices == i)[0]  # get all sample indices associated to cluster i
+    def __getitem__(self, item):
+        return self.points[item]
 
-            weights_normalized = weights[data_indices] / np.float64(sum(weights[data_indices]))
-            weights_normalized = np.reshape(weights_normalized, [data_indices.shape[0], 1])
+    def get_half_farthest_points(self):
+        dist_points = [[Helper.dist_func(self.center, p), p] for p in self.points]
+        sorted_dist_points = sorted(dist_points, key=lambda dist_point: dist_point[0])
+        to_keep = len(self.points) / 2
+        return [dist_point[1] for dist_point in sorted_dist_points][0:to_keep]
 
-            data_normalized = data[data_indices, :] * weights_normalized
-            clusters[i, :] = np.sum(data_normalized, axis=0)
 
+class DataPoint():
+    def __init__(self, dp, cluster):
+        self.dp = dp
+        self.point = dp.point
+        self.weight = dp.weight
+        #self.probability = dp.probability
+        self.cluster = cluster
+        self.cluster.add_point(dp)
+        self.q = None
+        self.dp_sum = None
+
+    def calc_sampling_weight(self):
+        if self.q is None:
+            # Formula slide 33, dm-09
+            center_dist_ratio = np.float64(1.0)
+            if Helper.dist_func(self.cluster.center.point, self.point) != np.float64(0.0):
+                center_dist_ratio = Helper.dist_func(self.cluster.center.point, self.point) / self.cluster.dist_point_sum()
+
+            self.q = np.ceil(
+                (np.float64(5.0) / np.float64(len(self.cluster))) +
+                center_dist_ratio
+            )
+        return self.q * self.dp.probability
+
+    def calc_sampling_probability(self):
+        return self.calc_sampling_weight() / self.dp_sum
+
+    def calc_weight(self, out_per_mapper):
+        return 1.0 / self.calc_sampling_weight() / out_per_mapper
+
+
+class Dp:
+    def __init__(self, weight, probability, point):
+        self.point = point
+        self.probability = probability
+        self.weight = weight
+
+
+class Reducer:
+    def __init__(self):
+        self.out_per_mapper = 5000 if "--local" in sys.argv else 75000
+
+        self.data = []
+
+        self.written = 0
+
+        self.cluster_centers = None
+        self.cluster_center_points = None
+        self.data_points = None
+        self.weights = None
+
+        self.no_clusters = 200
+
+        self.out_data = []
+        self.out_weights = []
+
+    def run(self):
+        self.read_input()
+
+        #self.num_per_mapper = len(self.data)
+        #self.avg_cluster_size = np.float64(self.num_per_mapper) / np.float64(self.no_clusters)
+        #self.keep_ratio = np.float64(self.out_per_mapper) / np.float64(self.num_per_mapper)
+
+        logging.warn("Starting transformation")
+
+        np.random.shuffle(self.data)
+
+        cluster_center_points = self.build_coresets()
+        self.cluster_centers = [ClusterCenter(c) for c in cluster_center_points]
+        self.sample_points()
+
+        logging.warn("Transformation done!")
+
+        self.data = self.out_data
+        self.weights = self.out_weights
+        self.run_k_means()
+
+    def run_k_means(self):
+        data = np.array(self.data)
+        weights = np.array(self.weights)
+
+        # initialize 200 clusters
+        #indices = np.random.randint(nSamples, size=200)
+        #clusters = data[indices, :]
+        clusters = load_good_centers_data()
+
+        # run weighted k-means
+        km = KMeans(n_clusters=200, n_init=1)
+        #km.fit(data)
         km.cluster_centers_ = clusters
-        logging.warn("Iteration %i" % t)
+        for t in range(200):
+            cluster_indices = km.predict(data)  # get the indices to which each data sample belongs
+
+            for i in range(clusters.shape[0]):
+                data_indices = np.where(cluster_indices == i)[0]  # get all sample indices associated to cluster i
+
+                weights_normalized = weights[data_indices] / np.float64(sum(weights[data_indices]))
+                weights_normalized = np.reshape(weights_normalized, [data_indices.shape[0], 1])
+
+                data_normalized = data[data_indices, :] * weights_normalized
+                clusters[i, :] = np.sum(data_normalized, axis=0)
+
+            km.cluster_centers_ = clusters
+            logging.warn("Iteration %i" % t)
+
+        def precise_str(x):
+            return "%.25f" % x
+
+        for r in range(clusters.shape[0]):
+            print("%s" % " ".join(map(precise_str, clusters[r, :])))
 
 
-    def precise_str(x):
-        return "%.25f" % x
+    def read_input(self):
+        reader = sys.stdin
+        for line in reader:
+            key, weight, probability, data = line.split("\t")
+            self.data.append(
+                Dp(np.float64(weight), np.float64(probability), np.fromstring(data, dtype=np.float64, sep=' ')))
 
-    for r in range(clusters.shape[0]):
-        print("%s" % " ".join(map(precise_str, clusters[r, :])))
+    def write_feature(self, row, weight):
+        self.out_data.append(row)
+        self.out_weights.append(weight)
+        self.written += 1
 
+    def can_write_more_features(self):
+        return self.written < self.out_per_mapper
+
+    def cluster_center(self, cluster_index):
+        return self.cluster_centers[cluster_index]
+
+    def build_coresets(self):
+        # The number of elements to take into the coreset at each iteration
+        # should be 10 * d * k * ln(1/epsilon) = 10 * 750 * 200 * ln(1/0.1) = HUGE!?
+        # Hmm...
+        # From: http://www.mit.edu/~michaf/Code/SVDCoresetAlg.m: "Should be equal to k / epsilon^2"
+        # k / epsilon^2
+        # for epsilon = 0.99: 200/(0.99)^2 = 205
+        # for epsilon = 0.5: 200/(0.5)^2   = 800
+        # for epsilon = 0.4: 200/(0.4)^2   = 1250
+        # for epsilon = 0.3: 200/(0.3)^2   = 2223
+        # for epsilon = 0.2: 200/(0.2)^2   = 5000
+        # for epsilon = 0.1: 200/(0.1)^2   = 20000
+        # for epsilon = 0.05: 200/(0.05)^2 = 80000
+        # => to have at most 60'000 dp's at the reducer, chose at most 200 per mapper => gives an epsilon = 0.99??
+        # => have to merge coresets at the reducer!
+        magic_constant = int(self.out_per_mapper / np.log2(len(self.data)) + 1)
+
+        # self.data is shuffled already => it's ok to take the first n points for uniform sampling
+        dat = self.data[:]
+        coreset = []
+        while len(dat) > 0:
+            coreset_part = dat[0:magic_constant]
+            coreset += coreset_part
+            del dat[0:magic_constant]
+            dat = self.remove_half_nearest_points(coreset_part, dat)
+        return coreset
+
+    def remove_half_nearest_points(self, center_points, data):
+        if len(data) == 0:
+            return []
+        k = KMeans(n_clusters=self.no_clusters)
+        k.cluster_centers_ = np.array(map(lambda x: x.point, center_points))
+        raw_data = map(lambda x: x.point, data)
+        assigned_clusters = k.predict(np.array(raw_data))
+        clusters = [ClusterCenter(c) for c in center_points]
+        for i in range(0, len(assigned_clusters)):
+            clusters[assigned_clusters[i]].add_point(data[i])
+
+        ret = []
+        for c in clusters:
+            ret += c.get_half_farthest_points()
+        return ret
+
+    def sample_points(self):
+        k = KMeans(n_clusters=self.no_clusters)
+        k.cluster_centers_ = np.array(map(lambda x: x.center.point, self.cluster_centers))
+        assigned_clusters = k.predict(np.array(map(lambda x: x.point, self.data)))
+
+        #self.cluster_centers = [ClusterCenter(c) for c in self.cluster_center_points]
+        self.data_points = [DataPoint(self.data[i], self.cluster_centers[assigned_clusters[i]]) for i in
+                            range(len(self.data))]
+
+        dp_sum = np.sum([dp.calc_sampling_weight() for dp in self.data_points]) / self.out_per_mapper
+
+        for dp in self.data_points:
+            dp.dp_sum = dp_sum
+
+        #logging.warn("Tot!")
+        #logging.warn(sum([dp.calc_sampling_probability() for dp in self.data_points]))
+        #logging.error(len(self.data_points))
+
+        while self.can_write_more_features():
+            np.random.shuffle(self.data_points)
+            for dp in self.data_points:
+                if not self.can_write_more_features():
+                    return
+
+                dp.dp_sum = dp_sum
+                if np.random.sample() < dp.calc_sampling_probability():
+                    self.write_feature(dp.point, dp.calc_weight(self.out_per_mapper))
+
+
+if __name__ == "__main__":
+    r = Reducer()
+    r.run()
