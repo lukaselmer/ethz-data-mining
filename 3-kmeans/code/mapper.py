@@ -77,10 +77,10 @@ class DataPoint():
             if Helper.dist_func(self.cluster.center, self.point) != np.float128(0.0):
                 center_dist_ratio = Helper.dist_func(self.cluster.center, self.point) / self.cluster.dist_point_sum()
 
-            self.q = np.ceil((
+            self.q = np.ceil(
                 (np.float128(5.0) / np.float128(len(self.cluster))) +
                 center_dist_ratio
-            ) * np.float128(3.0)) - np.float128(2.0)
+            )
         return self.q
 
     def calc_sampling_probability(self):
@@ -92,7 +92,7 @@ class DataPoint():
 
 class Mapper:
     def __init__(self):
-        total_rows_in_reducer, mappers = [8000, 15] if "--local" in sys.argv else [75000, 300]
+        total_rows_in_reducer, mappers = [8000*4, 15] if "--local" in sys.argv else [75000*4, 300]
 
         self.no_clusters = 200
         self.out_per_mapper = total_rows_in_reducer / mappers
@@ -135,11 +135,11 @@ class Mapper:
 
         return np.array(arr)
 
-    def write_feature(self, row, weight):
+    def write_feature(self, row, weight, probability):
         def precise_str(x):
             return "%.25f" % x
 
-        print("1\t%f\t%s" % (weight, " ".join(map(precise_str, row))))
+        print("1\t%s\t%s\t%s" % (precise_str(weight), precise_str(probability), " ".join(map(precise_str, row))))
         self.written += 1
 
     def can_write_more_features(self):
@@ -202,7 +202,7 @@ class Mapper:
 
                 dp.dp_sum = dp_sum
                 if np.random.sample() < dp.calc_sampling_probability():
-                    self.write_feature(dp.point, dp.calc_weight(self.out_per_mapper))
+                    self.write_feature(dp.point, dp.calc_weight(self.out_per_mapper), dp.calc_sampling_probability())
 
     def remove_half_nearest_points(self, center_points, data):
         k = KMeans(n_clusters=self.no_clusters)
@@ -219,6 +219,7 @@ class Mapper:
 
 
 if __name__ == "__main__":
+    logging.warn(datetime.datetime.now())
     m = Mapper()
     m.run()
 

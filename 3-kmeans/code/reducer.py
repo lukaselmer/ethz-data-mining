@@ -218,17 +218,33 @@ if __name__ == "__main__":
 
     arr = []
     weights = []
+    probabilities = []
     for line in reader:
-        key, weight, data = line.split("\t")
+        key, weight, probability, data = line.split("\t")
         weights.append(np.float64(weight))
+        probabilities.append(np.float64(probability))
         arr.append(np.fromstring(data, dtype=np.float64, sep=' '))
 
-    data = np.array(arr)
-    nSamples = data.shape[0]
-    weights = np.array(weights)
+    logging.warn("Starting transformation")
+    logging.warn(datetime.datetime.now())
+
+    probabilities = probabilities / np.sum(probabilities) / np.float64(4.0) * np.float64(75000.0)
+    data = []
+    weights2 = []
+    for i in range(0, len(probabilities)):
+        if np.random.sample() < probabilities[i]:
+            data.append(arr[i])
+            weights2.append(weights[i])
+
+    logging.warn("Transformation done!")
+    logging.warn(datetime.datetime.now())
+
+    data = np.array(data)
+    #nSamples = data.shape[0]
+    weights = np.array(weights2)
 
     # initialize 200 clusters
-    indices = np.random.randint(nSamples, size=200)
+    #indices = np.random.randint(nSamples, size=200)
     #clusters = data[indices, :]
     clusters = load_good_centers_data()
 
