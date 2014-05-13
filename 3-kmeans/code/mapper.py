@@ -77,10 +77,10 @@ class DataPoint():
             if Helper.dist_func(self.cluster.center, self.point) != np.float128(0.0):
                 center_dist_ratio = Helper.dist_func(self.cluster.center, self.point) / self.cluster.dist_point_sum()
 
-            self.q = np.ceil(
+            self.q = np.ceil((
                 (np.float128(5.0) / np.float128(len(self.cluster))) +
                 center_dist_ratio
-            )
+            ) * np.float128(3.0)) - np.float128(2.0)
         return self.q
 
     def calc_sampling_probability(self):
