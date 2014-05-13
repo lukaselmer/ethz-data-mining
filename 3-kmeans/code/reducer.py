@@ -242,7 +242,7 @@ if __name__ == "__main__":
         for i in range(clusters.shape[0]):
             data_indices = np.where(cluster_indices == i)[0]  # get all sample indices associated to cluster i
 
-            weights_normalized = weights[data_indices] / float(sum(weights[data_indices]))
+            weights_normalized = weights[data_indices] / np.float64(sum(weights[data_indices]))
             weights_normalized = np.reshape(weights_normalized, [data_indices.shape[0], 1])
 
             data_normalized = data[data_indices, :] * weights_normalized
@@ -252,6 +252,9 @@ if __name__ == "__main__":
         logging.warn("Iteration %i" % t)
 
 
+    def precise_str(x):
+        return "%.25f" % x
+
     for r in range(clusters.shape[0]):
-        print("%s" % " ".join(map(str, clusters[r, :])))
+        print("%s" % " ".join(map(precise_str, clusters[r, :])))
 
