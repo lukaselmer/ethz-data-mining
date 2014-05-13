@@ -28,7 +28,7 @@ class Helper:
 
     @staticmethod
     def dist_func(center, point):
-        return np.float64(euclidean_distances(center, point, squared=True))
+        return np.float128(euclidean_distances(center, point, squared=True))
 
 
 class ClusterCenter():
@@ -43,7 +43,7 @@ class ClusterCenter():
 
     def dist_point_sum(self):
         if self.dist_sum is None:
-            self.dist_sum = np.float64(0.0)
+            self.dist_sum = np.float128(0.0)
             for point in self:
                 self.dist_sum += Helper.dist_func(self.center, point)
         return self.dist_sum
@@ -72,12 +72,12 @@ class DataPoint():
     def calc_sampling_weight(self):
         if self.q is None:
             # Formula slide 33, dm-09
-            center_dist_ratio = np.float64(1.0)
-            if Helper.dist_func(self.cluster.center, self.point) != np.float64(0.0):
+            center_dist_ratio = np.float128(1.0)
+            if Helper.dist_func(self.cluster.center, self.point) != np.float128(0.0):
                 center_dist_ratio = Helper.dist_func(self.cluster.center, self.point) / self.cluster.dist_point_sum()
 
             self.q = np.ceil(
-                (np.float64(5.0) / np.float64(len(self.cluster))) +
+                (np.float128(5.0) / np.float128(len(self.cluster))) +
                 center_dist_ratio
             )
         return self.q
@@ -109,8 +109,8 @@ class Mapper:
         self.data = self.read_input()
 
         self.num_per_mapper = len(self.data)
-        self.avg_cluster_size = np.float64(self.num_per_mapper) / np.float64(self.no_clusters)
-        self.keep_ratio = np.float64(self.out_per_mapper) / np.float64(self.num_per_mapper)
+        self.avg_cluster_size = np.float128(self.num_per_mapper) / np.float128(self.no_clusters)
+        self.keep_ratio = np.float128(self.out_per_mapper) / np.float128(self.num_per_mapper)
 
         np.random.shuffle(self.data)
         self.cluster_center_points = self.build_coresets()
@@ -130,7 +130,7 @@ class Mapper:
 
         arr = []
         for line in reader:
-            arr.append(np.fromstring(line, dtype=np.float64, sep=' '))
+            arr.append(np.fromstring(line, dtype=np.float128, sep=' '))
 
         return np.array(arr)
 
