@@ -20,7 +20,7 @@ import datetime
 # 95'000: Submission: 2959, score: FAILED => FAILED
 #100'000: Submission: 2960, score: FAILED => FAILED
 # 80'000: Submission: 2961, score: 738.669749628 => 25 minutes
-# Submission 3609
+# Submission 3609, 3750-3753
 
 
 class Helper:
