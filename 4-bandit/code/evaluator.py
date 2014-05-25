@@ -1,6 +1,6 @@
 #!/usr/bin/env python2.7
 import sys
-import policy # This is your policy file.
+import policyUCB1 as policy  # This is your policy file.
 
 def read_articles(path):
     articles = {}
