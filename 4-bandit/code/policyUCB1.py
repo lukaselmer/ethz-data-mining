@@ -7,7 +7,7 @@ import numpy as np
 # global variables
 np.random.seed(42)
 articlesDict = None
-bandits = {}        # dictionary of type <articleNr, [reward1, ...rewardn]>
+bandits = {}        # dictionary of type <articleNr, (meanReward, nrTrials)>
 currentRecommendation = None
 n = 0
 
@@ -23,12 +23,17 @@ def set_articles(art):
 def update(reward):
     global bandits
     normalizedReward = (reward + 1) / np.float(2)
-    bandits[currentRecommendation].append(normalizedReward)
 
+    # update meanReward and nrTrials
+    meanReward, nrTrial = bandits[currentRecommendation]
+    nrTrial += 1
+    meanReward += 1/np.float(nrTrial) * (normalizedReward - meanReward)
+    bandits[currentRecommendation] = (meanReward, nrTrial)
 
 # compute ucb for a given article
 def ucb(article, n):
-    return np.mean(np.array(bandits[article])) + np.sqrt(2 * np.log(n) / len(bandits[article]))
+    meanReward, nrTrial = bandits[article]
+    return meanReward + np.sqrt(2 * np.log(n) / nrTrial)
 
 # This function will be called by the evaluator.
 # Check task description for details.
@@ -44,7 +49,7 @@ def reccomend(timestamp, user_features, articles):
     # initialization: recommend each machine once
     for article in np.random.permutation(articles):
         if not bandits.has_key(article):
-            bandits[article] = []
+            bandits[article] = (0, 0)
             currentRecommendation = article
             return article
 
