@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 import sys
 import gzip
-import policyUCB1 as policy  # This is your policy file.
+import policyLinUCB as policy  # This is your policy file.
 
 # This script loads a subset of the original yahoo data (e.g. 1 day of log data, which corresponds to 4.5 million log files)
 
