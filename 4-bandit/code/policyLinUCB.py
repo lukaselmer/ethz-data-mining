@@ -2,6 +2,19 @@
 
 import numpy as np
 
+#with alpha = 0.835 we get Online:  CTR=0.053443    Took 58 minutes and 37 seconds.
+#                          Offline: CTR=0.064567    Took 11170s
+
+#with alpha = 0.835 we get Online:  CTR=??          Took=??
+#                          Offline: CTR=0.048       Took 1250s
+
+#with alpha = 0.21 we get Online:   CTR=0.059383          Took=Took 57 minutes and 51 seconds
+#                          Offline: CTR=0.067549          Took = 1785s
+
+#with alpha = 0.2   we get Online:  CTR=??          Took=??
+#                          Offline: CTR=0.068724          Took = 1660s
+
+
 
 # Implementation of Linear UCB
 class LinUCB:
@@ -10,7 +23,7 @@ class LinUCB:
     all_M_inv = {}
     all_b = {}
     all_w = {}
-    alpha = 0.835
+    alpha = 0.2
     current_article = None  # current recommendation
     current_user = None  # user for which the article was recommended
 
@@ -33,7 +46,7 @@ class LinUCB:
         M_inv = self.all_M_inv[article]
         w = self.all_w[article]
 
-        return np.dot(w.T, user) + self.alpha * np.sqrt(np.dot(user.T, np.dot(M_inv, user)))
+        return self.alpha * np.sqrt(np.dot(user.T, np.dot(M_inv, user)))
 
 
     def recommend(self, timestamp, user_features, articles):
@@ -41,7 +54,14 @@ class LinUCB:
 
         best_ucb = -np.inf
         for article in articles:
-            current_ucb = self.ucb(article, user_features)
+            inner_product = np.dot(self.all_w[article].T, user_features)
+
+            # recommend articles which we haven't recommended yet
+            if inner_product == 0:
+                self.current_article = article
+                break
+
+            current_ucb = inner_product + self.ucb(article, user_features)
 
             if current_ucb > best_ucb:
                 best_ucb = current_ucb
