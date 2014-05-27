@@ -1,6 +1,14 @@
 #!/usr/bin/env python2.7
 
 import numpy as np
+#with alpha = 0.835 we get Online:  CTR=0.053443    Took 58 minutes and 37 seconds.
+#                          Offline: CTR=0.064567    Took 11170s
+
+#with alpha = 0.835 we get Online:  CTR=??          Took=??
+#                          Offline: CTR=0.048       Took 1250s
+
+#with alpha = 0.21 we get Online:   CTR=0.059383          Took=Took 57 minutes and 51 seconds
+#                          Offline: CTR=0.067549          Took = 1785s
 
 
 # Implementation of Linear UCB
@@ -10,7 +18,7 @@ class LinUCB:
     all_M_inv = {}
     all_b = {}
     all_w = {}
-    alpha = 0.835
+    alpha = 0.21
     current_article = None  # current recommendation
     current_user = None  # user for which the article was recommended
 
