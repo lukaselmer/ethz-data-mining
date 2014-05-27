@@ -1,73 +1,87 @@
 #!/usr/bin/env python2.7
 
-import numpy.random
-import random
 import numpy as np
-import math
-all_articles = []
-newArticles = {}
-all_M={}
-all_inverseCache={}
-all_b={}
-all_w = {}
-alpha=0.835
-lastArticle=[]
-lastUser=[]
-totalLine=0;
 
 
-# This function initializes all articles as new
-def initializeArticles(articles):
-    for article in articles:
-        newArticles[article] = True
+# Implementation of Linear UCB
+class LinUCB:
+    all_articles = []
+    all_M = {}
+    all_M_inv = {}
+    all_b = {}
+    all_w = {}
+    alpha = 0.835
+    current_article = None  # current recommendation
+    current_user = None  # user for which the article was recommended
 
+    def set_articles(self, articles):
+        self.all_articles = articles
+
+        # initialize M and b for each article:
+        for article in self.all_articles:
+            M = np.identity(6)
+            b = np.zeros((6, 1))
+            M_inv = np.linalg.inv(M)
+
+            self.all_M[article] = M
+            self.all_b[article] = b
+            self.all_M_inv[article] = M_inv
+            self.all_w[article] = np.dot(M_inv, b)
+
+
+    def ucb(self, article, user):
+        M_inv = self.all_M_inv[article]
+        w = self.all_w[article]
+
+        return np.dot(w.T, user) + self.alpha * np.sqrt(np.dot(user.T, np.dot(M_inv, user)))
+
+
+    def recommend(self, timestamp, user_features, articles):
+        user_features = np.reshape(user_features, (6, 1))
+
+        best_ucb = -np.inf
+        for article in articles:
+            current_ucb = self.ucb(article, user_features)
+
+            if current_ucb > best_ucb:
+                best_ucb = current_ucb
+                self.current_article = article
+
+        self.current_user = user_features
+        return self.current_article
+
+
+    def update(self, reward):
+        if reward == 0 or reward == 1:
+            article = self.current_article
+            user = self.current_user
+            M = self.all_M[article]
+            b = self.all_b[article]
+
+            self.all_M[article] = M + np.dot(user, user.T)
+            self.all_b[article] = b + reward * user
+
+            # precompute M^-1 and w for UCB
+            self.all_M_inv[article] = np.linalg.inv(self.all_M[article])
+            self.all_w[article] = np.dot(self.all_M_inv[article], self.all_b[article])
+
+
+
+linucb = LinUCB()
 
 # Evaluator will call this function and pass the article features.
 # Check evaluator.py description for details.
 def set_articles(art):
-    global all_articles
-    all_articles = art
-    initializeArticles(art)
-
+    linucb.set_articles(art)
 
 
 # This function will be called by the evaluator.
 # Check task description for details.
 def update(reward):
-    if reward == -1:
-        pass
-    else:
-        all_M[lastArticle] = all_M[lastArticle]+np.dot(lastUser,np.transpose(lastUser))
-        if reward == 1:
-            all_b[lastArticle] = all_b[lastArticle]+lastUser
+    linucb.update(reward)
 
 
 # This function will be called by the evaluator.
 # Check task description for details.
 def reccomend(timestamp, user_features, articles):
-    user_features = np.transpose(np.mat(user_features))
-    articlesWithMaxUCB = []
-    bestUCB = 0;
-
-    for article in articles:
-        if(newArticles[article]): #new one
-            newArticles[article] = False
-            all_M[article] = np.identity(6)  #'todo change 6 to size....'
-            all_b[article] = np.zeros((6, 1)) #'todo change 6 to size....'
-        if totalLine%1000 == 0 or not all_inverseCache.has_key(article):
-            #print 'drin at %d' %(totalLine)
-            all_inverseCache[article] = np.linalg.inv(all_M[article])
-        inverse=all_inverseCache[article]
-        all_w[article] = np.dot(inverse,all_b[article])
-        ucb_current = np.dot(np.transpose(all_w[article]), user_features)[0] + alpha*math.sqrt(np.dot(np.dot(np.transpose(user_features),inverse),user_features))
-        if(ucb_current>=bestUCB):
-            bestUCB=ucb_current
-            articlesWithMaxUCB.append(article)
-    global totalLine
-    totalLine+=1
-    global lastUser
-    lastUser = user_features
-    global lastArticle
-    lastArticle=random.choice(articlesWithMaxUCB) #if several articles had the same UCB value
-    return lastArticle
-
+    return linucb.recommend(timestamp, user_features, articles)
