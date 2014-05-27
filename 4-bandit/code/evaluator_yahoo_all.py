@@ -26,6 +26,9 @@ def process(path):
                 user_action = int(logline.pop(1))
                 time = int(logline[0])
 
+                if chosen == 109528:  # doesn't exist!
+                    continue
+
                 user_features = [None] * 6
                 for feat in logline[2:8]:
                     user_features[int(feat[0]) - 1] = float(feat[2:])
@@ -34,7 +37,8 @@ def process(path):
                 for feat in logline[8:]:
                     if feat[0] == '|':
                         article_id = int(feat[1:])
-                        articles.append(article_id)
+                        if article_id != 109528:
+                            articles.append(article_id)
 
                 # Getting the recommended article.
                 calculated = policy.reccomend(time, user_features, articles)
