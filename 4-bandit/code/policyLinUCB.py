@@ -21,7 +21,7 @@ class LinUCB:
         for article in self.all_articles:
             M = np.identity(6)
             b = np.zeros((6, 1))
-            M_inv = np.linalg.inv(M)
+            M_inv = M #the inverse of identity is identity
 
             self.all_M[article] = M
             self.all_b[article] = b
