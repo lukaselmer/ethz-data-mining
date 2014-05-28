@@ -3,15 +3,7 @@
 import numpy as np
 import random
 import time
-#with alpha = 0.835 we get Online:  CTR=0.053443    Took 58 minutes and 37 seconds.
-#                          Offline: CTR=0.064567    Took 11170s
-
-#with alpha = 0.835 we get Online:  CTR=??          Took=??
-#                          Offline: CTR=0.048       Took 1250s
-
-#with alpha = 0.21 we get Online:   CTR=0.059383          Took=Took 57 minutes and 51 seconds
-#                          Offline: CTR=0.067549          Took = 1785s
-
+import itertools
 
 # Implementation of Linear UCB
 class LinUCB:
@@ -23,10 +15,11 @@ class LinUCB:
     mapping = {}
     keyList=None
     articleSize = 1
+    totalLine = 0
 
 
 
-    alpha = 0.18
+    alpha = 0.2
     current_article = None  # current recommendation
     current_user = None  # user for which the article was recommended
 
@@ -40,7 +33,7 @@ class LinUCB:
         self.all_w = np.zeros((6,self.articleSize))
         M = np.identity(6)
         self.all_M = np.tile(M,(1,self.articleSize))
-        self.all_M_inv = self.all_M
+        self.all_M_inv = np.tile(M,(1,self.articleSize))
 
         self.all_b = np.zeros((6,self.articleSize))
 
@@ -53,21 +46,20 @@ class LinUCB:
     def recommend(self, timestamp, user_features, articles):
         user_features = np.reshape(user_features, (6, 1))
 
-        #indicesOfArticles = np.in1d(self.keyList,articles) #todo optimize
-        #indicesOfArticles = np.array([self.mapping[article] for article in articles])
-
-        indicesOfArticles = np.zeros((self.articleSize),dtype=bool)
-        for article in articles:
-            indicesOfArticles[self.mapping[article]] = True
+        indicesOfArticles = [self.mapping[article] for article in articles]
 
         w_x = self.all_w[:,indicesOfArticles]
         exploitPart=np.dot(w_x.T,user_features)
 
-        allM_inv = self.all_M_inv[:,indicesOfArticles.repeat(6)]
+        indicesForM_inv = [range(index*6,index*6+6) for index in indicesOfArticles]
+        indicesForM_inv = list(itertools.chain(*indicesForM_inv))
+
+        allM_inv = self.all_M_inv[:,indicesForM_inv]
         explorePart = np.dot((np.dot(user_features.T,allM_inv)).reshape(len(articles),6),user_features)
         explorePart = self.alpha*np.sqrt(explorePart)
 
         UCB = (exploitPart + explorePart).flatten()
+        #print UCB
         #bestArticlesIndices = UCB==max(UCB)
 
         #articlesArray = np.array(articles)
@@ -83,6 +75,7 @@ class LinUCB:
 
     def update(self, reward):
         if reward == 0 or reward == 1:
+            self.totalLine += 1
             #start = time.time()
             article = self.current_article
             user = self.current_user
