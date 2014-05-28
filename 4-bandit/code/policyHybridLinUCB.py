@@ -2,7 +2,8 @@
 
 import numpy as np
 #with alpha = 0.71 we get Online:  CTR=??          Took ??
-#                          Offline: CTR=??    Took ??
+#                          Offline: TAKES TOO LONG!!!! Evaluated 51586/1040000 lines.	CTR = 0.055907
+
 
 
 
