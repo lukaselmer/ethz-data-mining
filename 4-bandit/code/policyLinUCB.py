@@ -14,6 +14,8 @@ import numpy as np
 #with alpha = 0.2   we get Online:  CTR=??          Took=??
 #                          Offline: CTR=0.068724          Took = 1660s
 
+# TODO: recommend most uncertain article in case of 2 very similar articles
+# TODO: use timestamp to lower ucb score over time
 
 
 # Implementation of Linear UCB
@@ -46,7 +48,7 @@ class LinUCB:
         M_inv = self.all_M_inv[article]
         w = self.all_w[article]
 
-        return self.alpha * np.sqrt(np.dot(user.T, np.dot(M_inv, user)))
+        return np.dot(w.T, user) + self.alpha * np.sqrt(np.dot(user.T, np.dot(M_inv, user)))
 
 
     def recommend(self, timestamp, user_features, articles):
@@ -54,14 +56,7 @@ class LinUCB:
 
         best_ucb = -np.inf
         for article in articles:
-            inner_product = np.dot(self.all_w[article].T, user_features)
-
-            # recommend articles which we haven't recommended yet
-            if inner_product == 0:
-                self.current_article = article
-                break
-
-            current_ucb = inner_product + self.ucb(article, user_features)
+            current_ucb = self.ucb(article, user_features)
 
             if current_ucb > best_ucb:
                 best_ucb = current_ucb
