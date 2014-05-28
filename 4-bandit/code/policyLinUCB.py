@@ -13,12 +13,13 @@ class LinUCB:
     all_M_inv = {}
     all_b = {}
     all_w = {}
-    alpha = 0.205 #0.195
+    alpha = 0.2
     current_article = None  # current recommendation
     current_user = None  # user for which the article was recommended
 
     def set_articles(self, articles):
         print 'We are using an alpha of: %f \n' %(self.alpha)
+        print 'NORMAL LINUCB VERSION!!!!!\n'
         self.all_articles = articles
 
         # initialize M and b for each article:

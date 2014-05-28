@@ -19,13 +19,14 @@ class LinUCB:
 
 
 
-    alpha = 0.195
+    alpha = 0.2
     current_article = None  # current recommendation
     current_user = None  # user for which the article was recommended
 
 
     def set_articles(self, articles):
         print 'We are using an alpha of: %f \n' %(self.alpha)
+        print 'VECTORIZED VERSION!!!!!\n'
 
         self.keyList = np.array(articles.keys())
         #self.valueList = np.array(articles.values())
