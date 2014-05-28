@@ -2,18 +2,6 @@
 
 import numpy as np
 
-#with alpha = 0.835 we get Online:  CTR=0.053443    Took 58 minutes and 37 seconds.
-#                          Offline: CTR=0.064567    Took 11170s
-
-#with alpha = 0.835 we get Online:  CTR=??          Took=??
-#                          Offline: CTR=0.048       Took 1250s
-
-#with alpha = 0.21 we get Online:   CTR=0.059383          Took=Took 57 minutes and 51 seconds
-#                          Offline: CTR=0.067549          Took = 1785s
-
-#with alpha = 0.2   we get Online:  CTR=??          Took=??
-#                          Offline: CTR=0.068724          Took = 1660s
-
 # TODO: recommend most uncertain article in case of 2 very similar articles
 # TODO: use timestamp to lower ucb score over time
 
@@ -25,11 +13,12 @@ class LinUCB:
     all_M_inv = {}
     all_b = {}
     all_w = {}
-    alpha = 0.2
+    alpha = 0.205 #0.195
     current_article = None  # current recommendation
     current_user = None  # user for which the article was recommended
 
     def set_articles(self, articles):
+        print 'We are using an alpha of: %f \n' %(self.alpha)
         self.all_articles = articles
 
         # initialize M and b for each article:

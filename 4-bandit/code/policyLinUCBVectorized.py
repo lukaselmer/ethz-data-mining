@@ -19,12 +19,13 @@ class LinUCB:
 
 
 
-    alpha = 0.2
+    alpha = 0.195
     current_article = None  # current recommendation
     current_user = None  # user for which the article was recommended
 
 
     def set_articles(self, articles):
+        print 'We are using an alpha of: %f \n' %(self.alpha)
 
         self.keyList = np.array(articles.keys())
         #self.valueList = np.array(articles.values())
@@ -56,7 +57,7 @@ class LinUCB:
 
         allM_inv = self.all_M_inv[:,indicesForM_inv]
         explorePart = np.dot((np.dot(user_features.T,allM_inv)).reshape(len(articles),6),user_features)
-        explorePart = self.alpha*np.sqrt(explorePart)
+        explorePart = self.alpha*np.power(explorePart,0.5)
 
         UCB = (exploitPart + explorePart).flatten()
         #print UCB
