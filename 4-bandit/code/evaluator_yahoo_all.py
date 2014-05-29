@@ -1,7 +1,8 @@
 #!/usr/bin/env python2.7
 import sys
 import gzip
-import policyLinUCB as policy  # This is your policy file.
+import policyLinUCBVectorized as policy  # This is your policy file.
+import datetime
 
 def read_articles(path):
     articles = {}
@@ -13,7 +14,7 @@ def read_articles(path):
 
 def process(path):
 
-    clicked, lines_evaluated, lines_total = 0, 0, 0
+    clicked, lines_evaluated, lines_total, time, positive_clicked, positive_reward = 0, 0, 0, 0, 0, 0
 
     for i in range(10):
         with gzip.open(path % (i+1), 'rb') as inf:
@@ -51,11 +52,18 @@ def process(path):
                     policy.update(user_action)
                     clicked += user_action
                     lines_evaluated += 1
+                    positive_reward += user_action
+
                 else:
                     policy.update(-1)
 
+                positive_clicked += user_action
+
                 if lines_total % 10000 == 0:
-                    print "Evaluated %d/%d lines.\tCTR = %f" % (lines_evaluated, lines_total, float(clicked) / lines_evaluated)
+                    tstamp = datetime.datetime.fromtimestamp(time).strftime('%Y-%m-%d %H:%M:%S')
+                    print "%s\t\t+clicked %d/%d\t\tEvaluated %d/%d lines.\tCTR = %f" % (tstamp, positive_reward, positive_clicked, lines_evaluated, lines_total, float(clicked) / lines_evaluated)
+                    positive_clicked = 0
+                    positive_reward = 0
 
 
     print "Evaluated %d/%d lines." % ( lines_evaluated, lines_total)
