@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 import sys
 import gzip
-import policyLinUCBVectorized as policy  # This is your policy file.
+import policyLinUCB as policy  # This is your policy file.
 import datetime
 
 def read_articles(path):
