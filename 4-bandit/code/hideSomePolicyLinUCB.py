@@ -16,23 +16,29 @@ class FiFoQueue():
         self.avoid = False
 
     def is_full(self):
-        return len(self.arr) >= 500
+        return len(self.arr) >= 2000
 
     def good_ratio(self):
         if len(self.arr) == 0:
             return 0
         return float(sum(self.arr)) / len(self.arr)
 
-    def check_avoid(self):
+    def check_avoid(self, k, article_stats):
+        a = article_stats[k][0]
+        b = article_stats[k][1]
+        ratio = 1.0
+        if a + b > 0:
+            ratio = float(b) / (a + b)
+
         if self.avoid:
             return
 
         self.max_good_ratio = max([self.max_good_ratio, self.good_ratio()])
 
-        if self.count < 2000 or self.max_good_ratio < .05:
+        if self.count < 10000 or self.max_good_ratio < .09 or ratio < 0.05:
             return
 
-        self.avoid = self.good_ratio() < .025
+        self.avoid = self.good_ratio() < .01
         if self.avoid:
             return True
 
@@ -58,10 +64,14 @@ class HideSomeLinUCB:
     all_b = {}
     all_w = {}
     all_avoid_queues = {}
+    ucb_stats = {}
     alpha = 0.2
     count = 0
+    stats_count = 0
     current_article = None  # current recommendation
     current_user = None  # user for which the article was recommended
+    ucb_stats = {'lines_evaluated': 0, 'clicked': 0}
+    article_stats = {}
 
     def set_articles(self, articles):
         print 'We are using an alpha of: %f \n' % (self.alpha)
@@ -79,6 +89,7 @@ class HideSomeLinUCB:
             self.all_M_inv[article] = M_inv
             self.all_w[article] = np.dot(M_inv, b)
             self.all_avoid_queues[article] = FiFoQueue()
+            self.article_stats[article] = {2: 0, 0: 0, 1: 0}
 
 
     def ucb(self, article, user):
@@ -91,16 +102,32 @@ class HideSomeLinUCB:
     def recommend(self, timestamp, user_features, articles):
         user_features = np.reshape(user_features, (6, 1))
 
+        if self.stats_count == 0:
+            print timestamp
+
         self.count += 1
+        self.stats_count += 1
+        if self.stats_count > 100001:
+            self.stats_count = 1
+            ucb = float(self.ucb_stats['clicked']) / self.ucb_stats['lines_evaluated']
+            print "Timestamp: %i, UCB: %f, Lines Evaluated: %f" % (timestamp, ucb, self.ucb_stats['lines_evaluated'])
+            for k in self.article_stats:
+                a = self.article_stats[k][0]
+                b = self.article_stats[k][1]
+                if a + b > 0:
+                    self.article_stats[k][3] = float(b) / (a + b)
+            print self.article_stats
+
         if self.count > 10000:
             self.count = 0
+
             for k in self.all_avoid_queues:
                 q = self.all_avoid_queues[k]
-                if q.check_avoid():
+                if q.check_avoid(k, self.article_stats):
                     print "Avoiding article"
                     print k
 
-                # print ", ".join([str([x.good_ratio(), x.max_good_ratio]) for x in self.all_avoid_queues.values()])
+                    # print ", ".join([str([x.good_ratio(), x.max_good_ratio]) for x in self.all_avoid_queues.values()])
 
         best_ucb = -np.inf
         for article in articles:
@@ -118,7 +145,13 @@ class HideSomeLinUCB:
 
 
     def update(self, reward):
+        self.article_stats[self.current_article][2] += 1
+
         if reward == 0 or reward == 1:
+            self.ucb_stats['lines_evaluated'] += 1
+            self.article_stats[self.current_article][reward] += 1
+            self.ucb_stats['clicked'] += reward
+
             article = self.current_article
             user = self.current_user
             M = self.all_M[article]
