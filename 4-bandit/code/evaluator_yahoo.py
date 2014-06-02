@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 import sys
 import gzip
-import policyLinUCB as policy  # This is your policy file.
+import hideSomePolicyLinUCB as policy  # This is your policy file.
 
 # This script loads a subset of the original yahoo data (e.g. 1 day of log data, which corresponds to 4.5 million log files)
 
@@ -57,7 +57,7 @@ def process(path):
                 policy.update(-1)
 
             if lines_total % 10000 == 0:
-                print "Evaluated %d/%d lines.\tCTR = %f" % (lines_evaluated, lines_total, float(clicked) / lines_evaluated)
+                print "Evaluated %d/%d lines.\tCTR = %f\t%f%% done" % (lines_evaluated, lines_total, float(clicked) / lines_evaluated, 100.0/4680000.0*lines_total)
 
         print "Evaluated %d/%d lines." % ( lines_evaluated, lines_total)
         print "CTR=%f" % (float(clicked) / lines_evaluated)
