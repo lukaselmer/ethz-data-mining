@@ -107,7 +107,7 @@ class HideSomeLinUCB:
 
         self.count += 1
         self.stats_count += 1
-        if self.stats_count > 100001:
+        if self.stats_count > 500001:
             self.stats_count = 1
             ucb = float(self.ucb_stats['clicked']) / self.ucb_stats['lines_evaluated']
             print "Timestamp: %i, UCB: %f, Lines Evaluated: %f" % (timestamp, ucb, self.ucb_stats['lines_evaluated'])
@@ -116,7 +116,7 @@ class HideSomeLinUCB:
                 b = self.article_stats[k][1]
                 if a + b > 0:
                     self.article_stats[k][3] = float(b) / (a + b)
-            print self.article_stats
+            #print self.article_stats
 
         if self.count > 10000:
             self.count = 0
