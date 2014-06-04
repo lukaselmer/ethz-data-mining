@@ -1,0 +1,65 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[pdftex]{hyperref}
+
+\setlength{\textwidth}{16.5cm}
+\setlength{\marginparwidth}{1.5cm}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.15cm}
+\setlength{\textheight}{22cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\topmargin}{0cm}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\title{Data Mining: Learning from Large Data Sets - Spring Semester 2014}
+\author{lukas.elmer@student.ethz.ch\\ sandro.felicioni@student.ethz.ch\\ frederick.egli@student.ethz.ch\\}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Approximate near-duplicate search using Locality Sensitive Hashing} 
+%Maximum of 2 pages per section.
+
+final score of: \emph{(score=1.0)}.
+\section{Large-Scale Image Classification}
+%Maximum of 2 pages per section.
+
+%normalize was important
+final score of: \emph{(score=0.819053)}.
+
+
+\section{Extracting Representative Elements From Large Datasets}
+%Maximum of 2 pages per section.
+The first approach was \emph{K-Means of K-Means}, or in other words, each \emph{mapper} was running a \emph{k-Means} algorithm, and the \emph{reducer} was doing a \emph{K-Means} based on the output of the \emph{mappers}. The result was obviously not that much satisfying so we changed our strategy. \\
+
+We then decided to implement an \emph{online k-Means}. Therefore each \emph{mapper} just passed the data to the \emph{reducer}, which did the \emph{sequential k-Means}. We also experimented with the \emph{mini batch} feature of \emph{scikit-learn}. Even though we got good results, the score was still too high for the baseline hard.\\
+
+The final approach was using \emph{coresets}. After reading \cite{coreset} we had to figure out how many points were necessary to sample in order to get a good coreset ($\beta \text{ parameter}$). After finding $\beta$ and with a clever choice of initializing the cluster centers during the reducer phase we could successfully beat the baseline hard. with a final score of: \emph{737.16}.
+
+
+\section{Explore-Exploit Tradeoffs in Recommender Systems}
+%Maximum of 2 pages per section.
+The first recommender algorithm was based on random decisions, which does not learn over time. After uploading it to the evaluation system we had a \emph{CTR} of \emph{0.035394}. The first implemented bandit algorithm was \emph{UCB1}. Because it is a \emph{context free} bandit algorithm its results were not satisfying. 
+We then concentrated on the \emph{LinUCB} algorithm. After reading \cite{LinUCB} we implementing the first draft of \emph{LinUCB}. But we had concerns about the computational time limit. We refactored the algorithm such that no loops are required for the \emph{arg\_max} of the \emph{UCB scores}. \emph{LinUCB} needs one parameter, called $\alpha$, to regularize the exploration part. We gained the best result with $\alpha=0.2$.\\
+
+An additional improvement was achieved by using the timestamps. As soon as a news article was seen for the first time, we initialized a counter. For each article which was still available after 24 hours we reseted the weights.\\
+
+We had tested plenty of other algorithms, including UCB-V, HybridLinUCB and K-Means, but none of them were satisfying.
+
+Our final score was: 0.059848
+
+
+\small{\rmfamily{\begin{thebibliography}{99}
+    \bibitem{LinUCB} Lihong Li, Wei Chu, John Langford, Robert E. Schapire. A Contextual-Bandit Approach to
+Personalized News Article Recommendation. http://www.research.rutgers.edu/~lihong/pub/Li10Contextual.pdf
+\bibitem{coreset} Dan Feldman, Matthew Faulkner, Andreas Krause. Scalable Training of Mixture Models via Coresets. In Proc. Neural Information Processing Systems, 2011
+    
+    \end{thebibliography}}}
+
+\end{document} 
