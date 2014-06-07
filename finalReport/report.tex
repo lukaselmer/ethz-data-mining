@@ -24,9 +24,35 @@
 \maketitle
 
 \section{Approximate near-duplicate search using Locality Sensitive Hashing} 
-%Maximum of 2 pages per section.
 
-final score of: \emph{(score=1.0)}.
+For the fist assignment, we implemented LSH with multiple bands and multiple rows per band.
+
+\subsection{Mapper}
+
+\begin{enumerate}
+\item Generate multiple permutations for each shingle
+\item Generate a hash for every permutation
+\item For each hash, write $<band-nr>:<hash>$, so that the probability is high that two duplicates are hashed to the same bucket
+\end{enumerate}
+
+\subsection{Reducer}
+
+
+In the reducer, we implemented the Jaccard distance function to check if two similar rated items are to 85\% similar, or in other words, to have a precision of 100\%. Before doing this, we had a score of 0.97964.
+
+
+\subsection{Remarks}
+
+We first tried few bands and rows per band, and already got good results. Our last three submissions contained the following number of bands and rows:
+
+\begin{enumerate}
+\item 35 bands, 20 rows per band: Precision = 1.00000, recall = 0.99496.
+\item 40 bands, 20 rows per band: Precision = 1.00000, recall = 0.99664.
+\item 55 bands, 20 rows per band: Precision = 1.00000, recall = 1.00000.
+\end{enumerate}
+
+Which of course sets the final score of: \emph{(score=1.0)}.
+
 \section{Large-Scale Image Classification}
 %Maximum of 2 pages per section.
 
