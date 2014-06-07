@@ -1,7 +1,11 @@
 \documentclass[a4paper, 11pt]{article}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage[pdftex]{hyperref}
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 
 \setlength{\textwidth}{16.5cm}
 \setlength{\marginparwidth}{1.5cm}
@@ -54,10 +58,41 @@ We first tried few bands and rows per band, and already got good results. Our la
 Which of course sets the final score of: \emph{(score=1.0)}.
 
 \section{Large-Scale Image Classification}
-%Maximum of 2 pages per section.
 
-%normalize was important
-final score of: \emph{(score=0.819053)}.
+For image classification with SVM's, the most important thing is to find the right feature transformations, so the images can be classified correctly. We initially thought that a Chi2Sampler \cite{Chi2Sampler} would work fine, but it did not. We also tried the RBFSampler, but it did not provide better results.
+
+We tried very many thing in the process. But first, we normalized the data:
+
+\begin{enumerate}
+\item Subtract means
+\item Divide by variance
+\end{enumerate}
+
+In the end, the following feature transformations provided the best results:
+
+\begin{itemize}
+\item x = normalized features
+\item $\abs{x}$
+\item $\sqrt{\abs{x}}$
+\end{itemize}
+
+Additionally, for every vector added above, the following additional values were calculated and added as new features:
+
+\begin{itemize}
+\item Standard deviation: $stddev(x)$
+\item Variance: $var(x)$
+\item Absolute mean: $sum(np.abs(arr)) / len(arr)$
+\item Minimum: $min(arr)$
+\item Maximum: $max(arr)$
+\item Mean: $mean(x)$
+\item Median: $median(x)$
+\end{itemize}
+
+This concluded our final score of: \emph{(score=0.819053)}.
+
+\subsection{Remarks}
+
+Unfortunately, when looking at the images, it can be noticed that the training data clearly was corrupted (there were nature image displaying people and vice versa). If we assume that the test data also is corrupted, then it should not be possible to achieve significantly better results, unless the classifier behaves more like the classifier which classified the test data wrongly...
 
 
 \section{Extracting Representative Elements From Large Datasets}
@@ -85,7 +120,9 @@ Our final score was: 0.059848
     \bibitem{LinUCB} Lihong Li, Wei Chu, John Langford, Robert E. Schapire. A Contextual-Bandit Approach to
 Personalized News Article Recommendation. http://www.research.rutgers.edu/~lihong/pub/Li10Contextual.pdf
 \bibitem{coreset} Dan Feldman, Matthew Faulkner, Andreas Krause. Scalable Training of Mixture Models via Coresets. In Proc. Neural Information Processing Systems, 2011
-    
+\bibitem{Chi2Sampler} Chi2Sampler http://scikit-learn.org/stable/modules/generated/  
+
+sklearn.kernel\_approximation.SkewedChi2Sampler.html    
     \end{thebibliography}}}
 
 \end{document} 
